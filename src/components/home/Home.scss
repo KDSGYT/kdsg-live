@@ -1,0 +1,69 @@
+section {
+    display: flex;
+    height: 95vh;
+    background-color: #595252;
+
+    .name {
+        margin: auto;
+        position: relative;
+        h1 {
+            margin: auto;
+            font-size: 3rem;
+            color: white;
+            font-weight: 400;
+            // type snimation
+            animation: type 1s steps(15);
+            overflow: hidden;
+            white-space: nowrap;
+            width: 12.5ch;
+            border-right: 4px solid white;
+        }
+
+        .links {
+            text-align: center;
+            // display: flex;
+            // justify-content: space-around;
+            margin-top:0px;
+            animation-delay: 3s;
+            animation: show 2s;
+            position: relative;
+            &:first-child{
+                padding-right: 30px;
+            }
+            a {
+                // position: absolute;
+                text-decoration: none;
+                color:white;
+                
+
+            }
+
+        }
+
+        @keyframes show{
+            0%{
+                opacity:0%;
+                margin-top:30px
+            }
+        
+            100%{
+                opacity:100%;
+                margin-top:0px;
+            }
+        }
+
+        @keyframes type {
+            0% {
+                width: 0ch;
+            }
+
+            100% {
+                width: 12.5ch;
+            }
+
+            h1 {
+                border: none;
+            }
+        }
+    }
+}
