@@ -2,12 +2,22 @@ import React from 'react'
 
 const SVG = () => {
     return (
-        <div></div>       
-        // <svg width="96" height="269" viewBox="0 0 96 269" fill="none" xmlns="http://www.w3.org/2000/svg">
-        //     <path d="M43.4038 266.596C45.9422 269.135 50.0578 269.135 52.5962 266.596L93.9619 225.23C96.5004 222.692 96.5004 218.576 93.9619 216.038C91.4235 213.5 87.308 213.5 84.7696 216.038L48 252.808L11.2304 216.038C8.69204 213.5 4.57647 213.5 2.03806 216.038C-0.500347 218.576 -0.500347 222.692 2.03806 225.23L43.4038 266.596ZM41.5 18L41.5 262L54.5 262L54.5 18L41.5 18Z" fill="white" />
-        //     <path d="M43.4038 248.596C45.9422 251.135 50.0578 251.135 52.5962 248.596L93.962 207.23C96.5004 204.692 96.5004 200.576 93.962 198.038C91.4236 195.5 87.308 195.5 84.7696 198.038L48 234.808L11.2305 198.038C8.69206 195.5 4.57648 195.5 2.03808 198.038C-0.500332 200.576 -0.500332 204.692 2.03808 207.23L43.4038 248.596ZM41.5 -2.84124e-07L41.5 244L54.5 244L54.5 2.84124e-07L41.5 -2.84124e-07Z" fill="#595252" />
-        // </svg>
-
+        <svg width="63" height="40" viewBox="0 0 63 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g filter="url(#filter0_d)">
+                <path d="M7 3L31.5 27L56 3" stroke="white" stroke-width="6" />
+            </g>
+            <defs>
+                <filter id="filter0_d" x="0.900665" y="0.856934" width="61.1987" height="38.3426" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
+                    <feOffset dy="4" />
+                    <feGaussianBlur stdDeviation="2" />
+                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
+                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow" />
+                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape" />
+                </filter>
+            </defs>
+        </svg>
     )
 }
 

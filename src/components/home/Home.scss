@@ -3,70 +3,80 @@ section {
     height: 95vh;
     background-color: #595252;
 
+    @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
     .name {
-        height:10vh;
+        height: 10vh;
         margin: auto;
         position: relative;
+
         h1 {
+            height: 60%;
             margin: auto;
-            font-size: 3rem;
+            font-size: 4em;
             color: white;
             font-weight: 400;
-            // type snimation
+            // type animation
             animation: type 1s steps(15);
             overflow: hidden;
             white-space: nowrap;
-            width: 12.5ch;
+            width: 14.6ch;
+            letter-spacing: -1px;
             border-right: 4px solid white;
+            font-family: monospace;
+            // font-family: 'Roboto', sans-serif;
         }
 
         .links {
             height: 100%;
             text-align: center;
-            margin-top:0px;
-            animation-delay: 3s;
+            margin-top: 3px;
+            // animation-delay: 3s;
+            // transform: ;
             animation: show 2s;
             position: relative;
-            overflow:hidden;
+            overflow: hidden;
             width: 100%;
+
             a {
                 font-size: 1em;
                 padding: 0 2em;
                 text-decoration: none;
-                color:white;
-                #github{
+                color: white;
+
+                #github {
                     width: 100%;
-                    height:100%;
+                    height: 100%;
                     content: url('../../img/github/GitHub-Mark-Light-32px.png');
-                    &:hover{
-                        content:url('../../img/github/GitHub-Mark-32px.png')
+
+                    &:hover {
+                        content: url('../../img/github/GitHub-Mark-32px.png')
                     }
                 }
-                .linkedin{
-                    width: 20px;
-                    height:20px;
 
-                    color:white;
-                    content:url('../../img/linkedin/linkedin-3-32.png');
-                    &:hover{
+                .linkedin {
+                    width: 20p ;
+                    height: 20px;
+                    color: white;
+                    content: url('../../img/linkedin/linkedin-3-32.png');
+
+                    &:hover {
                         // filter: greyscale(0);
                         content: url('../../img/linkedin/32px-LinkedIn_logo_In-Black.svg.png');
                     }
                 }
-
             }
-
         }
 
-        @keyframes show{
-            0%{
-                opacity:0%;
-                margin-top:30px
+        @keyframes show {
+            0% {
+                opacity: 0%;
+                margin-top: 30px
             }
-        
-            100%{
-                opacity:100%;
-                margin-top:0px;
+
+            100% {
+                opacity: 100%;
+                margin-top: 3px;
             }
         }
 
@@ -76,8 +86,40 @@ section {
             }
 
             100% {
-                width: 12.5ch;
+                width: 15ch;
             }
         }
+    }
+}
+
+
+.downArrow{
+    margin:auto;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    top:95vh;
+    position:absolute;
+    color:white;
+    font-weight: 800;;
+    font-size: 40px;
+    font-stretch: 200%s;
+    transform: translateY(0);
+    animation: float 2s ease-in-out infinite
+
+}
+
+@keyframes float{
+    
+    0%{
+        transform: translateY(0px)
+    }
+    
+    50%{
+        transform: translateY(-10px);
+    }
+    100%{
+        transform: translatey(0px);
     }
 }

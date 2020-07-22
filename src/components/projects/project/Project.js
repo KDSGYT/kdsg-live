@@ -3,7 +3,9 @@ import './Project.scss'
 
 const Project = () => {
     return (
-        <h1>Project</h1>
+        <div className="Project">
+            <h1>Project</h1>
+        </div>
     )
 }
 

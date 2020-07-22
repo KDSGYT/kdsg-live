@@ -6,9 +6,9 @@ import Projects from './components/projects/Projects';
 
 function App() {
   return [
-    <Navigation />,
-    <Home />,
-    <Projects />
+    <Navigation key="navigation" />,
+    <Home key="homeComponent" />,
+    <Projects key="projectsComponent"/>
   ];
 }
 
