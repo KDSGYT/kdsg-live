@@ -4,6 +4,7 @@ section {
     background-color: #595252;
 
     .name {
+        height:10vh;
         margin: auto;
         position: relative;
         h1 {
@@ -20,21 +21,38 @@ section {
         }
 
         .links {
+            height: 100%;
             text-align: center;
-            // display: flex;
-            // justify-content: space-around;
             margin-top:0px;
             animation-delay: 3s;
             animation: show 2s;
             position: relative;
-            &:first-child{
-                padding-right: 30px;
-            }
+            overflow:hidden;
+            width: 100%;
             a {
-                // position: absolute;
+                font-size: 1em;
+                padding: 0 2em;
                 text-decoration: none;
                 color:white;
-                
+                #github{
+                    width: 100%;
+                    height:100%;
+                    content: url('../../img/github/GitHub-Mark-Light-32px.png');
+                    &:hover{
+                        content:url('../../img/github/GitHub-Mark-32px.png')
+                    }
+                }
+                .linkedin{
+                    width: 20px;
+                    height:20px;
+
+                    color:white;
+                    content:url('../../img/linkedin/linkedin-3-32.png');
+                    &:hover{
+                        // filter: greyscale(0);
+                        content: url('../../img/linkedin/32px-LinkedIn_logo_In-Black.svg.png');
+                    }
+                }
 
             }
 
@@ -59,10 +77,6 @@ section {
 
             100% {
                 width: 12.5ch;
-            }
-
-            h1 {
-                border: none;
             }
         }
     }

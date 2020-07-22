@@ -1,5 +1,6 @@
 import React from 'react'
 import './Navigation.scss'
+import Projects from '../projects/Projects'
 import { BrowserRouter as Router ,Link, Route, Switch} from 'react-router-dom'
 
 const Navigation = () => {
@@ -13,9 +14,9 @@ const Navigation = () => {
                     <li><Link className="nav-link" to="#contact">Contact</Link></li>
                 {/* </ul> */}
             </nav>
-            {/* <Switch> */}
-                {/* <Route  path="/"   /> */}
-            {/* </Switch> */}
+            <Switch>
+                <Route  path="/#projects" component={ Projects }  />
+            </Switch>
         </Router>
     )
 }

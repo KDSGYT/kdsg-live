@@ -1,4 +1,21 @@
-.projects{
-    height:95vh;
+.projects {
+    height: 65vh;
     background-color: white;
+
+    .grid {
+        text-align: center;
+        display: grid;
+        width: 100%;
+        // height: 100;
+        padding: 100px;
+        grid-template-columns:auto auto;
+        grid-template-rows: auto;
+        border: 2px solid black;
+
+        .grid-element {
+            border: 2px solid black;
+
+        }
+
+    }
 }

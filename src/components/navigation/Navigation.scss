@@ -10,11 +10,12 @@ nav {
     box-sizing: border-box;
     background-color: #595252;
     padding: 0 10vw;
-    // border-bottom: 2px solid rgb(75, 73, 73);
+    z-index: 1;
+
     li {
         margin: auto;
         list-style-type: none;
-        
+
         .nav-link {
             color: white;
             font-weight: 400;
