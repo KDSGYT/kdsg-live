@@ -4,11 +4,11 @@ const SVG = () => {
     return (
         <svg width="63" height="40" viewBox="0 0 63 40" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g filter="url(#filter0_d)">
-                <path d="M7 3L31.5 27L56 3" stroke="white" stroke-width="6" />
+                <path d="M7 3L31.5 27L56 3" stroke="white" strokeWidth="6" />
             </g>
             <defs>
-                <filter id="filter0_d" x="0.900665" y="0.856934" width="61.1987" height="38.3426" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                <filter id="filter0_d" x="0.900665" y="0.856934" width="61.1987" height="38.3426" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                    <feFlood floodOpacity="0" result="BackgroundImageFix" />
                     <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
                     <feOffset dy="4" />
                     <feGaussianBlur stdDeviation="2" />

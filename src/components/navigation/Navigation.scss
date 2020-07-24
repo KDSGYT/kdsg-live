@@ -1,19 +1,22 @@
 nav {
+    position: absolute;
 
     height: 5vh;
-    position: sticky;
+    min-height:51px;
+    // position: sticky;
     top: 0;
     width: 100%;
     display: flex;
     flex-direction: row;
     box-sizing: border-box;
+    background-position: top;
     background-color: #595252;
     padding: 0 5vw;
-    z-index: 1;
+    
+    z-index: 5;
 
     li {
         margin: auto 2vw;
-        
         list-style-type: none;
 
         .nav-link {

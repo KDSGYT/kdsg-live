@@ -1,22 +1,46 @@
-section {
+#home {
     display: flex;
-    height: 95vh;
-    background-color: #595252;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    background-color: rgba(89, 82, 82, 0.9);
 
+    background-image: url('../../img/homeBackgroundImage_opt.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-clip: border-box;
+    z-index: 2;
     @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+    overflow: hidden;
+    &::after {
+        content: "";
+        position: absolute;
+        background-image: none;
+        background-color: rgba(89, 82, 82, 0.7);
+        left: 0;
+        top: 0;
+        height: 100%;
+        background-size: contain;
+        width: 100%;
+        z-index: 2;
+    }
 
     .name {
         height: 10vh;
+        max-height: 200px;
+        min-height: 100px;
         margin: auto;
         position: relative;
+        z-index: 3;
 
         h1 {
-            height: 60%;
+            height: 65%;
             margin: auto;
             font-size: 4em;
             color: white;
             font-weight: 400;
-            // type animation
+            text-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
             animation: type 1s steps(15);
             overflow: hidden;
             white-space: nowrap;
@@ -24,7 +48,9 @@ section {
             letter-spacing: -1px;
             border-right: 4px solid white;
             font-family: monospace;
-            // font-family: 'Roboto', sans-serif;
+
+
+            // transform:;            
         }
 
         .links {
@@ -55,7 +81,7 @@ section {
                 }
 
                 .linkedin {
-                    width: 20p ;
+                    width: 20p;
                     height: 20px;
                     color: white;
                     content: url('../../img/linkedin/linkedin-3-32.png');
@@ -69,6 +95,7 @@ section {
         }
 
         @keyframes show {
+
             0% {
                 opacity: 0%;
                 margin-top: 30px
@@ -87,39 +114,44 @@ section {
 
             100% {
                 width: 15ch;
+
             }
+
         }
     }
 }
 
 
-.downArrow{
-    margin:auto;
+.downArrow {
+    margin: auto;
     display: flex;
     width: 100%;
     flex-direction: row;
     justify-content: space-around;
-    top:95vh;
-    position:absolute;
-    color:white;
-    font-weight: 800;;
+    top: 95vh;
+    position: absolute;
+    color: white;
+    font-weight: 800;
+    z-index: 3;
     font-size: 40px;
     font-stretch: 200%s;
     transform: translateY(0);
-    animation: float 2s ease-in-out infinite
+    transition: opacity 2s ease-in;
+    animation: float 2s ease-in-out infinite;
 
 }
 
-@keyframes float{
-    
-    0%{
+@keyframes float {
+
+    0% {
         transform: translateY(0px)
     }
-    
-    50%{
-        transform: translateY(-10px);
+
+    50% {
+        transform: translateY(-15px);
     }
-    100%{
+
+    100% {
         transform: translatey(0px);
     }
 }

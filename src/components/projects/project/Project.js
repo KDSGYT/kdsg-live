@@ -1,10 +1,13 @@
 import React from 'react'
+import Card from './card/Card'
 import './Project.scss'
+
 
 const Project = () => {
     return (
+        
         <div className="Project">
-            <h1>Project</h1>
+            <Card />            
         </div>
     )
 }

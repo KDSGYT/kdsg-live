@@ -1,18 +1,20 @@
 .projects {
-    height: 95vh;
-    background-color: rgba(255, 255, 255, 0.568);
-    
+    height: 100vh;
+    background-image: none;
+    background-color: rgba(255, 255, 255, 1);
+    z-index: 1;
 
     .grid {
         text-align: center;
         display: grid;
         width: 100%;
-        padding: 100px;
+        // padding: 10vw;
+        margin:auto;
         grid-template-columns:auto auto;
-        grid-template-rows: auto;
+        grid-template-rows: auto auto;
 
         .grid-element {
-
+            margin:auto
         }
 
     }
