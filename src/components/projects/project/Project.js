@@ -1,12 +1,25 @@
-import React,{ useState } from 'react'
-import Card from './card/Card'
+import React from 'react'
+// import Card from './card/Card'
 import './Project.scss'
 
 
-const Project = () => {
+const Project = ({ projectName = "SubsCount", githubLink, url, snapshotUrl }) => {
     return (
         <div className="Project">
-            <Card name={"subscount"} projectSnapShot={"../"} githubLink={"https://github.com/KDSGYT/subsCount-react"} link={""} />            
+            <div className="bottom">
+                <img src={url} alt="Subscount Project" />
+                <div className="top">
+
+                    <span>{projectName}</span>
+                    <span>
+                        <a href="https://github.com/KDSGYT/subsCount-react" rel="noopener noreferrer" target="_blank">Github</a>
+                        <a href="https://kdsgyt.github.io/subsCount-react/" rel="noopener noreferrer" target="_blank">Wesite</a>
+                    </span>
+
+                </div>
+            </div>
+
+
         </div>
     )
 }

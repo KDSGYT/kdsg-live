@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import './App.css';
 
 import Navigation from './components/navigation/Navigation';
@@ -7,16 +7,21 @@ import Projects from './components/projects/Projects';
 
 function App() {
 
-  // const [ offsetValue, setOffsetValue ] = useState(window.pageYOffset);
-  // const offset = window.pageYOffset
+  const [offset, setoffset] = useState(window.pageYOffset);
 
-  useEffect(() => {
-    ;
-  }, [])
+  window.addEventListener('scroll', () => {
+
+    setoffset(window.pageYOffset);
+
+  })
+
+  // useEffect(() => {
+  // console.log("working");
+  // window.scrollBy(0, 100);
+  // }, [offset])
 
   return [
-    // console.log(offsetValue),
-    <Navigation key="navigation" position={window.pageYOffset >= 0 ? "sticky" : "absolute"} />,
+    <Navigation key="navigation" position={offset > 100 ? "sticky" : null} opacity={150 > offset > 100 ? "0" : null} />,
     <Home key="homeComponent" />,
     <Projects key="projectsComponent" />
   ];

@@ -1,9 +1,6 @@
 nav {
-    position: absolute;
-
     height: 5vh;
     min-height:51px;
-    // position: sticky;
     top: 0;
     width: 100%;
     display: flex;
@@ -12,7 +9,9 @@ nav {
     background-position: top;
     background-color: #443b3b;
     padding: 0 5vw;
-    
+    // transition: opacity ease-in 3s ;
+    // animation: show 1s ease-in;
+
     z-index: 5;
 
     li {
@@ -31,4 +30,14 @@ nav {
         }
     }
 
+}
+@keyframes show {
+
+    0% {
+        opacity: 0%;
+    }
+
+    100% {
+        opacity: 100%;
+    }
 }

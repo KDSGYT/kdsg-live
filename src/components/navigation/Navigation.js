@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import React from 'react'
 import './Navigation.scss'
 // import Projects from '../projects/Projects'
 import { HashRouter as Router, Link, Route, Switch } from 'react-router-dom'
@@ -8,7 +8,7 @@ const Navigation = (props) => {
     
     return (
         <Router>
-            <nav style={{position:props.position}} className="navigation">
+            <nav style={{position:props.position, opacity:props.opacity}} className="navigation">
                 {/* <ul> */}
                 <li><Link className="nav-link" to="">Home</Link></li>
                 <li><Link className="nav-link" to="projects">Projects</Link></li>
