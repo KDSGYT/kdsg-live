@@ -1,14 +1,14 @@
 import React from 'react'
 import './Card.scss';
 
-const Card = () => {
+const Card = ({name}) => {
 
-    let projectName = "Subscount"
     return (
         <div className="card">
-            <div className="projectName">
-                {projectName}
-            </div>
+            <span className="projectName">
+                {name}
+            </span>
+
         </div>
     );
 }

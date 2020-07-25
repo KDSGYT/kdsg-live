@@ -1,6 +1,6 @@
 .projects {
-    height: 100vh;
-    background-image: none;
+    height: 100%;
+    width:100%;
     background-color: rgba(255, 255, 255, 1);
     z-index: 1;
 
@@ -8,13 +8,13 @@
         text-align: center;
         display: grid;
         width: 100%;
-        // padding: 10vw;
+        height:100%;
         margin:auto;
         grid-template-columns:auto auto;
         grid-template-rows: auto auto;
 
         .grid-element {
-            margin:auto
+            margin:auto;
         }
 
     }

@@ -1,6 +1,6 @@
 #home {
     display: flex;
-    height: 100vh;
+    height: 95vh;
     width: 100%;
     position: relative;
     // background-color: rgba(89, 82, 82, 0.9);
@@ -27,6 +27,7 @@
     }
 
     .name {
+        word-spacing: -1em;
         height: 10vh;
         max-height: 200px;
         min-height: 100px;
@@ -44,7 +45,7 @@
             animation: type 1s steps(15);
             overflow: hidden;
             white-space: nowrap;
-            width: 14.6ch;
+            width: 13.6ch;
             letter-spacing: -1px;
             border-right: 4px solid white;
             font-family: monospace;
@@ -113,7 +114,7 @@
             }
 
             100% {
-                width: 15ch;
+                width: 14ch;
 
             }
 
@@ -128,7 +129,7 @@
     width: 100%;
     flex-direction: row;
     justify-content: space-around;
-    top: 95vh;
+    top: 90vh;
     position: absolute;
     color: white;
     font-weight: 800;

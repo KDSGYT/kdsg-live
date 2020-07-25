@@ -1,17 +1,14 @@
-import React from 'react'
+import React, { useRef, useState } from 'react'
 import './Navigation.scss'
 // import Projects from '../projects/Projects'
 import { HashRouter as Router, Link, Route, Switch } from 'react-router-dom'
 
-const Navigation = () => {
+const Navigation = (props) => {
 
-    const nav = document.getElementsByClassName('nagivation').computedStyle;
-    console.log(nav);
-
-
+    
     return (
         <Router>
-            <nav className="navigation">
+            <nav style={{position:props.position}} className="navigation">
                 {/* <ul> */}
                 <li><Link className="nav-link" to="">Home</Link></li>
                 <li><Link className="nav-link" to="projects">Projects</Link></li>

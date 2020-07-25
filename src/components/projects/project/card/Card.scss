@@ -1,21 +1,20 @@
 .card{
-    margin:auto;
     border-radius:10px;
     background-color: rgb(236, 236, 236);
-    width: 20%;
-    height:20%;
-
-    margin:5vw;
-    display: flex;
-    flex-direction: column;
-    align-content: space-around;
+    margin:5vw 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
     text-align: center;
-
+    border:2px solid black;
+    box-sizing: border-box;
+    overflow:hidden;
     .projectName{
-        margin:auto;
-        width: 100%;
-        height:100%;
-        // border:2px solid black;
+        position: absolute;
+        border:2px solid black;
+        // margin:5vw;
+        // width: 100%;
+        // height:100%;
         text-align:center;
     }
 }
