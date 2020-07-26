@@ -4,6 +4,8 @@ import './App.css';
 import Navigation from './components/navigation/Navigation';
 import Home from './components/home/Home';
 import Projects from './components/projects/Projects';
+import About from './components/about/About'
+import Footer from './components/footer/Footer'
 
 function App() {
 
@@ -21,9 +23,11 @@ function App() {
   // }, [offset])
 
   return [
-    <Navigation key="navigation" position={offset > 100 ? "sticky" : null} opacity={150 > offset > 100 ? "0" : null} />,
-    <Home key="homeComponent" />,
-    <Projects key="projectsComponent" />
+      <Navigation key="navigation" position={offset > 100 ? "sticky" : null} opacity={150 > offset > 100 ? "0" : null} />,
+      <Home key="homeComponent" />,
+      <Projects key="projectsComponent" />,
+      <About key="aboutComponent" />,
+      <Footer key="footerComponent" />,
   ];
 }
 

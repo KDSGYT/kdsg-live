@@ -1,0 +1,30 @@
+.footer {
+    box-sizing: border-box;
+    // border:2px solid black;
+    height: 4vh;
+    background-color: #443b3b;
+    text-align: center;
+
+    span {
+        color: white;
+        .heart {
+            position: relative;
+            font-size: 1.5em;
+            outline: none;
+            border: none;
+            color: red;
+
+            margin: 5px;
+            margin-bottom: 0;
+            &:first-child{
+                position: absolute;
+            }
+        }
+
+        a {
+            margin-left: 2vw;
+            text-decoration: none;
+            color: white;
+        }
+    }
+}
