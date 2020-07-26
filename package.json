@@ -2,7 +2,6 @@
   "name": "kdsg-live",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://KDSGYT.github.io/kdsg-live",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
