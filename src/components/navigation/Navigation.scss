@@ -8,10 +8,10 @@ nav {
     box-sizing: border-box;
     background-position: top;
     background-color: #443b3b;
+    background-repeat: none;
+    background-position: center top;
+    background-color: none;
     padding: 0 5vw;
-    // transition: opacity ease-in 3s ;
-    // animation: show 1s ease-in;
-
     z-index: 5;
 
     li {
@@ -40,4 +40,13 @@ nav {
     100% {
         opacity: 100%;
     }
+}
+@keyframes appear {
+    0%{
+        top:-4vh;
+        
+	}
+	100%{
+        top:0px;
+	}
 }

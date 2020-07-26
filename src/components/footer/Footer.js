@@ -7,7 +7,7 @@ const Footer = () => {
     return (
         <footer className="footer">
             <span>
-                Made With <span className="heart"><AiFillHeart /></span> By 
+                Made With &nbsp;<span className="heart"><AiFillHeart /></span>&nbsp; By&nbsp; 
                 <a href="https://github.com/KDSGYT" > KDSG</a>
             </span>
         </footer>

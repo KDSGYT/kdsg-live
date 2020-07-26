@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 #home {
     display: flex;
     height: 95vh;
@@ -6,12 +8,11 @@
     // background-color: rgba(89, 82, 82, 0.9);
 
     background-image: url('../../img/homeBackgroundImage_opt.jpg');
-    background-position: center;
+    background-position: top center;
     background-size: cover;
     background-repeat: no-repeat;
     background-clip: border-box;
     z-index: 2;
-    @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
     overflow: hidden;
     &::after {
         content: "";

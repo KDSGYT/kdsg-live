@@ -19,15 +19,14 @@ function App() {
 
   // useEffect(() => {
   // console.log("working");
-  // window.scrollBy(0, 100);
   // }, [offset])
 
   return [
-      <Navigation key="navigation" position={offset > 100 ? "sticky" : null} opacity={150 > offset > 100 ? "0" : null} />,
-      <Home key="homeComponent" />,
-      <Projects key="projectsComponent" />,
-      <About key="aboutComponent" />,
-      <Footer key="footerComponent" />,
+    <Navigation key="navigation" position={offset >= 100 ? "sticky" : null} animation={offset >= 100 ? "appear 0.3s ease-in" : null} />,
+    <Home key="homeComponent" />,
+    <Projects key="projectsComponent" />,
+    <About key="aboutComponent" />,
+    <Footer key="footerComponent" />,
   ];
 }
 
