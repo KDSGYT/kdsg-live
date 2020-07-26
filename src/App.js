@@ -22,7 +22,7 @@ function App() {
   // }, [offset])
 
   return [
-    <Navigation key="navigation" position={offset > 0 ? "sticky" : null} animation={offset > 0 ? "appear 0.5s ease-in" : null} />,
+    <Navigation key="navigation" position={offset > 50 ? "sticky" : null} animation={offset > 50 ? "appear 0.5s ease-in" : null} />,
     <Home key="homeComponent" />,
     <Projects key="projectsComponent" />,
     <About key="aboutComponent" />,

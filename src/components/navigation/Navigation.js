@@ -1,27 +1,17 @@
 import React from 'react'
 import './Navigation.scss'
-// import Projects from '../projects/Projects'
 import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom'
+import ToggleNavigation from './ToggleNavigation'
 
 const Navigation = ({ position, animation }) => {
 
     return (
 
-
-
-        // <nav style={{ position, animation }} className="navigation">
-        //     {/* <ul> */}
-        //     <li><a className="nav-link" >Home</a></li>
-        //     <li><a className="nav-link" >Projects</a></li>
-        //     <li><a className="nav-link" >About</a></li>
-        //     <li><a className="nav-link">Contact</a></li>
-        //     {/* </ul> */}
-        // </nav>
-
-
         <Router>
             <nav style={{ position, animation }} className="navigation">
                 {/* <ul> */}
+            
+                <li><ToggleNavigation /></li>    
                 <li><Link className="nav-link" to="">Home</Link></li>
                 <li><Link className="nav-link" to="projects">Projects</Link></li>
                 <li><Link className="nav-link" to="about">About</Link></li>

@@ -5,7 +5,6 @@ Before deploying to gh-pages add the following string to the package.json file n
 Reason: it causes problem in production build.
 
 
-
 ### `npm test`
 
 Launches the test runner in the interactive watch mode.<br />

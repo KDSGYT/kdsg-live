@@ -1,6 +1,6 @@
 nav {
     height: 5vh;
-    min-height:51px;
+    min-height: 51px;
     top: 0;
     width: 100%;
     display: flex;
@@ -13,13 +13,14 @@ nav {
     background-color: none;
     padding: 0 5vw;
     z-index: 5;
-    // animation-delay: 5s;
+    box-shadow: 5px 5px 10px rgba($color: #272727, $alpha: 0.5);
 
     li {
         margin: auto 2vw;
         list-style-type: none;
 
         .nav-link {
+            // display: none;
             color: white;
             font-weight: 400;
             font-size: 1.2rem;
@@ -31,7 +32,32 @@ nav {
         }
     }
 
+
+    #toggle-navigation {
+        width: 7.5vw;
+        display: none;
+        // border: 2px solid black;
+
+        .line {
+            height: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            position: relative;
+
+            hr {
+                display: block;
+                pointer-events: none;
+                width: 30px;
+                border: 0.1em solid white;
+        
+            }
+
+        }
+    }
+
 }
+
 @keyframes show {
 
     0% {
@@ -42,12 +68,90 @@ nav {
         opacity: 100%;
     }
 }
+
 @keyframes appear {
-    0%{
-        top:-4vh;
+    0% {
+        top: -4vh;
+
+    }
+
+    100% {
+        top: 0px;
+    }
+}
+
+@media screen and (max-width:480px) {
+    nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 100vh;
+        transition: display 1s ease-in;
+
+        li {
+            text-align: center;
+
+            .nav-link {
+                display: none;
+            }
+
+            #toggle-navigation{
+                display: block ;
+            }
+
+        }
+
+    }
+
+
+
+}
+
+
+.toggle {
+    position: relative;
+
+    hr {
+        display: block;
+        position: absolute;
+        pointer-events: none;
+        transition: all 0.5s ease;
+
+        &:first-child {
+            transform-origin: center;
+            transform: rotate(45deg);
+        }
+
+        &:nth-child(2) {
+            display: none;
+            // position: absolute;
+        }
+
+        &:last-child {
+            transform-origin: center;
+            transform: rotate(-45deg);
+        }
+
+    }
+}
+
+
+.un-toggle {
+    transition: all 1s ease;
+
+    hr {
+
+        position: relative;
+        pointer-events: none;
+        transition: all 0.5s ease-out;
         
-	}
-	100%{
-        top:0px;
-	}
+        &:first-child {
+            transform: rotate(0deg);
+        
+        }
+
+        &:last-child {
+            transform: rotate(0deg);
+        }
+    }
 }
