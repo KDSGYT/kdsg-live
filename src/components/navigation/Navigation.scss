@@ -14,6 +14,7 @@ nav {
     padding: 0 5vw;
     z-index: 5;
     box-shadow: 5px 5px 10px rgba($color: #272727, $alpha: 0.5);
+    transition: display 1s ease-in;
 
     li {
         margin: auto 2vw;
@@ -50,12 +51,10 @@ nav {
                 pointer-events: none;
                 width: 30px;
                 border: 0.1em solid white;
-        
-            }
 
+            }
         }
     }
-
 }
 
 @keyframes show {
@@ -85,18 +84,19 @@ nav {
         display: flex;
         flex-direction: column;
         justify-content: space-around;
-        height: 100vh;
         transition: display 1s ease-in;
-
+        transition: all 0.5s ease-in;
         li {
             text-align: center;
 
             .nav-link {
-                display: none;
+                margin-top: 1vh;
+                position: absolute;
             }
 
-            #toggle-navigation{
-                display: block ;
+            #toggle-navigation {
+                margin-top: 2vw;
+                display: block;
             }
 
         }
@@ -109,23 +109,27 @@ nav {
 
 
 .toggle {
-    position: relative;
+    position: block;
 
     hr {
-        display: block;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        
         position: absolute;
         pointer-events: none;
-        transition: all 0.5s ease;
+        transition: all 0.5s ease-in;
 
         &:first-child {
             transform-origin: center;
             transform: rotate(45deg);
         }
 
-        &:nth-child(2) {
-            display: none;
+        // &:nth-child(2) {
+            // display: none;
+            // border: 2px solid black;
             // position: absolute;
-        }
+        // }
 
         &:last-child {
             transform-origin: center;
@@ -137,17 +141,22 @@ nav {
 
 
 .un-toggle {
-    transition: all 1s ease;
+    // transition: all 1s ease;
+    position: block;
 
     hr {
 
         position: relative;
         pointer-events: none;
         transition: all 0.5s ease-out;
-        
+
         &:first-child {
             transform: rotate(0deg);
-        
+
+        }
+
+        &:nth-child(2){
+            display: none;
         }
 
         &:last-child {

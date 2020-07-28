@@ -1,15 +1,16 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import './Navigation.scss';
 
-const ToggleNavigation = () => {
+const ToggleNavigation = ({handleToggle}) => {
 
-    const [toggle, setToggle] = useState(false)
-    useEffect(() => {
-        console.log(toggle);
-    }, [toggle])
+    const [toggle, setToggle] = useState(false);
+
+    // useEffect(() => {
+    //     console.log(toggle);
+    // }, [toggle])
 
     return (
-        <div id="toggle-navigation" >
+        <div id="toggle-navigation" onClick={() => handleToggle(toggle)} >
             <span className={`line ${toggle ? "toggle" : "un-toggle"}`} onClick={(e) => {
             setToggle(toggle ? false : true)
         }} >
