@@ -1,0 +1,11 @@
+{
+    "projects":{
+        "subscount":{
+            "name":"SubsCount",
+            "github":"https://github.com/KDSGYT/subsCount-react",
+            "gh-pages": "https://kdsgyt.github.io/subsCount-react/",
+            "officialWebsite": null
+        }
+    }
+    
+}

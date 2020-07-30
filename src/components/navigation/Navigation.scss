@@ -79,7 +79,7 @@ nav {
     }
 }
 
-@media screen and (max-width:480px) {
+@media screen and (max-width:600px) {
     nav {
         display: flex;
         flex-direction: column;
@@ -125,11 +125,9 @@ nav {
             transform: rotate(45deg);
         }
 
-        // &:nth-child(2) {
-            // display: none;
-            // border: 2px solid black;
-            // position: absolute;
-        // }
+        &:nth-child(2) {
+            opacity: 0;
+        }
 
         &:last-child {
             transform-origin: center;
@@ -156,7 +154,7 @@ nav {
         }
 
         &:nth-child(2){
-            display: none;
+            opacity:100%;
         }
 
         &:last-child {

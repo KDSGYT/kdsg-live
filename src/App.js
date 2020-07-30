@@ -4,8 +4,9 @@ import './App.css';
 import Navigation from './components/navigation/Navigation';
 import Home from './components/home/Home';
 import Projects from './components/projects/Projects';
-import About from './components/about/About'
-import Footer from './components/footer/Footer'
+import About from './components/about/About';
+import Footer from './components/footer/Footer';
+import { CTX } from './context/CTX';
 
 function App() {
 
