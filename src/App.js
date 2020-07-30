@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
-import './App.css';
+import './App.scss';
 
 import Navigation from './components/navigation/Navigation';
 import Home from './components/home/Home';
 import Projects from './components/projects/Projects';
 import About from './components/about/About';
 import Footer from './components/footer/Footer';
-import { CTX } from './context/CTX';
 
 function App() {
 
@@ -18,9 +17,7 @@ function App() {
 
   })
 
-  // useEffect(() => {
-  // console.log("working");
-  // }, [offset])
+
 
   return [
     <Navigation key="navigation" position={offset > 50 ? "sticky" : null} animation={offset > 50 ? "appear 0.5s ease-in" : null} />,

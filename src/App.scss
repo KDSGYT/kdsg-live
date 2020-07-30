@@ -1,0 +1,20 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    padding-bottom:0;
+    /* background-color: #443b3b;; */
+}
+
+@keyframes renderComponent {
+    0% {
+        opacity: 0;
+        margin-top: 20vw;
+    }
+
+    100% {
+        opacity: 100%;
+        margin-top:8vw;
+    }
+}
