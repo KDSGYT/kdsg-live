@@ -12,7 +12,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-clip: border-box;
-    z-index: 2;
+    // z-index: 2;
     // overflow: hidden;
 
     &::after {
@@ -25,7 +25,7 @@
         height: 100%;
         background-size: contain;
         width: 100%;
-        z-index: 2;
+        z-index: 1;
     }
 
     .name {
@@ -56,58 +56,7 @@
             // transform:;            
         }
 
-        .links {
-            height: 100%;
-            text-align: center;
-            margin-top: 3px;
-            animation: show 2s;
-            position: relative;
-            // overflow: hidden;
-            width: 100%;
 
-            a {
-                font-size: 1em;
-                padding: 0 2em;
-                text-decoration: none;
-                color: white;
-                image-rendering: optimizeQuality;
-
-                #github {
-                    width: 32px;
-                    height: 32px;
-                    // content: url('../../img/github/');
-
-                    &:hover {
-
-                        content: url('../../img/github/GitHub-Mark-32px.png')
-                    }
-                }
-
-                .linkedin {
-                    width: 32px;
-                    height: 32px;
-                    // color: white;
-                    // content: url('../../img/linkedin/');
-
-                    &:hover {
-                        content: url('../../img/linkedin/32px-LinkedIn_logo_In-Black.svg.png');
-                    }
-                }
-            }
-        }
-
-        @keyframes show {
-
-            0% {
-                opacity: 0%;
-                margin-top: 30px
-            }
-
-            100% {
-                opacity: 100%;
-                margin-top: 3px;
-            }
-        }
 
         @keyframes type {
             0% {
@@ -119,6 +68,68 @@
 
             }
 
+        }
+    }
+
+    .links {
+        height: auto;
+        text-align: center;
+        position: absolute;
+        top: 53%;
+        margin: auto;
+        width: 100%;
+        min-width: 100px;
+        z-index: 3;
+        // transition: all 2s ease-in;
+        // border:2px solid black;
+        // z-index: inherit;
+
+        a {
+            font-size: 1em;
+            padding: 0 2em;
+            position: relative;
+            text-decoration: none;
+            color: white;
+            image-rendering: optimizeQuality;
+
+            // z-index: inherit;
+            #github {
+                width: 32px;
+                height: 32px;
+                // content: url('../../img/github/');
+
+                &:hover {
+
+                    content: url('../../img/GitHub-Mark-32px.png')
+                }
+            }
+
+            .linkedin {
+                width: 32px;
+                height: 32px;
+                // color: white;
+                // content: url('../../img/linkedin/');
+
+                &:hover {
+                    content: url('../../img/linkedin/32px-LinkedIn_logo_In-Black.svg.png');
+                }
+            }
+        }
+    }
+
+    @keyframes show {
+
+        from {
+            // z-index: inherit;
+            z-index: 3;
+            opacity: 0%;
+            top: 58%;
+        }
+
+        to {
+            z-index: 3;
+            opacity: 100%;
+            top: 53%;
         }
     }
 }
