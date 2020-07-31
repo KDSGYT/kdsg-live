@@ -1,16 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import Project from './project/Project'
 import './Projects.scss';
-// import { Element } from 'react-scroll';
+
 const Projects = () => {
 
     const snapshotUrl = 'https://i.ibb.co/4VJTFKJ/home-Background-Image-opt-1.jpg';
     const [render, setrender] = useState(false)
     
     useEffect(() => {
-        // console.log(typeof (window.pageYOffset*2))
         if((window.pageYOffset)>(window.innerHeight/3)){
-            console.log("render")
             setrender(true);
         }
     }, [window.pageYOffset])

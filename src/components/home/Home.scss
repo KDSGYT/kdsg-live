@@ -13,7 +13,7 @@
     background-repeat: no-repeat;
     background-clip: border-box;
     z-index: 2;
-    overflow: hidden;
+    // overflow: hidden;
 
     &::after {
         content: "";
@@ -62,7 +62,7 @@
             margin-top: 3px;
             animation: show 2s;
             position: relative;
-            overflow: hidden;
+            // overflow: hidden;
             width: 100%;
 
             a {
@@ -73,9 +73,9 @@
                 image-rendering: optimizeQuality;
 
                 #github {
-                    width: 100%;
-                    height: 100%;
-                    content: url('../../img/github/GitHub-Mark-Light-32px.png');
+                    width: 32px;
+                    height: 32px;
+                    // content: url('../../img/github/');
 
                     &:hover {
 
@@ -84,13 +84,12 @@
                 }
 
                 .linkedin {
-                    width: 20p;
-                    height: 20px;
-                    color: white;
-                    content: url('../../img/linkedin/linkedin-3-32.png');
+                    width: 32px;
+                    height: 32px;
+                    // color: white;
+                    // content: url('../../img/linkedin/');
 
                     &:hover {
-                        // filter: greyscale(0);
                         content: url('../../img/linkedin/32px-LinkedIn_logo_In-Black.svg.png');
                     }
                 }
