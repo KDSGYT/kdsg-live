@@ -6,6 +6,7 @@ import Home from './components/home/Home';
 import Projects from './components/projects/Projects';
 import About from './components/about/About';
 import Footer from './components/footer/Footer';
+import Contact from './components/contact/Contact';
 
 function App() {
 
@@ -24,6 +25,7 @@ function App() {
     <Home key="homeComponent" />,
     <Projects key="projectsComponent" />,
     <About key="aboutComponent" />,
+    <Contact key="contactComponent" />,
     <Footer key="footerComponent" />,
   ];
 }

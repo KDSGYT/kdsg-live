@@ -6,8 +6,6 @@ const Projects = () => {
 
     const [render, setrender] = useState(false)
     
-    
-
     useEffect(() => {
         if((window.pageYOffset)>(window.innerHeight/3)){
             setrender(true);

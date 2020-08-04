@@ -3,7 +3,7 @@ import React, { useEffect, useRef } from 'react'
 import './Project.scss'
 
 
-const Project = ({ projectName = "SubsCount", githubLink, url, snapshotUrl }) => {
+const Project = ({ projectName , githubLink, url, snapshotUrl }) => {
     
     const bottom = useRef(null)
     useEffect(() => {
@@ -12,7 +12,7 @@ const Project = ({ projectName = "SubsCount", githubLink, url, snapshotUrl }) =>
 
     
     return (
-        <div className="Project" >
+        <div className="Project" onClick={() => window.location.href = url} >
             <div className="bottom"  ref={bottom}>
 
             </div>

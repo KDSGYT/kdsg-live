@@ -10,15 +10,7 @@ function ProjectGrid () {
         <div className="grid-container">
                     <div className="grid">
                         <div className="grid-element">
-                            <Project snapshotUrl={snapshotUrl} />
-                        </div>
-    
-                        <div className="grid-element">
-                            <Project snapshotUrl={snapshotUrl} />
-                        </div>
-    
-                        <div className="grid-element">
-                            <Project snapshotUrl={snapshotUrl} />
+                            <Project snapshotUrl={'https://i.ibb.co/m9ShMMt/subCount.png'} projectName={"SubsCount"} url={'http://subscount.kdsg.live'} />
                         </div>
                         <div className="grid-element">
                             <Project snapshotUrl={snapshotUrl} />
@@ -26,14 +18,6 @@ function ProjectGrid () {
                         <div className="grid-element">
                             <Project snapshotUrl={snapshotUrl} />
                         </div>
-    
-                        <div className="grid-element">
-                            <Project snapshotUrl={snapshotUrl} />
-                        </div>
-                        <div className="grid-element">
-                            <Project snapshotUrl={snapshotUrl} />
-                        </div>
-    
                         <div className="grid-element">
                             <Project snapshotUrl={snapshotUrl} />
                         </div>

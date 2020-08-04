@@ -23,6 +23,7 @@ const Navigation = ({ position, animation }) => {
 
             <nav style={{ position, animation }} className="navigation" ref={nav}>
                     <li><ToggleNavigation handleToggle={handleToggle} /></li>
+                    <li><h1>KDSG.LIVE</h1></li>
                     <li><Link className="nav-link" spy={true} smooth={true} offset={-70} duration={800} to="home">Home</Link></li>
                     <li><Link className="nav-link" spy={true} smooth={true} offset={-70} duration={800} to="projects">Projects</Link></li>
                     <li><Link className="nav-link" spy={true} smooth={true} offset={-70} duration={800} to="about">About</Link></li>

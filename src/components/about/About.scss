@@ -1,4 +1,36 @@
-.about{
-    height: 95vh;
-    background-color: rgba($color: #ffffff, $alpha: 1.0);
+$main-color: #443b3b;
+
+.about {
+    // border:2px solid black;
+    // padding: 20vh auto;
+    height:40vh;
+    width: 100%;
+    background-color: $main-color;
+    color: white;
+    box-sizing: content-box;
+
+    .content{
+        // border:2px solid black;
+        height:100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        h1, p{
+            // border:2px solid black;
+            text-align: center;
+            margin:auto;
+
+        }
+        h1{
+            
+            letter-spacing: 5px;
+            border:none;
+            border-bottom:2px solid white;
+            width: 10ch;
+            margin-bottom: 2%;
+        }
+        p{
+            width: 60vw;
+        }
+    }
 }

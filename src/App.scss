@@ -1,3 +1,5 @@
+$main-color: #443b3b;
+
 *{
     margin:0;
     padding:0;
@@ -12,11 +14,13 @@ body{
 @keyframes renderElement {
     0% {
         opacity: 0;
-        margin-top: 20vw;
+        // margin-top: 20vw;
+        top:30vh
     }
 
     100% {
         opacity: 100%;
-        margin-top:8vw;
+        top:0vh;
+        // margin-top:8vw;
     }
 }
