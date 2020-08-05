@@ -1,0 +1,16 @@
+.my-skillset {
+    // border: 2px solid black;
+    margin: auto;
+    display: flex;
+    // flex-direction: column;
+    justify-content: space-evenly;
+    height: auto;
+    // display: inline-block;
+    width: 80%;
+    height: 10vh;
+
+    img {
+        margin: auto;
+        height: 10vh;
+    }
+}

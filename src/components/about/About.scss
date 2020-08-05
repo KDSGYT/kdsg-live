@@ -15,7 +15,7 @@ $main-color: #443b3b;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
-        h1, p{
+        h1, #me{
             // border:2px solid black;
             text-align: center;
             margin:auto;
@@ -29,8 +29,17 @@ $main-color: #443b3b;
             width: 10ch;
             margin-bottom: 2%;
         }
-        p{
+        #me{
+            font-size:1.5rem;
             width: 60vw;
         }
+        .container{
+            height:auto;
+            border:2px solid black;
+            display: flex;
+            justify-content: center;
+        }
+
+
     }
 }
