@@ -7,10 +7,12 @@ const Projects = () => {
     const [render, setrender] = useState(false)
     
     useEffect(() => {
-        if((window.pageYOffset)>(window.innerHeight/3)){
-            setrender(true);
-        }
-    }, [window.pageYOffset])
+        document.addEventListener( 'scroll', () => {
+            if ((window.pageYOffset) > (window.innerHeight /3)) {
+                setrender(true);
+            }
+        })        
+    }, [])
 
     
     if(render){

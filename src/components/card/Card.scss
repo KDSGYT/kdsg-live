@@ -8,8 +8,11 @@
     // display: inline-block;
     width: 80%;
     height: 10vh;
+    // position: absolute;
+    animation: renderElement 2s ;
 
     img {
+        // position: absolute;
         margin: auto;
         height: 10vh;
     }
