@@ -14,6 +14,10 @@ const Projects = () => {
         })        
     }, [])
 
+    // function showProject(id) {
+        
+    // }
+
     
     if(render){
         return (

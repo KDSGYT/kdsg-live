@@ -1,0 +1,25 @@
+.expo {
+    border: none;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    height: 30vh;
+    width: 100vw;
+    overflow: hidden;
+    box-sizing: border-box;
+    top: 100%;
+    // left: -88%;
+    position: absolute;
+    margin-bottom: 20vh;
+    display: flex;
+    justify-content: center;
+
+    .main-area {
+            
+    }
+
+    .discription {
+        .skills-used {
+            list-style-type: none;
+        }
+    }
+}
