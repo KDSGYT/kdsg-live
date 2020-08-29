@@ -49,11 +49,35 @@
             white-space: nowrap;
             width: 13.6ch;
             letter-spacing: -1px;
-            border-right: 4px solid white;
+            // border-right: 4px solid rgba(255, 255, 255, 1);
             font-family: monospace;
-
-
+            
+            &::after{
+                position: absolute;
+                background-color:white;
+                // border:2px solid white;
+                fill: white;
+                content: " ";
+                right:0;
+                height:50%;
+                width: 4px;
+                transition: all  0s ;
+                animation: blink 1s linear infinite;
+            }
             // transform:;            
+        }
+
+        
+
+        @keyframes blink {
+            from {
+                background:white;
+            }
+
+            to {
+                background: transparent ;
+            }
+
         }
 
 

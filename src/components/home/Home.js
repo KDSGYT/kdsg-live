@@ -4,7 +4,6 @@ import './Home.scss';
 import SVG from '../SVG'
 import Links from './Links';
 import CSSTransitionGroup from 'react-transition-group/CSSTransition';
-import { css } from 'glamor'
 
 const Home = () => {
 
