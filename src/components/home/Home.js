@@ -1,9 +1,32 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import '../Transition.scss'
 import './Home.scss';
 import SVG from '../SVG'
 import Links from './Links';
+import CSSTransitionGroup from 'react-transition-group/CSSTransition';
+import { css } from 'glamor'
 
 const Home = () => {
+
+    const [animate, setAnimate] = React.useState(false);
+    useEffect(() => {
+        setAnimate(true)
+    }, [])
+
+    // const enter = css({ opacity: 0.01 });
+
+    // const enterActive = css({
+    //     opacity: 1,
+    //     transition: 'opacity 500ms ease-in',
+    // });
+
+    // const leave = css({ opacity: 1 });
+
+    // const leaveActive = css({
+    //     opacity: 0.01,
+    //     transition: 'opacity 300ms ease-in',
+    // });
+
 
 
     return (
@@ -12,8 +35,22 @@ const Home = () => {
                 <h1>Karan Pal Singh</h1>
                 <hr />
             </div>
-            <Links />
+            <CSSTransitionGroup
+                // transitionEnterTimeout={500}
+                // transitionLeaveTimeout={300}
+                classNames="fade"
+                timeout={2000}
+                in={animate}
+                // transitionName={{
+                //     enter: enter,
+                //     enterActive: enterActive,
+                //     leave: leave,
+                //     leaveActive: leaveActive,
+                // }}
+            >
 
+                <Links />
+            </CSSTransitionGroup>
             <div className="downArrow">
                 <SVG />
             </div>

@@ -8,7 +8,7 @@ function Expo({ skills, projectName }) {
     return (
         <div className="expo">
             <div className="main-area">
-                <span>Project IMage</span>
+                {/* <span>Project IMage</span> */}
                 <span>{projectName}</span>
             </div>
             <div className="discription">
