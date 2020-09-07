@@ -35,17 +35,9 @@ const Home = () => {
                 <hr />
             </div>
             <CSSTransitionGroup
-                // transitionEnterTimeout={500}
-                // transitionLeaveTimeout={300}
                 classNames="fade"
                 timeout={2000}
                 in={animate}
-                // transitionName={{
-                //     enter: enter,
-                //     enterActive: enterActive,
-                //     leave: leave,
-                //     leaveActive: leaveActive,
-                // }}
             >
 
                 <Links />

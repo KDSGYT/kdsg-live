@@ -18,17 +18,20 @@ nav {
     box-shadow: 5px 5px 10px rgba($color: #272727, $alpha: 0.5);
     transition: display 1s ease-in;
     overflow: hidden;
+
     li {
         margin: auto 2vw;
         list-style-type: none;
-        &:nth-child(2){
+
+        &:nth-child(1) {
             pointer-events: none;
-            font-family:  Helvetica, sans-serif;
+            font-family: Helvetica, sans-serif;
             text-shadow: 4px 4px 4px rgb(39, 39, 39);
-            color:white;
+            color: white;
             // border:2px solid black;
             letter-spacing: 2px;
         }
+
         .nav-link {
             cursor: pointer;
             // display: none;
@@ -96,8 +99,13 @@ nav {
         justify-content: space-around;
         transition: display 1s ease-in;
         transition: all 0.5s ease-in;
+
         li {
             text-align: center;
+
+            &:nth-child(1){
+                display:none;
+            }
 
             .nav-link {
                 margin-top: 1vh;
@@ -113,61 +121,60 @@ nav {
 
     }
 
+    .toggle {
+        position: block;
 
+        hr {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
 
-}
+            position: absolute;
+            pointer-events: none;
+            transition: all 0.5s ease-in;
 
-.toggle {
-    position: block;
+            &:first-child {
+                transform-origin: center;
+                transform: rotate(45deg);
+            }
 
-    hr {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        
-        position: absolute;
-        pointer-events: none;
-        transition: all 0.5s ease-in;
+            &:nth-child(2) {
+                opacity: 0;
+            }
 
-        &:first-child {
-            transform-origin: center;
-            transform: rotate(45deg);
-        }
+            &:last-child {
+                transform-origin: center;
+                transform: rotate(-45deg);
+            }
 
-        &:nth-child(2) {
-            opacity: 0;
-        }
-
-        &:last-child {
-            transform-origin: center;
-            transform: rotate(-45deg);
-        }
-
-    }
-}
-
-
-.un-toggle {
-    // transition: all 1s ease;
-    position: block;
-
-    hr {
-
-        position: relative;
-        pointer-events: none;
-        transition: all 0.5s ease-out;
-
-        &:first-child {
-            transform: rotate(0deg);
-
-        }
-
-        &:nth-child(2){
-            opacity:100%;
-        }
-
-        &:last-child {
-            transform: rotate(0deg);
         }
     }
+
+
+    .un-toggle {
+        // transition: all 1s ease;
+        position: block;
+
+        hr {
+
+            position: relative;
+            pointer-events: none;
+            transition: all 0.5s ease-out;
+
+            &:first-child {
+                transform: rotate(0deg);
+
+            }
+
+            &:nth-child(2) {
+                opacity: 100%;
+            }
+
+            &:last-child {
+                transform: rotate(0deg);
+            }
+        }
+    }
+
+
 }

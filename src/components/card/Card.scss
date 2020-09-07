@@ -1,19 +1,37 @@
 .my-skillset {
-    // border: 2px solid black;
     margin: auto;
     display: flex;
-    // flex-direction: column;
     justify-content: space-evenly;
     height: auto;
-    // display: inline-block;
     width: 80%;
     height: 10vh;
-    // position: absolute;
-    animation: renderElement 2s ;
+    // animation: renderElement 2s ;
+    
+    
+    & > #skills{
+        position: absolute;
+        width: 80%;
+        height:15%;
+        // border:2px solid black;
+        display: flex;
+        // top:5%;
+        // animation: slide 2s ease-in;
+        img {
+            // border:2px solid black;
+            // position: absolute;
+            // top:10px;
+            // border:2px solid black;
+            margin: auto;
+            height: 10vh;
+        }
+    }
+}
 
-    img {
-        // position: absolute;
-        margin: auto;
-        height: 10vh;
+@keyframes slide{
+    from{
+        // top:10vh
+    }
+    to{
+        // top:auto;
     }
 }
