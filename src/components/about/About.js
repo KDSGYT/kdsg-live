@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import CSSTransitionGroup from 'react-transition-group/CSSTransition';
 import Card from '../card/Card';
 import './About.scss';
 import '../Transition.scss';
