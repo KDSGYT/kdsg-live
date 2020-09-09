@@ -1,6 +1,9 @@
 $main-color: #443b3b;
 
-nav {
+
+
+.navigation,
+#toggle-navigation {
     height: 5vh;
     min-height: 51px;
     top: 0;
@@ -14,7 +17,7 @@ nav {
     background-position: center top;
     background-color: none;
     padding: 0 5vw;
-    z-index: 99;
+    z-index: 10;
     box-shadow: 5px 5px 10px rgba($color: #272727, $alpha: 0.5);
     transition: display 1s ease-in;
     overflow: hidden;
@@ -47,7 +50,15 @@ nav {
     }
 
 
-    #toggle-navigation {
+
+
+
+}
+
+#toggle-navigation {
+    display: none;
+
+    #toggle-button {
         width: 7.5vw;
         display: none;
         // border: 2px solid black;
@@ -93,7 +104,14 @@ nav {
 }
 
 @media screen and (max-width:600px) {
-    nav {
+
+
+    .navigation {
+        // position: absolute;
+        left: -90%;
+        margin-left:-100%;
+        top:6.5vh;
+        height: 100vh;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
@@ -103,8 +121,8 @@ nav {
         li {
             text-align: center;
 
-            &:nth-child(1){
-                display:none;
+            &:nth-child(1) {
+                display: none;
             }
 
             .nav-link {
@@ -112,11 +130,27 @@ nav {
                 position: absolute;
             }
 
-            #toggle-navigation {
-                margin-top: 2vw;
-                display: block;
-            }
 
+
+        }
+
+    }
+
+    #toggle-navigation {
+        // display: flex;
+        display:block;
+        // z-index: 12;/
+
+        li {
+            list-style-type: none;
+
+            #toggle-button {
+                // border:2px solid black;
+                margin-top: 2vw;
+                z-index: 99;
+                // width: auto;
+                display: flex;
+            }
         }
 
     }
