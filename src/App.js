@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './App.scss';
 
 import Navigation from './components/navigation/Navigation';
+import Mobile from './components/mobileNavigation/mobileNavigation'
 import Home from './components/home/Home';
 import Projects from './components/projects/Projects';
 import About from './components/about/About';
@@ -19,28 +20,31 @@ function App() {
 
   })
 
-
+  const navigation = window.innerWidth > 600 ?
+    <Navigation
+      key="navigation"
+      position={
+        offset > 50 ? "sticky"
+          : null
+      }
+      animation={
+        offset > 50 ? "appear 0.5s ease-in"
+          : null
+      }
+    />
+    : <Mobile />
 
   return (
     <>
       <Router>
-      <Navigation 
-        key="navigation" 
-        position={
-          offset > 50 ? "sticky" 
-          : null
-        } 
-        animation={
-          offset > 50 ? "appear 0.5s ease-in" 
-          : null
-          } 
-        />
-
-      <Home key="homeComponent" />
-      <Projects key="projectsComponent" />
-      <About key="aboutComponent" />
-      <Contact key="contactComponent" />
-      <Footer key="footerComponent" />
+        {/* Navigations */
+          navigation
+        }
+        <Home key="homeComponent" />
+        <Projects key="projectsComponent" />
+        <About key="aboutComponent" />
+        <Contact key="contactComponent" />
+        <Footer key="footerComponent" />
 
         <Switch>
           <Route exact path="/social">
