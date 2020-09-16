@@ -13,14 +13,18 @@ import Social from './views/Social/Social';
 function App() {
 
   const [offset, setoffset] = useState(window.pageYOffset);
-
+  const [smartphone, setSmartphone] = useState(window.innerWidth > 600)
   window.addEventListener('scroll', () => {
 
     setoffset(window.pageYOffset);
 
   })
 
-  const navigation = window.innerWidth > 600 ?
+  React.useEffect(() => {
+    setSmartphone(window.innerWidth > 600)    
+  }, [smartphone])
+
+  const navigation =  smartphone?
     <Navigation
       key="navigation"
       position={
@@ -32,7 +36,17 @@ function App() {
           : null
       }
     />
-    : <Mobile />
+    : <Mobile
+      key="navigation"
+      position={
+        offset > 50 ? "sticky"
+          : null
+      }
+      animation={
+        offset > 50 ? "appear 0.5s ease-in"
+          : null
+      }
+    />
 
   return (
     <>
