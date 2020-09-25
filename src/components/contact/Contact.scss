@@ -1,3 +1,46 @@
-#contact{
-    height:100vh;
+#contact {
+    height: 80vh;
+    background-image: url('../../img/contactBackgroundImage.jpg');
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    &::after {
+        position: absolute;
+        left: 0;
+        top: 0;
+        content: " ";
+        height: 100%;
+        width: 100%;
+        background-color: rgba(102, 99, 99, 0.5);
+        pointer-events: none;
+    }
+}
+
+#contact-form {
+    position: relative;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    z-index: 3;
+    background-color: rgba(255, 255, 255, 0.747);
+    height: 50vh;
+    width: 30vw;
+    padding: 1% 2%;
+
+    #name-fields {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+    }
+    #submit-button{
+        width: 100px;
+        height:45px;
+        // margin:0 auto;
+    }
 }

@@ -5,7 +5,7 @@ import './mobileNavigation.scss'
 const useStyles = makeStyles({
     navigation: {
         backgroundColor: "#443b3b",
-        height: "5.8vh",
+        height: "6vh",
         transition: "display 1s ease-in",
         width:"100%",
         zIndex:"10"
@@ -23,18 +23,20 @@ const useStyles = makeStyles({
 
     },
     hiddenLinks: {
+        top:"6vh",
         position: "absolute",
-        left: "-60%",
+        // left: "-60%",
         zIndex: "5",
         backgroundColor: "#443b3b",
         width: "100%",
         textAlign: "center",
         height: "96.7vh",
+        color:"white",
 
         // needs to be duplicated
         display: "flex",
         flexDirection: "column",
-        justifyContent: "space-around",
+        justifyContent: "space-evenly",
         transition: "all 1s ease"
 
     },
@@ -43,7 +45,11 @@ const useStyles = makeStyles({
         display: "flex",
         flexDirection: "column",
         justifyContent: "space-between"
-    }
+    },
+    line1Style:{
+        // transformOrigin:"(-50%,0)",
+        transform:"roatate(0.5turn)"
+    }, line2:{}
 })
 
 
@@ -63,7 +69,7 @@ function MobileNavigation({position, animation}) {
         >
             <ToggleButton links={links} />
 
-            <ul ref={links} className={hiddenLinks}>
+            <ul ref={links} className={hiddenLinks }>
                 <Links />
             </ul>
         </nav>
@@ -74,16 +80,19 @@ function ToggleButton({ links }) {
 
     const {
         toggleButton,
-        line
+        line,
+        line1Style
     } = useStyles()
 
     const lines = useRef();
+    const line1 = useRef();
+    const line2 = useRef();
     const [toggle, setToggle] = React.useState(false)
 
     React.useEffect(() => {
-        console.log(toggle);
         if (toggle) {
             links.current.style.left = "0%"
+            // lines.current.style.
         } else {
             links.current.style.left = "-100%"
         }
@@ -94,10 +103,10 @@ function ToggleButton({ links }) {
             onClick={() => toggle ? setToggle(!toggle) : setToggle(!toggle)}
             className={toggleButton}
         >
-            <span ref={lines} className={line}>
-                <hr />
-                <hr />
-                <hr />
+            <span ref={lines} id="lines" className={line} >
+                <hr  ref={line1} className={ line1Style, "button-line"}/>
+                <hr className="button-line"/>
+                <hr ref={line2}className="button-line"/>
             </span>
         </button>
     )

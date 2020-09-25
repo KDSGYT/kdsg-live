@@ -1,3 +1,6 @@
+
+
+
 // @media screen and (max-width:600px) {
 
 
@@ -127,3 +130,17 @@
 
 
 // }
+
+
+#lines{
+    .button-line{
+        content: " ";
+        border:1.5px solid white;
+        color:white;
+    }
+    &:first-child{
+        border:2px solid black;
+        // color:black;
+        // justify-content:  ;
+    }
+}

@@ -1,11 +1,86 @@
-import React from 'react';
+import React, { useState, useRef } from 'react';
 import './Contact.scss';
+import TextField from '@material-ui/core/TextField';
+import Icon from '@material-ui/core/Icon';
+import Button from '@material-ui/core/Button';
 
-const Contact = () =>{
-    return(
+
+
+const Contact = () => {
+    return (
         <section id="contact">
-            Something
+            <Form />
         </section>
+    )
+}
+
+const Form = () => {
+
+
+    const name = useRef("")
+    const message = useRef("")
+    const subject = useRef("")
+
+    const [state, setState] = useState()
+
+    function handleSubmit(e) {
+        e.preventDefault()
+
+        window.location.href = state;
+
+    }
+    function handleChange() {
+        let nameValue = name.current.value;
+        let subjectValue = subject.current.value;
+        let messageValue = message.current.value;
+        setState(`mailto:kdsgyt@gmail.com?cc=${nameValue}?subject=${subjectValue}&body=${messageValue}`)
+    }
+    React.useEffect(() => {
+
+
+    }, [name.current.value, subject.current.value, message.current.value])
+
+    React.useEffect(() => {
+        console.log(state)
+    }, [state])
+
+    return (
+        <form onSubmit={handleSubmit} id="contact-form" noValidate autoComplete="off">
+            <div id="name-fields">
+                <TextField
+                    id="name"
+                    label="Name"
+                    variant="outlined"
+                    ref={name}
+                    onChange={handleChange}
+
+                />
+                <TextField
+                    id="subject"
+                    label="Subject"
+                    variant="outlined"
+                    ref={subject}
+                    onChange={handleChange}
+
+                />
+            </div>
+            <TextField
+                id="message"
+                label="Message"
+                multiline
+                variant="outlined"
+                rows={6}
+                ref={message}
+                onChange={handleChange}
+            />
+            <Button
+
+                id="submit-button"
+                variant="contained"
+                color="primary"
+                type={"submit"}
+            >Send</Button>
+        </form>
     )
 }
 

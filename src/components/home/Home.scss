@@ -5,15 +5,11 @@
     height: 95vh;
     width: 100%;
     position: relative;
-    // background-color: rgba(89, 82, 82, 0.9);
-
     background-image: url('../../img/homeBackgroundImage_opt.jpg');
     background-position: top center;
     background-size: cover;
     background-repeat: no-repeat;
     background-clip: border-box;
-    // z-index: 2;
-    // overflow: hidden;
 
     &::after {
         content: "";
@@ -26,6 +22,7 @@
         background-size: contain;
         width: 100%;
         z-index: 0;
+        pointer-events: none;
     }
 
     .name {
