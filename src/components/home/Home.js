@@ -6,27 +6,12 @@ import Links from './Links';
 import CSSTransitionGroup from 'react-transition-group/CSSTransition';
 
 const Home = () => {
+    // This will determine that will the animation 
+    const [makeNavbarStick, setmakeNavbarSticky] = React.useState(false);
 
-    const [animate, setAnimate] = React.useState(false);
     useEffect(() => {
-        setAnimate(true)
+        setmakeNavbarSticky(true)
     }, [])
-
-    // const enter = css({ opacity: 0.01 });
-
-    // const enterActive = css({
-    //     opacity: 1,
-    //     transition: 'opacity 500ms ease-in',
-    // });
-
-    // const leave = css({ opacity: 1 });
-
-    // const leaveActive = css({
-    //     opacity: 0.01,
-    //     transition: 'opacity 300ms ease-in',
-    // });
-
-
 
     return (
         <section id="home">
@@ -37,7 +22,7 @@ const Home = () => {
             <CSSTransitionGroup
                 classNames="fade"
                 timeout={2000}
-                in={animate}
+                in={makeNavbarStick}
             >
 
                 <Links />

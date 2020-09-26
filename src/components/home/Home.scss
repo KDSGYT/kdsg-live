@@ -34,7 +34,8 @@
         position: relative;
         z-index: 1;
 
-        & > span {
+        &>span {
+            display: block;
             height: 65%;
             margin: auto;
             font-size: 3.4rem;
@@ -48,31 +49,34 @@
             letter-spacing: -1px;
             // border-right: 4px solid rgba(255, 255, 255, 1);
             font-family: monospace;
-            
-            &::after{
-                position: absolute;
-                background-color:white;
-                // border:2px solid white;
-                fill: white;
-                content: " ";
-                right:-2;
-                height:50%;
-                width: 4px;
-                transition: all  0s ;
-                animation: blink 1s linear infinite;
-            }
+
+
             // transform:;            
         }
 
-        
+        &::after {
+            position: absolute;
+            background-color: white;
+            top:0;
+            right:0;
+            fill: white;
+            content: " ";
+            right: -2;
+            height: 50%;
+            width: 4px;
+            // transition: none 0s;
+            animation: blink 0.8s linear infinite;
+        }
+
+
 
         @keyframes blink {
             from {
-                background:white;
+                background: white;
             }
 
             to {
-                background: transparent ;
+                background: transparent;
             }
 
         }
