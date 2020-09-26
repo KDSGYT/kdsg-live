@@ -1,7 +1,6 @@
 import React, { useState, useRef } from 'react';
 import './Contact.scss';
 import TextField from '@material-ui/core/TextField';
-import Icon from '@material-ui/core/Icon';
 import Button from '@material-ui/core/Button';
 
 

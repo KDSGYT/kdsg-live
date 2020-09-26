@@ -21,7 +21,22 @@ function ProjectGrid() {
                         timeout={2000}
                         in={animate}
                     >
-                        <div className="grid">
+                        <div className="flex-box">
+                            <div className="flex-element">
+                                <Project snapshotUrl={'https://i.ibb.co/m9ShMMt/subCount.png'} projectName={"SubsCount"} url={'http://subscount.kdsg.live'} />
+                            </div>
+                            <div className="flex-element">
+                                <Project snapshotUrl={snapshotUrl} />
+                            </div>
+                            <div className="flex-element">
+                                <Project snapshotUrl={snapshotUrl} />
+                            </div>
+                            <div className="flex-element">
+                                <Project snapshotUrl={snapshotUrl} />
+                            </div>
+                        </div>
+
+                        {/* <div className="grid">
                             <div className="grid-element">
                                 <Project snapshotUrl={'https://i.ibb.co/m9ShMMt/subCount.png'} projectName={"SubsCount"} url={'http://subscount.kdsg.live'} />
                             </div>
@@ -34,7 +49,7 @@ function ProjectGrid() {
                             <div className="grid-element">
                                 <Project snapshotUrl={snapshotUrl} />
                             </div>
-                        </div>
+                        </div> */}
                     </CSSTransitionGroup>
                 </div>
                 <CTX.Consumer>

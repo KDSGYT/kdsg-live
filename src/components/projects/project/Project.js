@@ -7,7 +7,7 @@ import './Project.scss'
 const Project = ({ projectName = "placeholderText", url, snapshotUrl }) => {
 
     const bottom = useRef(null)
-    const [showExpo, setShowExpo] = useState(false);
+    // const [showExpo, setShowExpo] = useState(false);
     
     // const expo = showExpo ?
     //     <Expo
