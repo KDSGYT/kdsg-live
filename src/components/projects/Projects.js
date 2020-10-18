@@ -22,6 +22,7 @@ const Projects = () => {
     if(render){
         return (
             <section className="projects" name="projects" id="projects">
+                <h1>This is master branch</h1>
                 <ProjectGrid />
             </section>
         );
