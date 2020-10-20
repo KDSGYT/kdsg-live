@@ -130,39 +130,8 @@
 
 
 // }
-$maincolor : #443b3b;
-#navigation{
-    background-color: $maincolor;
-    height:6vh;
-    width:100%;
-    z-index:10;
-    box-shadow: 5px 5px 10px rgba($color: #272727, $alpha: 0.5);
-    transition: display 1s ease-in;
 
-    #toggle-button{
-        border: none;
-        width:35px;
-        height: 25px;
-        background-color: $maincolor;
-        outline: none;
-        margin-left: 10px;
-        margin-top: 1px;
-    }
-    #hidden-links{
-        top: 6vh;
-        position:absolute;
-        z-index: 10;
-        background-color: $maincolor;
-        width: 100%;
-        text-align: center;
-        height: 96.7vh;
-        color:white;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        transition: all 1s ease;
-    }
-}
+
 #lines{
     .button-line{
         content: " ";
