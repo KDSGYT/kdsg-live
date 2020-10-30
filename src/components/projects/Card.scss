@@ -3,7 +3,6 @@
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.336);
     border-radius: 8px;
     margin: auto 5%;
-    border: 2px solid black;
     width: 40vw;
     max-width: 30vh;
     min-height: 36vh;
@@ -27,7 +26,7 @@
     }
 
     h1{
-        font-size: 2rem;
+        font-size: 2.4em;
     }
     h2{
         font-size: 1.7rem;
@@ -35,6 +34,8 @@
 
     .technologies-list{
         // border:2px solid black;
+        width: 80%;
+        margin: auto;
         display: grid;
         grid-template-columns: auto auto;
         li{

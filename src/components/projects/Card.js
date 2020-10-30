@@ -17,8 +17,8 @@ function Card({ projectName, projectImage, technologiesUsed, links }) {
                 {technologiesUsedList}
             </ul>
             <ul className="usefulLinks">
-                <li><a href={github} target="_blank">Github</a> </li>
-                <li><a href={website} target="_blank">Website</a> </li>
+                <li><a href={github} rel="noopener noreferrer" target="_blank">Github</a> </li>
+                <li><a href={website} rel="noopener noreferrer" target="_blank">Website</a> </li>
             </ul>
         </div>
     )
