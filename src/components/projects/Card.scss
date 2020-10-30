@@ -1,0 +1,77 @@
+.card {
+    text-align: center;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.336);
+    border-radius: 8px;
+    margin: auto 5%;
+    border: 2px solid black;
+    width: 40vw;
+    max-width: 30vh;
+    min-height: 36vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+    text-align: center;
+    background-color: white;
+    
+
+    .project-image {
+        align-content: center;
+        margin: auto;
+        border: 2px solid black;
+        min-height: 15vh;
+        min-width:  15vh;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+    }
+
+    h1{
+        font-size: 2rem;
+    }
+    h2{
+        font-size: 1.7rem;
+    }
+
+    .technologies-list{
+        // border:2px solid black;
+        display: grid;
+        grid-template-columns: auto auto;
+        li{
+            // border:2px solid black;
+            margin:1%
+        }
+    }
+
+
+    ul {
+        list-style-type: none;
+
+        li {
+            a {
+                color: black;
+                text-decoration: none;
+                &:hover{
+                    color:rgb(107, 107, 107);
+                    cursor: pointer;
+                }
+            }
+
+        }
+
+    }
+
+    .usefulLinks {
+
+        width: 80%;
+        margin: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+
+        a {
+            font-size: 1.5rem;
+        }
+    }
+
+}
