@@ -1,67 +1,13 @@
 .projects {
     height: 60vh;
     width: 100%;
-    background-color: rgba(255, 255, 255, 1);
+    background-color: rgb(202, 202, 202);
     z-index: 1;
     box-sizing: content-box;
-    overflow: hidden;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 
-    //flexbox is being coded from here
-    .flex-box{
-        display: flex;
-        border:2px solid black;
-        width: auto;
-        .flex-element{
-            height: 30px;
-        }
-    }
-
-    .grid-container {
-        // border:2px solid black;
-        position: relative;
-        height: 100%;
-        margin: auto;
-        width: 100%;
-        min-width: 800px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        
-        .grid {
-            border: 2px solid black;
-            position: absolute;
-            display: grid;
-            margin: auto;
-            // grid-template-columns: minmax(200px, auto) minmax(200px, auto) minmax(200px, auto) minmax(200px, auto);
-            // grid-template-columns: auto ;
-            animation: showProjects 1.5s ease;
-
-            .grid-element {
-                width: 100%;
-                min-height: 200px;
-                height: 25%;
-            }
-
-        }
-    }
-}
-
-@media all and (max-width: 860px) {
-    .grid-container {
-        .grid {
-            // width: ;
-            grid-template-columns: none;
-            grid-template-columns: minmax(20px, 250px) ;
-        }
-    }
-}
-
-@keyframes showProjects {
-    0% {
-        top: 60vh;
-    }
-
-    100% {
-        top: 17.5vh;
-    }
+    
 }

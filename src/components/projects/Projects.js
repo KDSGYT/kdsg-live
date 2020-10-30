@@ -1,38 +1,42 @@
-import React, { useEffect, useState } from 'react';
-import ProjectGrid from './ProjectGrid';
-import './Projects.scss';
+import React from 'react';
+import "./Projects.scss";
+import Card from './Card';
+import SubsCount from '../../img/subCount.png'
 
-const Projects = () => {
+function Projects() {
 
-    const [render, setrender] = useState(false)
-    
-    useEffect(() => {
-        document.addEventListener( 'scroll', () => {
-            if ((window.pageYOffset) > (window.innerHeight /3)) {
-                setrender(true);
+    const cards = [
+        {
+            name: "SubsCount",
+            projectImage: SubsCount,
+            technologies: [
+                'HTML',
+                'ReactJs',
+                'SCSS',
+                'Material-UI'
+            ],
+            links: {
+                github: "https://github.com/KDSGYT/subsCount-react",
+                website: "https://kdsgyt.github.io/subsCount-react/"
             }
-        })        
-    }, [])
+        }
+    ]
 
-    // function showProject(id) {
-        
-    // }
+    const cardData = cards.map(({ name, projectImage, technologies, links }) => {
+        return <Card
+            projectName={name}
+            projectImage={projectImage}
+            technologiesUsed={technologies}
+            links={links}
+        />
+    })
 
-    
-    if(render){
-        return (
-            <section className="projects" name="projects" id="projects">
-                <h1>This is master branch</h1>
-                <ProjectGrid />
-            </section>
-        );
-    } else {
-        return(
-            <section className="projects" name="projects" id="projects">
+    return (
+        <section className={"projects"}>
+            {cardData}
 
-            </section>
-        )
-    }
+        </section>
+    )
 }
 
 export default Projects
