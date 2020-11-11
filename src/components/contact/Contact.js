@@ -24,24 +24,25 @@ const Form = () => {
 
     function handleSubmit(e) {
         e.preventDefault()
-
-        window.location.href = state;
+        window.open(state)
+        // window.location.href = state;
 
     }
     function handleChange() {
         let nameValue = name.current.value;
         let subjectValue = subject.current.value;
         let messageValue = message.current.value;
-        setState(`mailto:kdsgyt@gmail.com?cc=${nameValue}?subject=${subjectValue}&body=${messageValue}`)
+        // console.log(nameValue)
+        setState(`mailto:kdsgyt@gmail.com?cc=${nameValue}&subject=${subjectValue}&body=${messageValue}`)
     }
     React.useEffect(() => {
 
 
+        console.log(subject)
     }, [name.current.value, subject.current.value, message.current.value])
 
-    React.useEffect(() => {
-        console.log(state)
-    }, [state])
+    // React.useEffect(() => {
+    // }, [state])
 
     return (
         <form onSubmit={handleSubmit} id="contact-form" noValidate autoComplete="off">
@@ -50,7 +51,8 @@ const Form = () => {
                     id="name"
                     label="Name"
                     variant="outlined"
-                    ref={name}
+                    // ref={name}
+                    inputRef={name}
                     onChange={handleChange}
 
                 />
@@ -58,7 +60,7 @@ const Form = () => {
                     id="subject"
                     label="Subject"
                     variant="outlined"
-                    ref={subject}
+                    inputRef={subject}
                     onChange={handleChange}
 
                 />
@@ -69,7 +71,7 @@ const Form = () => {
                 multiline
                 variant="outlined"
                 rows={6}
-                ref={message}
+                inputRef={message}
                 onChange={handleChange}
             />
             <Button
