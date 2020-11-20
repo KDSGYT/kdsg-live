@@ -39,28 +39,19 @@
             display: none;
         }
 
-        // li {
-        //     position: absolute;
-        //     display: flex;
-        //     flex-direction: column;
-        //     justify-content: center;
-        //     #links{
-        //         border: 2px solid black;
-        //     }
-        // }
         #links {
             position: absolute;
-            z-index: 999;
-            top:8vh;
+            // z-index: 999;
+            top:5vh;
             // bottom: -00%;
             left: -100%;
             text-align: center;
             background-color: $main-color;
-            height: 92vh;
+            height: 95vh;
             width: 100%;
             display: flex;
             flex-direction: column;
-            justify-content: start;
+            justify-content: flex-start;
             transition: all 0.7s ease-in;
             // animation: 3s linear slidein;
             // display: none;

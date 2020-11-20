@@ -37,12 +37,13 @@ function Projects() {
         }
     ]
 
-    const cardData = cards.map(({ name, projectImage, technologies, links }) => {
+    const cardData = cards.map(({ name, projectImage, technologies, links }, index) => {
         return <Card
             projectName={name}
             projectImage={projectImage}
             technologiesUsed={technologies}
             links={links}
+            key={index}
         />
     })
 
