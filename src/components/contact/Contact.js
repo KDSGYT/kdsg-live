@@ -35,14 +35,6 @@ const Form = () => {
         // console.log(nameValue)
         setState(`mailto:kdsgyt@gmail.com?cc=${nameValue}&subject=${subjectValue}&body=${messageValue}`)
     }
-    React.useEffect(() => {
-
-
-        console.log(subject)
-    }, [name.current.value, subject.current.value, message.current.value])
-
-    // React.useEffect(() => {
-    // }, [state])
 
     return (
         <form onSubmit={handleSubmit} id="contact-form" noValidate autoComplete="off">

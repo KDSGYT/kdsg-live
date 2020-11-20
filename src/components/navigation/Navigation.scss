@@ -1,5 +1,5 @@
-$main-color: #443b3b;
-
+@import '../../assets/Animations.scss';
+@import '../../assets/Variables.scss';
 .navigation,
 #toggle-navigation {
     height: 5vh;
@@ -19,31 +19,47 @@ $main-color: #443b3b;
     box-shadow: 5px 5px 10px rgba($color: #272727, $alpha: 0.5);
     transition: display 1s ease-in;
     overflow: hidden;
+    
+    #toggle-button {
+        display: none;
+    }
+
+    & #website-name {
+        pointer-events: none;
+        font-family: Helvetica, sans-serif;
+        text-shadow: 4px 4px 4px rgb(39, 39, 39);
+        color: white;
+        // border:2px solid black;
+        letter-spacing: 2px;
+    }
 
     li {
         margin: auto 2vw;
         list-style-type: none;
+        color: white;
 
-        &:nth-child(1) {
-            pointer-events: none;
-            font-family: Helvetica, sans-serif;
-            text-shadow: 4px 4px 4px rgb(39, 39, 39);
-            color: white;
-            // border:2px solid black;
-            letter-spacing: 2px;
+
+        &:hover {
+            color: rgb(177, 177, 177);
         }
+
+    }
+
+    div {
+        display: block;
+        // border: 2px solid white;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
 
         .nav-link {
             cursor: pointer;
             // display: none;
-            color: white;
+            // color: white;
             font-weight: 400;
             font-size: 1.2rem;
             text-decoration: none;
 
-            &:hover {
-                color: rgb(177, 177, 177);
-            }
         }
     }
 
@@ -52,29 +68,30 @@ $main-color: #443b3b;
 
 
 }
+
 
 #toggle-navigation {
     display: none;
 }
 
-@keyframes show {
+// @keyframes show {
 
-    0% {
-        opacity: 0%;
-    }
+//     0% {
+//         opacity: 0%;
+//     }
 
-    100% {
-        opacity: 100%;
-    }
-}
+//     100% {
+//         opacity: 100%;
+//     }
+// }
 
-@keyframes appear {
-    0% {
-        top: -4vh;
+// @keyframes appear {
+//     0% {
+//         top: -4vh;
 
-    }
+//     }
 
-    100% {
-        top: 0px;
-    }
-}
+//     100% {
+//         top: 0px;
+//     }
+// }

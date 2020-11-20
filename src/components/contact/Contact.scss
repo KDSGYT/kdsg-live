@@ -31,7 +31,7 @@
     height: 50vh;
     min-width: 350px;
     max-width: 500px;
-    width: 30vw;
+    width: 60%;
     padding: 1% 2%;
 
     #name-fields {
@@ -39,10 +39,24 @@
         flex-direction: row;
         justify-content: space-between;
 
+        #subject,
+        #name {
+            width: 35%;
+            max-width: 40%;
+        }
     }
-    #submit-button{
+
+    #submit-button {
         width: 100px;
-        height:45px;
+        height: 45px;
         // margin:0 auto;
     }
 }
+
+// @media all and (max-width:480px) {
+//     #contact-form {
+//         #name-field {}
+
+//         #submit-button {}
+//     }
+// }

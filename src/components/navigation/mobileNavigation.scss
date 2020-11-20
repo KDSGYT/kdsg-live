@@ -1,0 +1,74 @@
+@import '../../assets/Variables.scss';
+
+@media all and (max-width: 480px) {
+
+    .navigation {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height:5vh;
+        overflow: visible;
+
+        #toggle-button {
+            display: block;
+            margin: auto 0;
+            border: none;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 10%;
+            height: 100%;
+            overflow: hidden;
+            background-color: transparent;
+            outline: none;
+
+            .button-line {
+                height: 20%;
+                width: 100%;
+
+                hr {
+                    border: none;
+                    height: 3px;
+                    background-color: white;
+                }
+            }
+        }
+
+        #website-name {
+            display: none;
+        }
+
+        // li {
+        //     position: absolute;
+        //     display: flex;
+        //     flex-direction: column;
+        //     justify-content: center;
+        //     #links{
+        //         border: 2px solid black;
+        //     }
+        // }
+        #links {
+            position: absolute;
+            z-index: 999;
+            top:8vh;
+            // bottom: -00%;
+            left: -100%;
+            text-align: center;
+            background-color: $main-color;
+            height: 92vh;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            transition: all 0.7s ease-in;
+            // animation: 3s linear slidein;
+            // display: none;
+        }
+        
+
+    }
+
+
+
+}

@@ -1,0 +1,21 @@
+@keyframes show {
+
+    0% {
+        opacity: 0%;
+    }
+
+    100% {
+        opacity: 100%;
+    }
+}
+
+@keyframes appear {
+    0% {
+        top: -4vh;
+
+    }
+
+    100% {
+        top: 0px;
+    }
+}
