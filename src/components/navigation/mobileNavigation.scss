@@ -8,6 +8,7 @@
         flex-direction: column;
         justify-content: space-around;
         height:5vh;
+        overflow: visible;
 
         #toggle-button {
             display: block;
@@ -47,21 +48,21 @@
         //         border: 2px solid black;
         //     }
         // }
-        div {
+        #links {
             position: absolute;
-            z-index: 9;
-            top:0;
-            // bottom: -7.5%;
-            // left: 0;
+            z-index: 999;
+            top:8vh;
+            // bottom: -00%;
+            left: -100%;
             text-align: center;
-            // background-color: $main-color;
-            background-color: transparent;
-            height: 95vh;
-            width: 99vw;
-            border: 2px solid black;
+            background-color: $main-color;
+            height: 92vh;
+            width: 100%;
             display: flex;
             flex-direction: column;
             justify-content: start;
+            transition: all 0.7s ease-in;
+            // animation: 3s linear slidein;
             // display: none;
         }
         
