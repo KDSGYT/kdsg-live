@@ -1,0 +1,73 @@
+@import '../../assets/Variables.scss';
+
+@media all and (max-width: 480px) {
+
+    .navigation {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height:5vh;
+
+        #toggle-button {
+            display: block;
+            margin: auto 0;
+            border: none;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 10%;
+            height: 100%;
+            overflow: hidden;
+            background-color: transparent;
+            outline: none;
+
+            .button-line {
+                height: 20%;
+                width: 100%;
+
+                hr {
+                    border: none;
+                    height: 3px;
+                    background-color: white;
+                }
+            }
+        }
+
+        #website-name {
+            display: none;
+        }
+
+        // li {
+        //     position: absolute;
+        //     display: flex;
+        //     flex-direction: column;
+        //     justify-content: center;
+        //     #links{
+        //         border: 2px solid black;
+        //     }
+        // }
+        div {
+            position: absolute;
+            z-index: 9;
+            top:0;
+            // bottom: -7.5%;
+            // left: 0;
+            text-align: center;
+            // background-color: $main-color;
+            background-color: transparent;
+            height: 95vh;
+            width: 99vw;
+            border: 2px solid black;
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            // display: none;
+        }
+        
+
+    }
+
+
+
+}

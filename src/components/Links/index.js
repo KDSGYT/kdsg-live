@@ -15,7 +15,7 @@ const Links = () => {
         <React.Fragment>
             {links.map((item, index) => {
                 return (
-                    <li key={index}>
+                    <li key={index} className="links">
                         <Link
                             className="nav-link"
                             spy={true}
