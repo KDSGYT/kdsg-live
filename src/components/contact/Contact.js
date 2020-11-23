@@ -46,7 +46,7 @@ const Form = () => {
                     // ref={name}
                     inputRef={name}
                     onChange={handleChange}
-
+                    className={"color"}
                 />
                 <TextField
                     id="subject"

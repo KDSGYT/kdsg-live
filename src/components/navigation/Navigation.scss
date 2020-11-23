@@ -1,5 +1,6 @@
 @import '../../assets/Animations.scss';
 @import '../../assets/Variables.scss';
+
 .navigation,
 #toggle-navigation {
     height: 5vh;
@@ -11,15 +12,13 @@
     box-sizing: border-box;
     background-position: top;
     background-color: $main-color;
-    background-repeat: none;
     background-position: center top;
-    background-color: none;
     padding: 0 5vw;
     z-index: 10;
     box-shadow: 5px 5px 10px rgba($color: #272727, $alpha: 0.5);
     transition: display 1s ease-in;
     overflow: hidden;
-    
+
     #toggle-button {
         display: none;
     }
@@ -74,24 +73,68 @@
     display: none;
 }
 
-// @keyframes show {
+// @import '../../assets/Variables.scss';
+// Mobile navigation for smartphones
+@media screen and (max-width: 960px) {
 
-//     0% {
-//         opacity: 0%;
-//     }
+    .navigation {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 5vh;
+        overflow: visible;
 
-//     100% {
-//         opacity: 100%;
-//     }
-// }
+        #toggle-button {
+            margin: auto 0;
+            border: none;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 10%;
+            max-width: 40px;
+            height: 100%;
+            overflow: hidden;
+            background-color: transparent;
+            outline: none;
 
-// @keyframes appear {
-//     0% {
-//         top: -4vh;
+            .button-line {
+                height: 20%;
+                width: 100%;
 
-//     }
+                hr {
+                    border: none;
+                    height: 3px;
+                    background-color: white;
+                }
+            }
+        }
 
-//     100% {
-//         top: 0px;
-//     }
-// }
+        #website-name {
+            display: none;
+        }
+
+        #links {
+            position: absolute;
+            // z-index: 999;
+            top: 5vh;
+            // bottom: -00%;
+            left: -100%;
+            text-align: center;
+            background-color: $main-color;
+            height: 95vh;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            transition: all 0.7s ease-in;
+            // animation: 3s linear slidein;
+            // display: none;
+        }
+
+
+    }
+
+
+
+}

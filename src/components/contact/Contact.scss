@@ -32,6 +32,7 @@
     min-width: 350px;
     max-width: 500px;
     width: 60%;
+    max-height: 60vw;
     padding: 1% 2%;
 
     #name-fields {
@@ -39,10 +40,12 @@
         flex-direction: row;
         justify-content: space-between;
 
+        
         #subject,
         #name {
+            
             width: 35%;
-            max-width: 40%;
+            // max-width: 40%;
         }
     }
 
