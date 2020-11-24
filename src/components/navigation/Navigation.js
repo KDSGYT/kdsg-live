@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react';
-import './Navigation.scss';
 import Links from '../Links';
+import './Navigation.scss';
 import './mobileNavigation.scss';
 
 const Navigation = ({ position, togglePosition, animation }) => {

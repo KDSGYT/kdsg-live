@@ -1,16 +1,17 @@
 import React, { useEffect } from 'react';
 import '../Transition.scss'
-import './Home.scss';
 import SVG from '../SVG'
 import Links from './Links';
 import CSSTransitionGroup from 'react-transition-group/CSSTransition';
+import './Home.scss';
 
 const Home = () => {
     // This will determine that will the animation 
     const [makeNavbarStick, setmakeNavbarSticky] = React.useState(false);
 
     useEffect(() => {
-        setmakeNavbarSticky(true)
+        setmakeNavbarSticky(true);
+        console.log("did")
     }, [])
 
     return (
