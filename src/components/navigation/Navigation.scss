@@ -1,12 +1,12 @@
 @import '../../assets/Animations.scss';
 @import '../../assets/Variables.scss';
 
-.navigation,
-#toggle-navigation {
+//Basic Navigation styles
+.navigation {
     height: 5vh;
     min-height: 51px;
     top: 0;
-    width: 100%;
+    width: 100vw;
     display: flex;
     flex-direction: row;
     box-sizing: border-box;
@@ -19,10 +19,23 @@
     transition: display 1s ease-in;
     overflow: hidden;
 
+    //hide the hamburger icon not mobile device
     #toggle-button {
+        margin: auto 0;
+        border: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 10%;
+        max-width: 40px;
+        height: 100%;
+        overflow: hidden;
+        background-color: transparent;
+        outline: none;
         display: none;
     }
-
+    
+    //Website name styles
     & #website-name {
         pointer-events: none;
         font-family: Helvetica, sans-serif;
@@ -44,6 +57,7 @@
 
     }
 
+    //Arrange the links according to screen size
     div {
         display: block;
         // border: 2px solid white;
@@ -69,11 +83,6 @@
 }
 
 
-#toggle-navigation {
-    display: none;
-}
-
-// @import '../../assets/Variables.scss';
 // Mobile navigation for smartphones
 @media screen and (max-width: 960px) {
 
@@ -86,17 +95,7 @@
         overflow: visible;
 
         #toggle-button {
-            margin: auto 0;
-            border: none;
             display: flex;
-            flex-direction: column;
-            justify-content: center;
-            width: 10%;
-            max-width: 40px;
-            height: 100%;
-            overflow: hidden;
-            background-color: transparent;
-            outline: none;
 
             .button-line {
                 height: 20%;

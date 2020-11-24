@@ -1,5 +1,6 @@
 import React from 'react'
 import './Card.scss'
+
 function Card({ projectName, projectImage, technologiesUsed, links }) {
 
     const technologiesUsedList = technologiesUsed.map((tech, index) => {
