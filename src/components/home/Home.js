@@ -7,12 +7,12 @@ import './Home.scss';
 
 const Home = () => {
     // This will determine that will the animation 
-    const [makeNavbarStick, setmakeNavbarSticky] = React.useState(false);
+    const [fadeInLinks, setfadeInLinks] = React.useState(false);
 
+    //When links mount into the DOM
     useEffect(() => {
-        setmakeNavbarSticky(true);
-        console.log("did")
-    }, [])
+        setfadeInLinks(true);
+    })
 
     return (
         <section id="home">
@@ -20,14 +20,15 @@ const Home = () => {
                 <span>Karan Pal Singh</span>
                 <hr />
             </div>
+            {/* FadeIN the Links */}
             <CSSTransitionGroup
                 classNames="fade"
                 timeout={2000}
-                in={makeNavbarStick}
+                in={fadeInLinks}
             >
-
                 <Links />
             </CSSTransitionGroup>
+            {/* Floating Arrow */}
             <div className="downArrow">
                 <SVG />
             </div>

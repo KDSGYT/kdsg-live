@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import '../../assets/Animations.scss';
+@import '../../assets/Variables.scss';
 
 #home {
     display: flex;
@@ -7,15 +8,17 @@
     position: relative;
     background-image: url('../../img/homeBackgroundImage_opt.jpg');
     background-position: top center;
+    // background-position: fixed;
     background-size: cover;
     background-repeat: no-repeat;
     background-clip: border-box;
 
+    // shade to make the background darker
     &::after {
         content: "";
         position: absolute;
         background-image: none;
-        background-color: rgba(102, 99, 99, 0.7);
+        background-color: $imageOverlayColor;
         left: 0;
         top: 0;
         height: 100%;
@@ -47,18 +50,14 @@
             white-space: nowrap;
             width: 13.6ch;
             letter-spacing: -1px;
-            // border-right: 4px solid rgba(255, 255, 255, 1);
             font-family: monospace;
-
-
-            // transform:;            
         }
 
         &::after {
             position: absolute;
             background-color: white;
-            top:0;
-            right:0;
+            top: 0;
+            right: 0;
             fill: white;
             content: " ";
             right: -2;
@@ -66,33 +65,6 @@
             width: 4px;
             // transition: none 0s;
             animation: blink 0.8s linear infinite;
-        }
-
-
-
-        @keyframes blink {
-            from {
-                background: white;
-            }
-
-            to {
-                background: transparent;
-            }
-
-        }
-
-
-
-        @keyframes type {
-            0% {
-                width: 0ch;
-            }
-
-            100% {
-                width: 14ch;
-
-            }
-
         }
     }
 
@@ -105,10 +77,6 @@
         width: 100%;
         min-width: 100px;
         z-index: 1;
-        // animation: show 2s ease-out;
-        // transition: all 2s ease-in;
-        // border:2px solid black;
-        // z-index: inherit;
 
         a {
             font-size: 1em;
@@ -142,24 +110,7 @@
             }
         }
     }
-
-    @keyframes show {
-
-        from {
-            // z-index: inherit;
-            z-index: 3;
-            // opacity: 0%;
-            top: 58%;
-        }
-
-        to {
-            z-index: 3;
-            // opacity: 100%;
-            top: 53%;
-        }
-    }
 }
-
 
 .downArrow {
     margin: auto;
@@ -200,22 +151,5 @@
 
             }
         }
-    }
-}
-
-
-
-@keyframes float {
-
-    0% {
-        transform: translateY(0px)
-    }
-
-    50% {
-        transform: translateY(-20px);
-    }
-
-    100% {
-        transform: translatey(0px);
     }
 }

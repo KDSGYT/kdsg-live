@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import './App.scss';
-
 import Navigation from './components/navigation/Navigation';
-// import Mobile from './components/mobileNavigation/mobileNavigation'
 import Home from './components/home/Home';
 import Projects from './components/projects/Projects';
 import About from './components/about/About';
@@ -10,7 +8,7 @@ import Footer from './components/footer/Footer';
 import Contact from './components/contact/Contact';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Social from './views/Social/Social';
-
+import Grid from './components/photoGrid/PhotoGrid';
 function App() {
 
   const [offset, setoffset] = useState(window.pageYOffset);
@@ -26,60 +24,41 @@ function App() {
     setSmartphone(window.innerWidth > 600)
   }, [smartphone])
 
-  // const navigation = smartphone > 600 ?
-  //   <Navigation
-  //     key="navigation"
-  //     position={
-  //       offset > 50 ? "sticky"
-  //         : null
-  //     }
-  //     animation={
-  //       offset > 50 ? "appear 0.5s ease-in"
-  //         : null
-  //     }
-  //   />
-  //   : <Mobile
-  //     key="navigation"
-  //     position={
-  //       offset > 50 ? "sticky"
-  //         : null
-  //     }
-  //     animation={
-  //       offset > 50 ? "appear 0.5s ease-in"
-  //         : null
-  //     }
-  //   />
-
-  /* navigation */
-
   return (
-    <>
-      <Router>
+    <Router>
 
-        <Navigation
-          key="navigation"
-          position={
-            offset > 50 ? "sticky"
-              : null
-          }
-          animation={
-            offset > 50 ? "appear 0.5s ease-in"
-              : null
-          }
-        />
-        <Home key="homeComponent" />
-        <Projects key="projectsComponent" />
-        <About key="aboutComponent" />
-        <Contact key="contactComponent" />
-        <Footer key="footerComponent" />
+      <Switch>
+      {/* Normal website */}
+        <Route exact path="/">
+          <Navigation
+            key="navigation"
+            position={
+              offset > 50 ? "sticky"
+                : null
+            }
+            animation={
+              offset > 50 ? "appear 0.5s ease-in"
+                : null
+            }
+          />
 
-        <Switch>
-          <Route exact path="/social">
-            <Social />
-          </Route>
-        </Switch>
-      </Router>
-    </>
+          <Home key="homeComponent" />
+          <Projects key="projectsComponent" />
+          <About key="aboutComponent" />
+          <Contact key="contactComponent" />
+          <Footer key="footerComponent" />
+
+        </Route>
+
+        {/* Route when you go to social */}
+        <Route exact path="/social">
+          <Social />
+        </Route>
+        <Route exact path="/grid">
+          <Grid />
+        </Route>
+      </Switch>
+    </Router>
   );
 
 

@@ -19,3 +19,57 @@
         top: 0px;
     }
 }
+
+@keyframes blink {
+    from {
+        background: white;
+    }
+
+    to {
+        background: transparent;
+    }
+
+}
+
+@keyframes type {
+    0% {
+        width: 0ch;
+    }
+
+    100% {
+        width: 14ch;
+
+    }
+
+}
+
+@keyframes float {
+
+    0% {
+        transform: translateY(0px)
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translatey(0px);
+    }
+}
+
+@keyframes show {
+
+    from {
+        // z-index: inherit;
+        z-index: 3;
+        // opacity: 0%;
+        top: 58%;
+    }
+
+    to {
+        z-index: 3;
+        // opacity: 100%;
+        top: 53%;
+    }
+}

@@ -1,9 +1,12 @@
 import React from 'react';
 import './Social.scss';
-function Social () {
+
+function Social() {
 
     return (
-        <h1>Working</h1>
+        <section id="social" >
+            <h1> Working</h1>
+        </section>
     )
 
 }
