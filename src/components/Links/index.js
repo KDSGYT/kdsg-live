@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-scroll';
 
 
-const Links = () => {
+const Links = ({setToggle}) => {
 
     const links = [
         "home",
@@ -23,6 +23,7 @@ const Links = () => {
                             offset={-70}
                             duration={800}
                             to={item}
+                            onClick={() => setToggle(false)}
                         >
                             {item.toUpperCase()}
                         </Link>

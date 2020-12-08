@@ -33,7 +33,7 @@ const Navigation = ({ position, togglePosition, animation }) => {
                 <li id="website-name"><h1>KDSG.LIVE</h1></li>
 
                 <div ref={links} id="links">
-                    <Links />
+                    <Links setToggle={setToggle}/>
 
                 </div>
             </nav>

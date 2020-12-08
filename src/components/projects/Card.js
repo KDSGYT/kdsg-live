@@ -4,7 +4,7 @@ import GitHubIcon from '@material-ui/icons/GitHub';
 import VisibilityRoundedIcon from '@material-ui/icons/VisibilityRounded';
 import './Card.scss'
 
-function Card({ projectName, projectImage, technologiesUsed, links }) {
+function Card({ projectName, projectImage, links }) {
 
     const { github, website } = links;
 
@@ -14,7 +14,7 @@ function Card({ projectName, projectImage, technologiesUsed, links }) {
                 <img className="project-image" src={projectImage} alt="projectImage" />
 
             </div>
-            <h1>{projectName}</h1>
+            <span>{projectName}</span>
             <div className="usefulLinks lower-part">
 
                 <button className="github" onClick={() => window.open(github)}>

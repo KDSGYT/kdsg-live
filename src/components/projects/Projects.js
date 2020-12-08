@@ -9,26 +9,14 @@ function Projects() {
         {
             name: "SubsCount",
             projectImage: SubsCount,
-            technologies: [
-                'HTML',
-                'ReactJs',
-                'SCSS',
-                'Material-UI'
-            ],
             links: {
                 github: "https://github.com/KDSGYT/subsCount-react",
                 website: "https://kdsgyt.github.io/subsCount-react/"
             }
         },
         {
-            name:"Way2Way.in",
+            name:"Way2Way",
             projectImage: Way2Way,
-            technologies:[
-                'HTML',
-                'ReactJs',
-                'SCSS',
-                'Wordpress'
-            ],
             links:{
                 github: "https://github.com/KDSGYT/way2way-react",
                 website: "http://way2way.in"

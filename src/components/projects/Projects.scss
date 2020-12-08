@@ -11,3 +11,9 @@
 
     
 }
+@media screen and (max-width: 480px){
+    .projects{
+        height:100vh;
+        flex-direction:column;
+    }
+}
