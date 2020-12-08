@@ -21,7 +21,7 @@ function Card({ projectName, projectImage, technologiesUsed, links }) {
                     <GitHubIcon
                         className="icon"
                         key="github"
-                        style={{ fontSize: "3em", }}
+                        style={{ fontSize: "3em" }}
 
                     />
                 </button>

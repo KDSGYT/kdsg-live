@@ -4,6 +4,7 @@ import SVG from '../SVG'
 import Links from './Links';
 import CSSTransitionGroup from 'react-transition-group/CSSTransition';
 import './Home.scss';
+import { Link } from 'react-scroll';
 
 const Home = () => {
     // This will determine that will the animation 
@@ -29,9 +30,19 @@ const Home = () => {
                 <Links />
             </CSSTransitionGroup>
             {/* Floating Arrow */}
-            <div className="downArrow">
-                <SVG />
-            </div>
+                {/* <div > */}
+                <Link
+                    className="downArrow"
+                    // className="nav-link"
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={800}
+                    to={'projects'}
+                >
+                    <SVG />
+                </Link>
+                {/* </div> */}
         </section>
 
     )
