@@ -1,6 +1,7 @@
 @import '../../assets/Animations.scss';
 @import '../../assets/Variables.scss';
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap');
+
 #home {
     display: flex;
     height: 95vh;
@@ -40,10 +41,10 @@
         &>span {
             display: block;
             height: 65%;
-            margin: auto;
+            // margin: auto;
             font-size: 3.4rem;
             color: white;
-            font-weight: 400;
+            // font-weight: 400;
             text-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
             animation: type 1s steps(15);
             overflow: hidden;
@@ -59,9 +60,9 @@
             position: absolute;
             background-color: white;
             top: 9%;
+            right: -2%;
             fill: white;
             content: " ";
-            right: -2%;
             height: 50%;
             width: 4px;
             animation: blink 0.8s linear infinite;
@@ -86,14 +87,11 @@
             color: white;
             image-rendering: optimizeQuality;
 
-            // z-index: inherit;
             #github {
                 width: 32px;
                 height: 32px;
-                // content: url('../../img/github/');
 
                 &:hover {
-
                     content: url('../../img/GitHub-Mark-32px.png')
                 }
             }
@@ -101,8 +99,6 @@
             .linkedin {
                 width: 32px;
                 height: 32px;
-                // color: white;
-                // content: url('../../img/linkedin/');
 
                 &:hover {
                     content: url('../../img/linkedin/32px-LinkedIn_logo_In-Black.svg.png');
