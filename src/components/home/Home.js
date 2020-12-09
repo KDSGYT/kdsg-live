@@ -13,7 +13,7 @@ const Home = () => {
     //When links mount into the DOM
     useEffect(() => {
         setfadeInLinks(true);
-    })
+    },[setfadeInLinks])
 
     return (
         <section id="home">

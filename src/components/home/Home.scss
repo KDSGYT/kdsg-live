@@ -1,6 +1,6 @@
 @import '../../assets/Animations.scss';
 @import '../../assets/Variables.scss';
-
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap');
 #home {
     display: flex;
     height: 95vh;
@@ -49,21 +49,21 @@
             overflow: hidden;
             white-space: nowrap;
             width: 13.6ch;
-            letter-spacing: -1px;
-            font-family: monospace;
+            letter-spacing: 3px;
+            font-family: 'Nunito', sans-serif;
+            word-spacing: 1px;
+            padding-bottom:1%;
         }
 
         &::after {
             position: absolute;
             background-color: white;
-            top: 0;
-            right: 0;
+            top: 9%;
             fill: white;
             content: " ";
-            right: -2;
+            right: -2%;
             height: 50%;
             width: 4px;
-            // transition: none 0s;
             animation: blink 0.8s linear infinite;
         }
     }

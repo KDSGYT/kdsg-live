@@ -1,5 +1,4 @@
 import React from 'react'
-// import { SvgIcon } from '@material-ui/core/SvgIcon';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import VisibilityRoundedIcon from '@material-ui/icons/VisibilityRounded';
 import './Card.scss'
@@ -33,8 +32,6 @@ function Card({ projectName, projectImage, links }) {
                         style={{ fontSize: "3.7em" }}
                     />
                 </button>
-                {/* <li key="github"><a href={github} rel="noopener noreferrer" target="_blank">Github</a> </li> */}
-                {/* <li key="website"><a href={website} rel="noopener noreferrer" target="_blank">Website</a> </li> */}
             </div>
         </div>
     )
