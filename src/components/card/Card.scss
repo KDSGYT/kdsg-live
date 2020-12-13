@@ -1,17 +1,78 @@
-.my-skillset {
+@import '../../assets/Variables.scss';
+
+.skill-card {
+    border: none;
     margin: auto;
     display: flex;
-    justify-content: space-evenly;
-    height: auto;
-    width: 98%;
-    height: 10vh;
-    
-    
-    & > #skills{
+    flex-direction: column;
+    height: 30vh;
+    width: 20vh;
+    background-color: white;
+    color: black;
+    border: none;
+    // border: 2px solid black;
+    border-radius: 5%;
+    box-sizing: content-box;
+    overflow: hidden;
+    position: relative;
+
+    &:hover>.overlay-flap {
+        top: -65%;
+        border-radius: 0;
+    }
+
+    &:hover>.section-name {
+        top: 5%;
+        color: white;
+    }
+
+    .overlay-flap {
+        background-color: $main-color;
+        padding: 20%;
+        // width: 20vh;
+        height: 56%;
         position: absolute;
+        transition: top 3s ease-in;
+        border-radius: 0 0 10px 10px;
+        left: 0;
+
+        img {
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+    .section-name {
+        position: absolute;
+        text-align: center;
         width: 100%;
-        height:10%;
+        height: 20%;
+        top: 85%;
+        // margin-top: 110%;
+        margin-bottom: 10%;
+        // border:none
+        transition: all 0.5s ease-in;
+
+    }
+
+    .skills {
+        list-style-type: none;
+        width: 100%;
+        padding-top: 30%;
+        height: 100%;
+        min-height: 80%;
+        // border: 2px solid green;
         display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        li {
+            width: 100%;
+            text-align: center;
+            height: 15%;
+            font-size: 1rem;
+        }
+
         img {
             margin: auto;
             height: 90%;
@@ -19,11 +80,14 @@
     }
 }
 
-@keyframes slide{
-    from{
+
+
+@keyframes slide {
+    from {
         // top:10vh
     }
-    to{
+
+    to {
         // top:auto;
     }
 }

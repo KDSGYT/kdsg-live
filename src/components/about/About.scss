@@ -1,17 +1,33 @@
 @import '../../assets/Variables.scss';
 
-.about {
+#about {
     // border:2px solid black;
     // padding: 20vh auto;
-    height: 50vh;
-    width: 100%;
+    min-height: 80vh;
+    padding: 10% 0;
     background-color: $main-color;
+    width: 100%;
     color: white;
     box-sizing: content-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    // border: 2px solid white;
+
+    h2 {
+        text-align: center;
+        letter-spacing: 5px;
+        border: none;
+        border-bottom: 2px solid white;
+        width: 8ch;
+        margin: 10% auto 2% auto;
+        margin-bottom: 2%;
+
+    }
 
     .content {
         // border:2px solid black;
-        height: 100%;
+        height: 30%;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
@@ -46,5 +62,24 @@
         }
 
 
+    }
+
+    #skills-section {
+        padding: 5%;
+        padding-top: 2.5%;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+
+    }
+}
+
+@media all and (max-width: 480px) {
+    #about {
+        #skills-section {
+            flex-direction: column;
+            height: 100vh;
+        }
     }
 }
