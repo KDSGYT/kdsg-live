@@ -21,12 +21,6 @@ const About = () => {
         }
     }, [])
 
-
-
-
-
-    // const content = render ? (<Card render={render} />) : <div></div>;
-
     return (
         <section id="about">
             <div className="content">
@@ -36,6 +30,7 @@ const About = () => {
             <h2>Skills</h2>
             <div id="skills-section">
                 <Card
+                key="front-end"
                     id="front-end"
                     sectionName="Front-End"
                     content={[
@@ -48,6 +43,8 @@ const About = () => {
                     SVG={frontEnd}
                 />
                 <Card
+                key="backend"
+
                     id="backend"
                     sectionName="Back-End"
                     content={[
@@ -60,6 +57,8 @@ const About = () => {
                     SVG={backEnd}
 
                 /><Card
+                key="software"
+
                     id="software"
                     sectionName="Software"
                     content={[

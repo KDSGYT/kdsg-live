@@ -1,8 +1,9 @@
 import React from 'react';
 import { Link } from 'react-scroll';
+import GithubLinkedIn from '../home/GithubLinkedIn';
+// import Links from '../home/GithubLinkedIn';
 
-
-const Links = ({setToggle}) => {
+const Links = ({ setToggle }) => {
 
     const links = [
         "home",
@@ -30,6 +31,9 @@ const Links = ({setToggle}) => {
                     </li>
                 )
             })}
+            <div id="navbar-github-linkedin">
+                <GithubLinkedIn />
+            </div>
         </React.Fragment>
     )
 }

@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import '../Transition.scss'
 import SVG from '../SVG'
-import Links from './Links';
+import GithubLinkedIn from './GithubLinkedIn';
 import CSSTransitionGroup from 'react-transition-group/CSSTransition';
 import './Home.scss';
 import { Link } from 'react-scroll';
@@ -27,7 +27,7 @@ const Home = () => {
                 timeout={2000}
                 in={fadeInLinks}
             >
-                <Links />
+                <GithubLinkedIn />
             </CSSTransitionGroup>
             {/* Floating Arrow */}
                 {/* <div > */}
