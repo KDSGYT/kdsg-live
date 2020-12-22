@@ -30,7 +30,7 @@ const About = () => {
             <h2>Skills</h2>
             <div id="skills-section">
                 <Card
-                key="front-end"
+                    key="front-end"
                     id="front-end"
                     sectionName="Front-End"
                     content={[
@@ -43,8 +43,7 @@ const About = () => {
                     SVG={frontEnd}
                 />
                 <Card
-                key="backend"
-
+                    key="backend"
                     id="backend"
                     sectionName="Back-End"
                     content={[
@@ -57,14 +56,14 @@ const About = () => {
                     SVG={backEnd}
 
                 /><Card
-                key="software"
-
+                    key="software"
                     id="software"
                     sectionName="Software"
                     content={[
                         "VSCode",
                         "Figma",
                         "Adobe Photoshop",
+                        "Wordpress"
 
                     ]}
                     render={render}

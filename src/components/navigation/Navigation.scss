@@ -1,38 +1,37 @@
-@import '../../assets/Animations.scss';
-@import '../../assets/Variables.scss';
+@import "../../assets/Animations.scss";
+@import "../../assets/Variables.scss";
 
 //Basic Navigation styles
 .navigation {
-    height             : 6vh;
-    min-height         : 51px;
-    top                : 0;
-    width              : 100vw;
-    display            : flex;
-    flex-direction     : row;
-    justify-content    : space-between;
-    box-sizing         : border-box;
+    height: 6vh;
+    min-height: 51px;
+    top: 0;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    box-sizing: border-box;
     background-position: top;
-    background-color   : $main-color;
+    background-color: $main-color;
     background-position: center top;
-    padding            : 0 5vw;
-    z-index            : 10;
-    box-shadow         : 5px 5px 10px rgba($color: #272727, $alpha: 0.5);
-    transition         : display 1s ease-in;
-    overflow           : hidden;
+    padding: 0 5vw;
+    z-index: 10;
+    box-shadow: 0px 10px 10px rgba($color: #000000, $alpha: 0.5);
+    transition: display 1s ease-in;
+    overflow: hidden;
 
     #links {
         width: auto;
 
         #navbar-github-linkedin {
-            width : 5vw;
+            width: 5vw;
             margin: auto;
 
             .links {
-                height         : 10%;
-                display        : flex;
-                flex-direction : row;
+                height: 10%;
+                display: flex;
+                flex-direction: row;
                 justify-content: space-between;
-
             }
         }
 
@@ -41,80 +40,77 @@
 
     //hide the hamburger icon not mobile device
     #toggle-button {
-        margin          : auto 0;
-        border          : none;
-        display         : flex;
-        flex-direction  : column;
-        justify-content : center;
-        width           : 10%;
-        max-width       : 40px;
-        height          : 100%;
-        overflow        : hidden;
+        margin: auto 0;
+        border: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 10%;
+        max-width: 40px;
+        height: 100%;
+        overflow: hidden;
         background-color: transparent;
-        outline         : none;
-        display         : none;
+        outline: none;
+        display: none;
     }
 
     //Website name styles
     & #website-name {
         pointer-events: none;
-        font-family   : Helvetica, sans-serif;
-        text-shadow   : 4px 4px 4px rgb(39, 39, 39);
-        color         : white;
+        font-family: Helvetica, sans-serif;
+        text-shadow: 4px 4px 4px rgb(39, 39, 39);
+        color: white;
         letter-spacing: 2px;
     }
 
     li {
-        margin         : auto 2vw;
+        margin: auto 2vw;
         list-style-type: none;
-        color          : white;
+        color: white;
 
         &:hover {
             color: rgb(177, 177, 177);
         }
-
     }
 
     //Arrange the links according to screen size
     div {
-        display       : block;
-        width         : 100%;
-        display       : flex;
+        display: block;
+        width: 100%;
+        display: flex;
         flex-direction: row;
 
         .nav-link {
-            cursor         : pointer;
+            cursor: pointer;
             // display: none;
             // color: white;
-            font-weight    : 400;
-            font-size      : 1.2rem;
+            font-weight: 400;
+            font-size: 1.2rem;
             text-decoration: none;
         }
     }
 }
 
-
 // Mobile navigation for smartphones
 @media (max-width: 900px) {
-
     .navigation {
-        position       : relative;
-        display        : flex;
-        flex-direction : column;
+        position: relative;
+        display: flex;
+        flex-direction: column;
         justify-content: space-around;
-        height         : 5vh;
-        overflow       : visible;
+        height: 5vh;
+        overflow: visible;
 
         #toggle-button {
             display: flex;
 
             .button-line {
                 height: 20%;
-                width : 100%;
+                width: 100%;
 
                 hr {
-                    border          : none;
-                    height          : 3px;
+                    border: none;
+                    height: 3px;
                     background-color: white;
                 }
             }
@@ -125,19 +121,20 @@
         }
 
         #links {
-            position        : absolute;
-            top             : 6vh;
-            left            : -100%;
-            text-align      : center;
+            position: absolute;
+            top: 6vh;
+            left: -100%;
+            text-align: center;
             background-color: $main-color;
-            height          : 94vh;
-            width           : 100%;
-            display         : flex;
-            flex-direction  : column;
-            justify-content : flex-start;
-            transition      : all 0.7s ease-in;
-            #navbar-github-linkedin{
-                .links{
+            height: 94vh;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            transition: all 0.7s ease-in;
+
+            #navbar-github-linkedin {
+                .links {
                     display: none;
                 }
             }
