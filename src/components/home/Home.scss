@@ -29,6 +29,7 @@
         pointer-events: none;
     }
 
+    // name
     .name {
         height: 10vh;
         max-height: 200px;
@@ -36,6 +37,7 @@
         margin: auto;
         position: relative;
         z-index: 1;
+        // border:2px solid white;
 
         &>span {
             display: block;
@@ -55,6 +57,7 @@
             padding-bottom:1%;
         }
 
+        // blinker
         &::after {
             position: absolute;
             background-color: white;
