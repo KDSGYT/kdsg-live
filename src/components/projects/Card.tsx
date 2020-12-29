@@ -1,9 +1,15 @@
-import React from 'react'
+import React, { FC } from 'react'
 import GitHubIcon from '@material-ui/icons/GitHub';
 import VisibilityRoundedIcon from '@material-ui/icons/VisibilityRounded';
 import './Card.scss'
 
-function Card({ projectName, projectImage, links }) {
+interface props {
+    projectName: string,
+    projectImage: any,
+    links: any
+}
+
+const Card:FC<props> = ({ projectName, projectImage, links }) => {
 
     const { github, website } = links;
 

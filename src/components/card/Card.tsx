@@ -1,9 +1,16 @@
-import React from 'react';
+import React, { FC } from 'react';
 import './Card.scss';
 import CSSTransitionGroup from 'react-transition-group/CSSTransition';
 
+interface props {
+    render:boolean,
+    id:string,
+    sectionName: string,
+    SVG: any,
+    content: any
+}
 
-function Card({ render, id, sectionName, SVG, content }) {
+const Card: FC<props> = ({ render, id, sectionName, SVG, content }) => {
 
 
     React.useEffect(() => {
@@ -12,7 +19,7 @@ function Card({ render, id, sectionName, SVG, content }) {
 
 
     const [animate, setAnimate] = React.useState(false)
-    const skills = content.map((skill, index) => <li key={index}>{skill}</li>)
+    const skills = content.map((skill:string, index:number) => <li key={index}>{skill}</li>)
     return (
 
         <CSSTransitionGroup

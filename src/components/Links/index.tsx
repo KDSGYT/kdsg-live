@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { Link } from 'react-scroll';
 import GithubLinkedIn from '../home/GithubLinkedIn';
 // import Links from '../home/GithubLinkedIn';
+interface props {
+    setToggle: any
+}
 
-const Links = ({ setToggle }) => {
+const Links: FC<props> = ({ setToggle }) => {
 
     const links = [
         "home",
@@ -11,6 +14,8 @@ const Links = ({ setToggle }) => {
         'about',
         'contact'
     ]
+
+    function handleClick() { setToggle(false) }
 
     return (
         <React.Fragment>
@@ -24,7 +29,7 @@ const Links = ({ setToggle }) => {
                             offset={-70}
                             duration={800}
                             to={item}
-                            onClick={() => setToggle(false)}
+                            onClick={handleClick}
                         >
                             {item.toUpperCase()}
                         </Link>

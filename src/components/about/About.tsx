@@ -5,6 +5,7 @@ import '../Transition.scss';
 import frontEnd from '../../img/SVG/web-design.svg';
 import backEnd from '../../img/SVG/backend.svg';
 import software from '../../img/SVG/computer.svg';
+
 const About = () => {
 
     const [render, setrender] = useState(false)

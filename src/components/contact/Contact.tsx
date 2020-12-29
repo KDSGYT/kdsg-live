@@ -3,8 +3,6 @@ import './Contact.scss';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 
-
-
 const Contact = () => {
     return (
         <section id="contact">
@@ -16,24 +14,25 @@ const Contact = () => {
 const Form = () => {
 
 
-    const name = useRef("")
-    const message = useRef("")
-    const subject = useRef("")
+    const name: any = useRef("")
+    const message: any = useRef("")
+    const subject: any = useRef("")
 
     const [state, setState] = useState()
 
-    function handleSubmit(e) {
-        e.preventDefault()
+    function handleSubmit(event: any) {
+        event.preventDefault()
         window.open(state)
         // window.location.href = state;
 
     }
     function handleChange() {
-        let nameValue = name.current.value;
-        let subjectValue = subject.current.value;
-        let messageValue = message.current.value;
+        let nameValue: string = name.current.value;
+        let subjectValue: string = subject.current.value;
+        let messageValue: string = message.current.value;
         // console.log(nameValue)
-        setState(`mailto:kdsgyt@gmail.com?cc=${nameValue}&subject=${subjectValue}&body=${messageValue}`)
+        const link:any = `mailto:kdsgyt@gmail.com?cc=${nameValue}&subject=${subjectValue}&body=${messageValue}`
+        setState(link)
     }
 
     return (
