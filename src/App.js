@@ -20,6 +20,10 @@ function App() {
 
   })
 
+  React.useEffect(() =>{
+    window.document.title="Portfolio | Home";
+  })
+
   React.useEffect(() => {
     setSmartphone(window.innerWidth > 600)
   }, [smartphone])

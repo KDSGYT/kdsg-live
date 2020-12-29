@@ -12,7 +12,7 @@ function Card({ render, id, sectionName, SVG, content }) {
 
 
     const [animate, setAnimate] = React.useState(false)
-    const skills = content.map(skill => <li>{skill}</li>)
+    const skills = content.map((skill, index) => <li key={index}>{skill}</li>)
     return (
 
         <CSSTransitionGroup
