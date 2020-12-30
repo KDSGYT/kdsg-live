@@ -3,6 +3,8 @@ import "./Projects.scss";
 import Card from './Card';
 import SubsCount from '../../img/subCount.png'
 import Way2Way from '../../img/way2way.png'
+import firebaselogin from '../../img/firebase-login.png';
+
 function Projects() {
 
     const cards = [
@@ -22,6 +24,14 @@ function Projects() {
                 website: "http://way2way.in"
             }
 
+        },
+        {
+            name:"Firebase Authentication",
+            projectImage: firebaselogin,
+            links:{
+                github: "https://github.com/KDSGYT/firebase-login",
+                website: "http://firebase-login.kdsg.live"
+            }
         }
     ]
 
