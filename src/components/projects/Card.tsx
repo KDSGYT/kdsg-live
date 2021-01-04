@@ -19,7 +19,7 @@ const Card:FC<props> = ({ projectName, projectImage, links }) => {
                 <img className="project-image" src={projectImage} alt="projectImage" />
 
             </div>
-            <span>{projectName}</span>
+            <span className="project-name">{projectName}</span>
             <div className="usefulLinks lower-part">
 
                 <button className="github" onClick={() => window.open(github)}>
