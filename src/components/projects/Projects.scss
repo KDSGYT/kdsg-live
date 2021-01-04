@@ -13,7 +13,8 @@
 }
 @media screen and (max-width: 480px){
     .projects{
-        height:100vh;
+        height:auto;
+        // min-height: 200vh;
         flex-direction:column;
     }
 }

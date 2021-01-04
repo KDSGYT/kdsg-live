@@ -5,6 +5,7 @@
     box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.336);
     border-radius: 8px;
     margin: auto 5%;
+
     width: 40vw;
     height: 36vh;
     max-width: 25vh;
@@ -41,9 +42,9 @@
         }
     }
 
-    span {
+    .project-name {
         margin-top: 30%;
-        font-size: 26px;
+        font-size: 1.3rem;
         font-weight: 500;
         margin-bottom: 0;
     }
@@ -75,8 +76,9 @@
             outline: none;
             border: none;
             background-color: transparent;
+
             .icon {
-                
+
                 &:hover {
                     // box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.336);
                     color: rgb(110, 110, 110);
@@ -91,15 +93,19 @@
         }
 
         a {
-            font-size: 1.5rem;
+            // font-size: 1.5rem;
         }
     }
 
 }
 
-@media screen and (max-width:480px) {
+@media all and (max-width:480px) {
     .card {
-        margin: auto;
+        margin: 5% auto;
 
+    }
+
+    .project-name {
+        font-size: 1rem;
     }
 }
