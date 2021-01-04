@@ -1,50 +1,16 @@
-import { firestore as DB, photoStore } from '../Util/firebase';
+import { firestore as DB } from '../Util/firebase';
 
-const projects = DB.collection('projects');
-
+/**
+ * 
+ * @param setState function to set the global state for project information
+ * Retrieved the data from firebase cloud store and push the data to the global state
+ */
 export async function getProjects(setState: any) {
-    const projectsData = await projects.get();
-    let newState: any = []
-    projectsData.forEach(doc => {
-        newState.push(doc.data())
-    })
-    newState = newState.map((doc: any) => {
-        const manipulatedObject = {...doc};
-        getProjectImage(doc.projectImage)
-            .then(result => manipulatedObject.projectImage = result)
-            .catch(err => console.log('error'))
-        return manipulatedObject
-    })
+    const projects = DB.collection('projects');//collection in which documents are saved
+    const projectsData = await projects.get();// Retrieve the data using get.
+    const newState: any = []//empty array to save the received data
+
+    projectsData.forEach(doc => newState.push(doc.data())) //push the projects to state object
     setState(newState)
-    // return;
-}
-
-export async function getProjectImage(link: string) {
-    const gsRef = photoStore.refFromURL(link)
-    let imageUrl;
-    await gsRef.getDownloadURL()
-        .then(url => {
-            // console.log(url)
-            return imageUrl = url;
-        })
-        .catch(function (error) {
-
-            // A full list of error codes is available at
-            // https://firebase.google.com/docs/storage/web/handle-errors
-            console.log('error')
-            switch (error.code) {
-                case 'storage/object-not-found':
-                    // File doesn't exist
-                    break;
-
-                case 'storage/unauthorized':
-                    // User doesn't have permission to access the object
-                    break;
-
-                case 'storage/canceled':
-                    // User canceled the upload
-                    break;
-            }
-        });
-    return imageUrl;
+    return ;// make sure the function ends all times
 }
