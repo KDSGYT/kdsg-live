@@ -1,0 +1,54 @@
+#toggle-button {
+    display: none;
+}
+
+$navbar-height: 5vh;
+
+@media (max-width:768px) {
+    #button-container {
+        margin-left: -0.7%;
+        width: 100vw;
+        height: $navbar-height - 1vh;
+
+        #toggle-button {
+            margin: 2% 0 0 3%;
+            border: none;
+            background-color: transparent;
+            // border:2px solid black;
+            width: 7vw;
+            // min-width: 30px;
+            // border: 2px solid white;
+            height: $navbar-height - 1vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+
+            .line {
+                // border: 1px solid black;
+
+                width: 100%;
+                height: 2px;
+                background-color: white;
+                transition: all 0.5s ease;
+                transform-origin: left;
+                border-radius: 5px;
+            }
+        }
+
+        .toggle {
+            .line1 {
+                transform: rotateZ(0.125turn)
+            }
+
+            .line2 {
+                opacity: 0%
+            }
+
+            .line3 {
+                transform: rotateZ(-0.125turn);
+            }
+
+        }
+
+    }
+}
