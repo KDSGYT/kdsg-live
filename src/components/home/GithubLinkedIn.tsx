@@ -4,7 +4,7 @@ import linkedIn from '../../img/linkedin/linkedin-3-32.png';
 
 function GithubLinkedIn() {
     return (
-        <div className="links" style={{animation:"show 1.5s linear" }}>
+        <div className="links" style={{animation:"show 1.5s linear", minWidth:"80px" }}>
             <a rel="noopener noreferrer" target="_blank" href="https://github.com/KDSGYT/kdsg-live">
                 <img src={github} id="github" alt="github" />
             </a>
