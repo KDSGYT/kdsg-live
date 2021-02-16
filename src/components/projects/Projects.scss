@@ -1,11 +1,14 @@
 .projects {
-    height: 60vh;
+    border:2px solid black;
+
+    min-height: 90vh;
     width: 100%;
     background-color: rgb(202, 202, 202);
     z-index: 1;
     box-sizing: content-box;
     margin: 0;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
 

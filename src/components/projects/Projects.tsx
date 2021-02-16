@@ -7,24 +7,24 @@ function Projects() {
 
     const [projectsData, setProjectsData] = useState([]);
     useEffect(() => {
-        console.log('runned')
         getProjects(setProjectsData)
     }, []);
 
     const cardData = projectsData.map(({ name, projectImage, links }, index) => {
 
-        return <Card
-            projectName={name}
-            projectImage={projectImage}
-            links={links}
-            key={index}
-        />
+        return (
+            <Card
+                projectName={name}
+                projectImage={projectImage}
+                links={links}
+                key={index}
+            />
+        )
     })
 
     return (
         <section className={"projects"}>
             {cardData}
-
         </section>
     )
 }
