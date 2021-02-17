@@ -37,15 +37,12 @@
         margin: auto;
         position: relative;
         z-index: 1;
-        // border:2px solid white;
 
         &>span {
             display: block;
             height: 65%;
-            // margin: auto;
             font-size: 3.4em;
             color: white;
-            // font-weight: 400;
             text-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
             animation: type 1s steps(14);
             overflow: hidden;
@@ -53,7 +50,6 @@
             width: 13.6ch;
             letter-spacing: 3px;
             font-family: 'Nunito', sans-serif;
-            // word-spacing: -1px;
             padding-bottom:1%;
         }
 
@@ -78,6 +74,7 @@
         top: 54%;
         margin: auto;
         width: 100%;
+        // border:2px solid black;
         min-width: 100px;
         z-index: 1;
 
