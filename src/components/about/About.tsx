@@ -5,21 +5,38 @@ import '../Transition.scss';
 import frontEnd from '../../img/SVG/web-design.svg';
 import backEnd from '../../img/SVG/backend.svg';
 import software from '../../img/SVG/computer.svg';
+import { getSkillData } from '../../assets/Functions';
 
 const About = () => {
 
+    const initialState: any = [
+        {skills:[]}, {skills:[]}, {skills:[]}
+    ];
+
+    const [skillData, setSkillData] = useState(initialState)
+
+    // i think this code is unnecessary and can be removed
+    // this code is supposed to display render animation
     const [render, setrender] = useState(false)
+
     useEffect(() => {
         const handler = () => {
             if ((window.pageYOffset) > (window.innerHeight * 1)) {
                 setrender(true);
             }
         }
+
         document.addEventListener('scroll', handler)
+
+        /**
+         * Get skills from the DB and set the state
+         */
+        getSkillData(setSkillData)
 
         return () => {
             document.removeEventListener('scroll', handler)
         }
+
     }, [])
 
     return (
@@ -34,12 +51,7 @@ const About = () => {
                     key="front-end"
                     id="front-end"
                     sectionName="Front-End"
-                    content={[
-                        "HTML",
-                        "CSS",
-                        "JavaScript",
-                        "ReactJS"
-                    ]}
+                    content={skillData[1].skills}
                     render={render}
                     SVG={frontEnd}
                 />
@@ -47,12 +59,7 @@ const About = () => {
                     key="backend"
                     id="backend"
                     sectionName="Back-End"
-                    content={[
-                        "Firebase",
-                        "NodeJS",
-                        "MySQL",
-                        "ExpressJS"
-                    ]}
+                    content={skillData[0].skills}
                     render={render}
                     SVG={backEnd}
 
@@ -60,13 +67,7 @@ const About = () => {
                     key="software"
                     id="software"
                     sectionName="Software"
-                    content={[
-                        "VSCode",
-                        "Figma",
-                        "Adobe Photoshop",
-                        "Wordpress"
-
-                    ]}
+                    content={skillData[2].skills}
                     render={render}
                     SVG={software}
 

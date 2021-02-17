@@ -20,6 +20,9 @@ const Card: FC<props> = ({ render, id, sectionName, SVG, content }) => {
 
     const [animate, setAnimate] = React.useState(false)
     const skills = content.map((skill:string, index:number) => <li key={index}>{skill}</li>)
+    React.useEffect(() => {
+        // console.log(content)
+    })
     return (
 
         <CSSTransitionGroup

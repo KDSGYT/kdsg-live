@@ -12,5 +12,17 @@ export async function getProjects(setState: any) {
 
     projectsData.forEach(doc => newState.push(doc.data())) //push the projects to state object
     setState(newState)
-    return ;// make sure the function ends all times
+    return;// make sure the function ends all times
+}
+
+/**
+* Retrieve data from DB for the list of agencies
+* @param setState Sets data for agencies
+*/
+export async function getSkillData(setState: any) {
+    const newState: any = []
+    const data = await DB.collection('skills').get()
+    await data.forEach((doc) => newState.push(doc.data()))
+    await setState(newState)
+    return;
 }
