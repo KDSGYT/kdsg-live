@@ -32,10 +32,11 @@ const Navigation: FC<props> = ({ position, animation }) => {
             ref={navBar}
         >
             <ToggleButton
+
                 toggle={toggle}
                 setToggle={setToggle}
             />
-            <li id="website-name"><h1>KDSG.LIVE</h1></li>
+            <li id="website-name"><h1 >KDSG.LIVE</h1></li>
 
             <div ref={links} id="links">
                 <Links setToggle={setToggle} />

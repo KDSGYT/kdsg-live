@@ -10,6 +10,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     box-sizing: border-box;
     background-position: top;
     background-color: $main-color;
@@ -38,29 +39,29 @@
         // float: right;
     }
 
-    //hide the hamburger icon not mobile device
-    #toggle-button {
-        margin: auto 0;
-        border: none;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        width: 10%;
-        max-width: 40px;
-        height: 100%;
-        overflow: hidden;
-        background-color: transparent;
-        outline: none;
-        display: none;
-    }
 
     //Website name styles
-    & #website-name {
+    #website-name {
+        width: auto;
         pointer-events: none;
         font-family: Helvetica, sans-serif;
         text-shadow: 4px 4px 4px rgb(39, 39, 39);
         color: white;
         letter-spacing: 2px;
+        height: 100%;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+
+    }
+
+
+    #links{
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
     }
 
     li {

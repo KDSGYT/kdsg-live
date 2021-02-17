@@ -1,11 +1,15 @@
-#toggle-button {
-    display: none;
+#button-container{
+    display:none;
+    #toggle-button {
+        display: none;
+    }
 }
 
 $navbar-height: 5vh;
 
 @media (max-width:768px) {
     #button-container {
+        display:block;
         margin-left: 0;
         width: 100%;
         height: $navbar-height;
@@ -17,19 +21,14 @@ $navbar-height: 5vh;
 
             border: none;
             background-color: transparent;
-            // border:2px solid black;
-            width: 7vw;
-            // min-width: 30px;
-            // border: 2px solid white;
-            height: $navbar-height - 1vh;
+            height: 100%;
             display: flex;
             flex-direction: column;
             justify-content: space-evenly;
-
+            outline:none;
             .line {
-                // border: 1px solid black;
 
-                width: 100%;
+                width: 30px;
                 height: 2px;
                 background-color: white;
                 transition: all 0.5s ease;
