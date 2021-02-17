@@ -6,7 +6,7 @@
     height: 6vh;
     min-height: 51px;
     top: 0;
-    width: 100vw;
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -99,6 +99,7 @@
         flex-direction: column;
         justify-content: space-around;
         height: 5vh;
+        padding:0;
         overflow: visible;
 
         #toggle-button {
