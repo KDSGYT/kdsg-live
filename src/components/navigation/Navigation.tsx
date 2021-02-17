@@ -13,7 +13,7 @@ const Navigation: FC<props> = ({ position, animation }) => {
 
     const navBar = useRef(null);
     const links: any = useRef(null)
-    const [toggle, setToggle] = useState(false)
+    const [toggle, setToggle] = useState("")
 
     React.useEffect(() => {
         if (toggle) {
