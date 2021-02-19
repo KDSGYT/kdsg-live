@@ -1,36 +1,12 @@
-### `npm run delpoy` Deploy the app to the gh-pages
-
-Before deploying to gh-pages add the following string to the package.json file not the package-lock.json file
-    "homepage": "http://KDSGYT.github.io/kdsg-live"
-Reason: it causes problem in production build.
-
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-
-
+<h1 align="center"> KDSG.LIVE</h1>
+<p align="center"> 
+    <a href="http://kdsg.live">
+        <img src="https://img.shields.io/website?style=for-the-badge&url=http%3A%2F%2Fkdsg.live"/>
+    </a>
+    <a href="http://kdsg.live">
+        <img src="https://img.shields.io/node/v/react?style=for-the-badge"/>
+    </a>
+</p>
+<p align="center">
+    This is the source code for the online portfolio hosted on KDSG.LIVE
+</p>
