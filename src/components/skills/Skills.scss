@@ -1,0 +1,46 @@
+@import '../../assets/Variables.scss';
+@import '../../assets/Classes.scss';
+#skills {
+    height: auto;
+    padding: 5% 0;
+    background-color: $main-color;
+    width: 100%;
+    color: white;
+    box-sizing: content-box;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+    h2 {
+        text-align: center;
+        letter-spacing: 5px;
+        border: none;
+        border-bottom: 2px solid white;
+        width: 8ch;
+        // margin: 10% auto 2% auto;
+        // margin-bottom: 2%;
+
+    }
+
+    
+
+    #skills-section {
+        padding: 5%;
+        padding-top: 2.5%;
+        // height: auto;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+}
+
+@media all and (max-width: 480px) {
+    #about {
+        #skills-section {
+            flex-direction: column;
+            height: 100vh;
+        }
+    }
+}

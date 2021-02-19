@@ -3,9 +3,9 @@ import './App.scss';
 import Navigation from './components/navigation/Navigation';
 import Home from './components/home/Home';
 import Projects from './components/projects/Projects';
-import About from './components/about/About';
+import Skills from './components/skills/Skills';
 import Footer from './components/footer/Footer';
-import Contact from './components/contact/Contact';
+import Contact from './components/about/About';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Social from './views/Social/Social';
 import Grid from './components/photoGrid/PhotoGrid';
@@ -21,7 +21,7 @@ function App() {
   })
 
   React.useEffect(() =>{
-    window.document.title="Portfolio | Home";
+    window.document.title="Karan Pal Singh | Portfolio";
   })
 
   React.useEffect(() => {
@@ -48,7 +48,7 @@ function App() {
 
           <Home key="homeComponent" />
           <Projects key="projectsComponent" />
-          <About key="aboutComponent" />
+          <Skills key="aboutComponent" />
           <Contact key="contactComponent" />
           <Footer key="footerComponent" />
 

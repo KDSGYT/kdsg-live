@@ -30,3 +30,6 @@ yarn-error.log*
 src/Util/firebase.ts*
 
 config.json
+
+#TODO file
+TODO

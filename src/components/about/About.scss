@@ -1,77 +1,21 @@
-@import '../../assets/Variables.scss';
-
-#about {
-    // height: 100vh;
-    // min-height: 60vh;
-    padding: 10% 0;
-    background-color: $main-color;
-    width: 100%;
-    color: white;
-    box-sizing: content-box;
+#contact {
+    height: 80vh;
+    background-image: url('../../img/contactBackgroundImage.jpg');
+    background-position: center;
+    background-size: cover;
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
 
-    h2 {
-        text-align: center;
-        letter-spacing: 5px;
-        border: none;
-        border-bottom: 2px solid white;
-        width: 8ch;
-        margin: 10% auto 2% auto;
-        margin-bottom: 2%;
-
-    }
-
-    .content {
-        height: 30%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-
-        h1,
-        #me {
-            text-align: center;
-            margin: auto;
-        }
-
-        h1 {
-            letter-spacing: 5px;
-            border: none;
-            border-bottom: 2px solid white;
-            width: 10ch;
-            margin-bottom: 2%;
-        }
-
-        #me {
-            font-size: 1.3em;
-            width: 60vw;
-        }
-
-        .container {
-            height: auto;
-            border: 2px solid black;
-            display: flex;
-            justify-content: center;
-        }
-    }
-
-    #skills-section {
-        padding: 5%;
-        padding-top: 2.5%;
-        height: auto;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-
-    }
-}
-
-@media all and (max-width: 480px) {
-    #about {
-        #skills-section {
-            flex-direction: column;
-            height: 100vh;
-        }
+    &::after {
+        position: absolute;
+        left: 0;
+        top: 0;
+        content: " ";
+        height: 100%;
+        width: 100%;
+        background-color: rgba(102, 99, 99, 0.5);
+        pointer-events: none;
     }
 }
