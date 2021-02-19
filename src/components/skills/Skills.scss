@@ -4,7 +4,7 @@
     height: auto;
     padding: 5% 0;
     background-color: $main-color;
-    width: 100%;
+    // width: 100%;
     color: white;
     box-sizing: content-box;
     flex-direction: column;
@@ -25,7 +25,7 @@
     
 
     #skills-section {
-        padding: 5%;
+        // padding: 5%;
         padding-top: 2.5%;
         // height: auto;
         width: 100%;
@@ -37,10 +37,11 @@
 }
 
 @media all and (max-width: 480px) {
-    #about {
+    #skills {
         #skills-section {
             flex-direction: column;
             height: 100vh;
+            width: auto;
         }
     }
 }
