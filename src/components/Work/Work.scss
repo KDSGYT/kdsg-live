@@ -1,0 +1,8 @@
+@import '../assets/Global.scss';
+#work{
+    padding: 20px $globalPadding;
+    color: black;
+    #projects{
+        padding: 20px 300px;
+    }
+}

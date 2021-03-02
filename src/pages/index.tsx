@@ -5,6 +5,7 @@ import IntroText from "../components/IntroText/IntroText";
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Work from "../components/Work/Work";
 import CNTower from '../images/cn-tower.svg';
 import './styles/index.scss'
 
@@ -13,6 +14,7 @@ const IndexPage = () => (
     <SEO title="Karan | Front End Developer " />
     <img src={CNTower} id="cn-tower" />
     <IntroText />
+    <Work />
   </Layout>
 )
 
