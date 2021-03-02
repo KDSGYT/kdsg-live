@@ -1,0 +1,17 @@
+#cn-tower {
+    position: absolute;
+    left: 40%;
+    top: 1%;
+    height: 100vh;
+    opacity: 18%;
+    object-fit: cover;
+    // border: 2px solid black;
+    z-index: 99;
+    width: 20%;
+    transform-origin: -50% -50%;
+    transition: all 1s ease;
+
+    &:hover {
+        opacity: 80%;
+    }
+}

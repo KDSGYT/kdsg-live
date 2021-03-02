@@ -1,0 +1,53 @@
+@import '../assets/Global.scss';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+#intro-section {
+
+    padding: $globalPadding + 100px;
+    width: 100%;
+    height: 92.5vh;
+    align-items: center;
+    justify-content: space-between;
+
+    #intro-text {
+        font-family: 'Poppins', Arial;
+        color: black;
+        background-color: white;
+        transition: 0.5s all ease;
+        padding: 2%;
+        border-radius: 5px;
+
+        &:hover {
+            padding: 5% 3%;
+            color: white;
+            background-color: black;
+        }
+    }
+
+    #author-image {
+        position: relative;
+        width: 400px;
+        height: 400px;
+        border:2px solid black;
+        margin-right: 5%;
+        border-radius: 100%;
+        background-color: black;
+
+        img {
+            top: 0;
+            left: 0;
+            position: absolute;
+            width:  100%;
+            height: 100%;
+            border-radius: 100%;
+            object-fit: cover;
+            transition: 0.5s all ease;
+            &:hover{
+                top:-2px;
+                left:16px;
+
+                // bottom: ;
+            }
+        }
+    }
+}
