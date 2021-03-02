@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+#navigation{
+    padding: 0 60px;
+    width: 100%;
+    height: 70px;
+    align-items: center;
+    justify-content: space-between;
+    h1{
+        font-family: 'Poppins', Arial;
+        font-weight: 600;
+        margin: auto 0;
+        width: auto;
+        color: transparent;
+        -webkit-text-stroke: 2px black;
+        transition: all 0.5s ease;
+        &:hover{
+            color: black;
+        }
+    }
+}
