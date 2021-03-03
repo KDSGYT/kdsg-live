@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+
+#contact-us {
+    // border: 2px solid black;
+    width: 100%;
+    min-height: 65vh;
+    color: black;
+    flex-direction: column;
+    font-family: 'Poppins', Arial;
+    align-items: center;
+    margin-bottom: 6%;
+    p {
+        width: 600px;
+        text-align: center;
+    }
+
+    h2 {
+        text-decoration: underline;
+        transition: all 1s ease;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}

@@ -13,6 +13,7 @@ import './assets/Global.scss';
 import Header from "./header"
 import "./layout.css"
 import Navbar from "./navbar/Navbar"
+import Footer from "./Footer/Footer";
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -37,6 +38,7 @@ const Layout = ({ children }) => {
         // }}
       >
         <main>{children}</main>
+        <Footer />
         {/* <footer
           style={{
             marginTop: `2rem`,
