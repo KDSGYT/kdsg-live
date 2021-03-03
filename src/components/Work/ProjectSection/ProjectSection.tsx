@@ -1,15 +1,26 @@
 import * as React from 'react';
-import projectImage from '../../../images/way2way.jpg'
+import { FC } from 'react';
 import './ProjectSection.scss';
 
+interface props {
+    projectTitle: string,
+    projectImage: any,
+    projectDiscription: string,
+    projectSkills: any
+}
 
-export default function ProjectSection() {
+const ProjectSection: FC<props> = (props) => {
 
-    const projectName ="Way2Way";
+    const {
+        projectTitle,
+        projectImage,
+        projectDiscription,
+        projectSkills
+    } = props;
 
     return (
         <div className="project-card">
-            
+
             <div className="left-section">
                 <img src={projectImage} />
             </div>
@@ -17,20 +28,22 @@ export default function ProjectSection() {
             <div className="right-section display-flex" >
 
                 <h4 className="featured display-flex">Featured</h4>
-            
-                <h3 className="project-name display-flex">{projectName}</h3>
-            
+
+                <h3 className="project-name display-flex">{projectTitle}</h3>
+
                 <p className="project-discription display-flex">
-                    A website to help international students and immigrants to find their first job and accomodation in Canada
+                    {projectDiscription}
                 </p>
-            
+
                 <ol className="project-techs display-flex">
-                    <li>ReactJS</li>
-                    <li>HTML5</li>
-                    <li>CSS3</li>
+                    {projectSkills.map(skill => (
+                        <li>{skill}</li>
+                    ))}
                 </ol>
-            
+
             </div>
         </div>
     )
 }
+
+export default ProjectSection;
