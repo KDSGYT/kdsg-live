@@ -10,14 +10,31 @@ import Work from "../components/Work/Work";
 import CNTower from '../images/cn-tower.svg';
 import './styles/index.scss'
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Karan | Front End Developer " />
-    <img src={CNTower} id="cn-tower" />
-    <IntroText />
-    <Work />
-    <ContactUs />
-  </Layout>
-)
+const IndexPage = () => {
+
+  const Tower = React.useRef(null)
+  function handleOver() {
+    Tower.current.style.opacity = "70%";
+  }
+  function handleLeave(){
+    Tower.current.style.opacity = "20%"
+  }
+
+  return (
+    <Layout>
+      <SEO title="Karan | Front End Developer " />
+      <img 
+        src={CNTower} 
+        onMouseOver={handleOver} 
+        onMouseLeave={handleLeave}
+        ref={Tower} 
+        id="cn-tower" 
+        />
+      <IntroText />
+      <Work />
+      <ContactUs />
+    </Layout>
+  )
+}
 
 export default IndexPage

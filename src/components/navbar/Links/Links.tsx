@@ -1,6 +1,8 @@
 import * as React from 'react';
 import './Links.scss';
 import scrollTo from 'gatsby-plugin-smoothscroll';
+import resume from '../../assets/Resume.pdf';
+
 export default function Links({toggle, setToggle}) {
     
     const [appear, setAppear] = React.useState(toggle)
@@ -22,7 +24,7 @@ export default function Links({toggle, setToggle}) {
             <li onClick={() => handleClick('home')}id="link-1">Home</li>
             <li onClick={() => handleClick('work')}id="link-2">Work</li>
             <li onClick={() => handleClick('contact-us')}id="link-3">Contact Me</li>
-            <li id="link-4"><a href="">Resume</a></li>
+            <li id="link-4"><a href={resume} target="_blank">Resume</a></li>
         </ul>
     )
 }
