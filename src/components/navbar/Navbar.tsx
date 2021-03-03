@@ -2,6 +2,7 @@ import * as React from 'react';
 import { useState } from 'react';
 import ToggleButton from './ToggleButton/ToggleButton'
 import './Navbar.scss';
+import Links from './Links/Links';
 
 export default function Navbar() {
     
@@ -18,6 +19,7 @@ export default function Navbar() {
                 toggle={toggle}
                 setToggle={setToggle}
             />
+            <Links toggle={toggle}/>
         </nav>
     )   
 }

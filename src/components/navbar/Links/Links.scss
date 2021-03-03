@@ -1,0 +1,33 @@
+@import '../../assets/Global.scss';
+
+.links {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    // border: 2px solid black;
+    right: -25%;
+    top: 0;
+    list-style-type: none;
+    height: 100vh;
+    width: 30vw;
+    background-color: white;
+    z-index: 98;
+    align-items: center;
+    font-size: 30px;
+    transition: all 0.9s ease;
+    li:hover {
+        text-decoration: underline;
+    }
+
+    #link-1,
+    #link-2,
+    #link-3,
+    #link-4 {
+        // transition: all 1s ease;
+    }
+}
+
+#appear{
+    right:0
+}
