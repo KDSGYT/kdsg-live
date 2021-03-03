@@ -19,7 +19,10 @@ export default function Navbar() {
                 toggle={toggle}
                 setToggle={setToggle}
             />
-            <Links toggle={toggle}/>
+            <Links 
+                toggle={toggle}
+                setToggle={setToggle}
+            />
         </nav>
     )   
 }
