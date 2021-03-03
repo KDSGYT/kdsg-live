@@ -1,5 +1,10 @@
 import * as React from 'react';
-
+// import TwitterIcon from 'gatsby-plugin-material-ui';
+import TwitterIcon from '../../../images/twitter.svg';
+import LinkedInIcon from '../../../images/linkedin.svg';
+import GithubIcon from '../../../images/github.svg';
+import ResumeIcon from '../../../images/file.svg';
+import './SocialMediaLinks.scss';
 export default function SocialMediaLinks() {
     
     const style = {
@@ -11,9 +16,10 @@ export default function SocialMediaLinks() {
 
     return (
         <ol style={style} className="display-flex">
-            <li>Twitter</li>
-            <li>LinkedIn</li>
-            <li>Github</li>
+            <li><img className="icon" src={GithubIcon} /></li>
+            <li><img className="icon" src={TwitterIcon} /></li>
+            <li><img className="icon" src={ResumeIcon} /></li>
+            <li><img className="icon" src={LinkedInIcon} /></li>
         </ol>
     )
 }

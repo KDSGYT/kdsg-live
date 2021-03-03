@@ -1,0 +1,11 @@
+ol {
+    li {
+        height: 100%;
+        width: 10%;
+        cursor: pointer;
+        .icon {
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+}
