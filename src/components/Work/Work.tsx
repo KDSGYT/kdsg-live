@@ -1,25 +1,48 @@
-import * as React from 'react';
+import React, {useEffect, useState} from 'react';
 import ProjectSection from './ProjectSection/ProjectSection';
 import './Work.scss';
+import firebase from "gatsby-plugin-firebase";
 
-import projectImage from '../../images/way2way.jpg'
 
 export default function Work() {
 
-    const projectDiscription = "    A website to help international students and immigrants to find their first job and accomodation in Canada";
-    const projectSkills = [
-        'HTML'
-    ]
+    const [values, setValues] = useState(null)    
+    
+    useEffect(() => {
+        firebase
+        .firestore()
+        .collection("/projects")
+        .get()
+        .then(res => {
+            setValues(() => {
+                const newState = [];
+                res.forEach(item => newState.push(item.data()));
+                return newState;
+            })
+        });
+
+    }, []);
+    
     return (
         <section id="work">
             <h2>WORK</h2>
             <div id="projects" >
-                <ProjectSection
-                    projectTitle="Way2Way"
-                    projectImage={projectImage}
-                    projectDiscription={projectDiscription}
-                    projectSkills={projectSkills}
-                />
+                {values ? values.map((item, index) => {
+                    const {
+                        name,
+                        projectImage,
+                        skills,
+                        disc
+                    } = item;
+
+                    return <ProjectSection
+                        key={index}
+                        projectTitle={name}
+                        projectImage={projectImage}
+                        projectSkills={skills}
+                        projectDiscription={disc}
+                    />
+                }) : ""}
             </div>
         </section>
     )

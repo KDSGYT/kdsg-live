@@ -18,10 +18,10 @@ export default function SocialMediaLinks() {
 
     return (
         <ol style={style} className="display-flex">
-            <li><a href="https://www.github.com/kdsgyt"><img className="icon" src={GithubIcon} /></a></li>
-            <li><a href="https://www.twitter.com/kdsgyt"><img className="icon" src={TwitterIcon} /></a></li>
-            <li><a href={resume} target="_blank"><img className="icon" src={ResumeIcon} /></a></li>
-            <li><a href="https://www.linkedin.com/in/kdsgyt"><img className="icon" src={LinkedInIcon} /></a></li>
+            <li><a target="_blank" href="https://www.github.com/kdsgyt"><img className="icon" src={GithubIcon} /></a></li>
+            <li><a target="_blank" href="https://www.twitter.com/kdsgyt"><img className="icon" src={TwitterIcon} /></a></li>
+            <li><a target="_blank" href={resume}><img className="icon" src={ResumeIcon} /></a></li>
+            <li><a target="_blank" href="https://www.linkedin.com/in/kdsgyt"><img className="icon" src={LinkedInIcon} /></a></li>
         </ol>
     )
 }

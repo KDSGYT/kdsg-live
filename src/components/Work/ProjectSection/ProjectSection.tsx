@@ -1,12 +1,14 @@
 import * as React from 'react';
 import { FC } from 'react';
 import './ProjectSection.scss';
+import GithubIcon from '../../../images/github.svg';
+import LinkIcon from '../../../images/external-link-symbol.svg';
 
 interface props {
     projectTitle: string,
     projectImage: any,
-    projectDiscription: string,
-    projectSkills: any
+    projectDiscription?: string,
+    projectSkills?: any
 }
 
 const ProjectSection: FC<props> = (props) => {
@@ -15,7 +17,7 @@ const ProjectSection: FC<props> = (props) => {
         projectTitle,
         projectImage,
         projectDiscription,
-        projectSkills
+        projectSkills = []
     } = props;
 
     return (
@@ -36,10 +38,14 @@ const ProjectSection: FC<props> = (props) => {
                 </p>
 
                 <ol className="project-techs display-flex">
-                    {projectSkills.map(skill => (
-                        <li>{skill}</li>
+                    {projectSkills.map((skill, index) => (
+                        <li key={index}>{skill}</li>
                     ))}
                 </ol>
+                <ul className="project-links display-flex">
+                    <li><a href=""><img src={GithubIcon}/></a></li>
+                    <li><a href=""><img src={LinkIcon}/></a></li>
+                </ul>
 
             </div>
         </div>
