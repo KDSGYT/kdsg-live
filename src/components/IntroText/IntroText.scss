@@ -51,3 +51,17 @@
         }
     }
 }
+
+@media(max-width:$mobileView){
+    #intro-section{
+        padding: $globalPaddingMobile;
+        #intro-text{
+            // border: 2px solid black;
+            width: 100vw;
+            padding: 0;
+        }
+        #author-image{
+            display: none;
+        }
+    }
+}

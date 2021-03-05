@@ -1,13 +1,24 @@
 /*********************************
+***********Responsive*************
+***********Design*****************
+***********Breakpoints************
+********************************/
+$mobileView: 480px;
+$desktopView: 768px;
+
+/*********************************
 ***********Variables*************
 ********************************/
-$globalPadding: 70px;
+$globalPaddingDesktop:70px;
 
+$globalPaddingMobile:20px;
+
+$globalPadding: $globalPaddingDesktop;
 
 /*********************************
 ***********STYLES****************
 ********************************/
-.display-flex{
+.display-flex {
     display: flex;
     flex-direction: row;
     justify-content: space-around;

@@ -24,3 +24,9 @@
     
 }
 
+@media (max-width:$mobileView){
+    #navigation{
+        padding: 0 $globalPaddingMobile;
+    }
+}
+

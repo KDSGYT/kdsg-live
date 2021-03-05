@@ -9,12 +9,12 @@
     flex-direction: column;
     justify-content: space-evenly;
     // border: 2px solid black;
-    right: -25%;
+    right: -100%;
     // right: 0;
     top: 0;
     list-style-type: none;
     height: 100vh;
-    width: 30vw;
+    width: 500px;
     background-color: white;
     z-index: 98;
     align-items: center;
@@ -62,5 +62,12 @@
     #link-4{
         margin-right: 0;
         opacity: 100%;
+    }
+}
+
+@media (max-width:480px){
+
+    .links{
+        width: 100vw;
     }
 }

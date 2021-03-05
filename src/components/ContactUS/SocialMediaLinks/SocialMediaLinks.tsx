@@ -9,19 +9,12 @@ import resume from '../../assets/Resume.pdf'
 
 export default function SocialMediaLinks() {
     
-    const style = {
-        listStyleType:"none",
-        width:"400px",
-        flexDirection:"row",
-        alignItems:"center"
-    }
-
     return (
-        <ol style={style} className="display-flex">
+        <ul id="social-link-list" className="display-flex">
             <li><a target="_blank" href="https://www.github.com/kdsgyt"><img className="icon" src={GithubIcon} /></a></li>
             <li><a target="_blank" href="https://www.twitter.com/kdsgyt"><img className="icon" src={TwitterIcon} /></a></li>
             <li><a target="_blank" href={resume}><img className="icon" src={ResumeIcon} /></a></li>
             <li><a target="_blank" href="https://www.linkedin.com/in/kdsgyt"><img className="icon" src={LinkedInIcon} /></a></li>
-        </ol>
+        </ul>
     )
 }

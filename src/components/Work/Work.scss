@@ -1,10 +1,19 @@
 @import '../assets/Global.scss';
-#work{
+
+#work {
     margin-top: 10vh;
     min-height: 100vh;
     padding: 20px $globalPadding;
     color: black;
-    #projects{
+
+    #projects {
         padding: 20px 18%;
+    }
+}
+
+@media (max-width: $mobileView) {
+    #work {
+        padding: 10px $globalPaddingMobile;
+
     }
 }
