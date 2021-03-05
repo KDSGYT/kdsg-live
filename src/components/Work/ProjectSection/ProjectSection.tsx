@@ -7,17 +7,19 @@ import LinkIcon from '../../../images/external-link-symbol.svg';
 interface props {
     projectTitle: string,
     projectImage: any,
-    projectDiscription?: string,
-    projectSkills?: any
+    projectDiscription: string,
+    projectSkills: any
+    projectLinks:any
 }
 
 const ProjectSection: FC<props> = (props) => {
 
     const {
         projectTitle,
-        projectImage,
+        projectImage, 
         projectDiscription,
-        projectSkills = []
+        projectSkills = [],
+        projectLinks
     } = props;
 
     return (
@@ -43,8 +45,8 @@ const ProjectSection: FC<props> = (props) => {
                     ))}
                 </ol>
                 <ul className="project-links display-flex">
-                    <li><a href=""><img src={GithubIcon}/></a></li>
-                    <li><a href=""><img src={LinkIcon}/></a></li>
+                    <li><a target="_blank" href={projectLinks.github}><img src={GithubIcon}/></a></li>
+                    <li><a target="_blank" href={projectLinks.website}><img src={LinkIcon}/></a></li>
                 </ul>
 
             </div>

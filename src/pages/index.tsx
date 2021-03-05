@@ -18,6 +18,10 @@ const IndexPage = () => {
     Tower.current.style.opacity = "20%"
   }
 
+  React.useEffect(() => {
+    handleLeave();
+  }, []);
+
   return (
     <Layout>
       <SEO title="Karan | Front End Developer " />

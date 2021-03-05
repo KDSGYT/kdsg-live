@@ -32,7 +32,8 @@ export default function Work() {
                         name,
                         projectImage,
                         skills,
-                        disc
+                        disc,
+                        links
                     } = item;
 
                     return <ProjectSection
@@ -41,6 +42,7 @@ export default function Work() {
                         projectImage={projectImage}
                         projectSkills={skills}
                         projectDiscription={disc}
+                        projectLinks={links}
                     />
                 }) : ""}
             </div>
