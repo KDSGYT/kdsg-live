@@ -8,4 +8,4 @@
 
 import 'firebase/app';
 import 'firebase/firestore';
-import 'firebase/analytics';
+// import 'firebase/analytics';
