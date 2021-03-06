@@ -1,5 +1,5 @@
 import React, { Suspense, useEffect, useState } from 'react';
-const ProjectSection = React.lazy(() => import('./ProjectSection/ProjectSection'));
+import  ProjectSection from './ProjectSection/ProjectSection';
 import './Work.scss';
 import firebase from "gatsby-plugin-firebase";
 
@@ -27,7 +27,6 @@ export default function Work() {
         <section id="work">
             <h2>WORK</h2>
             <div id="projects" >
-                <Suspense fallback={<div>Loading...</div>}>
                     {values ? values.map((item, index) => {
                         const {
                             name,
@@ -46,7 +45,6 @@ export default function Work() {
                             projectLinks={links}
                         />
                     }) : ""}
-                </Suspense>
             </div>
         </section>
     )
