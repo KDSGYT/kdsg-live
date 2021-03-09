@@ -22,5 +22,6 @@ $globalPadding: $globalPaddingDesktop;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    flex-wrap: wrap;
     // border: 2px solid black;
 }

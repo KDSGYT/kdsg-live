@@ -28,10 +28,9 @@
         position: relative;
         width: 400px;
         height: 400px;
-        border:2px solid black;
         margin-right: 5%;
         border-radius: 100%;
-        background-color: black;
+        background-color: rgb(224, 66, 66);
 
         img {
             top: 0;
@@ -43,7 +42,7 @@
             object-fit: cover;
             transition: 0.5s all ease;
             &:hover{
-                top:-2px;
+                top:-4px;
                 left:16px;
 
                 // bottom: ;

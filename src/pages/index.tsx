@@ -1,4 +1,5 @@
 import * as React from "react"
+import AboutMe from "../components/AboutMe/AboutMe";
 import ContactUs from "../components/ContactUS/ContactUs";
 import IntroText from "../components/IntroText/IntroText";
 
@@ -14,7 +15,7 @@ const IndexPage = () => {
   function handleOver() {
     Tower.current.style.opacity = "70%";
   }
-  function handleLeave(){
+  function handleLeave() {
     Tower.current.style.opacity = "20%"
   }
 
@@ -25,14 +26,15 @@ const IndexPage = () => {
   return (
     <Layout>
       <SEO title="Karan | Front End Developer " />
-      <img 
-        src={CNTower} 
-        onMouseOver={handleOver} 
+      <img
+        src={CNTower}
+        onMouseOver={handleOver}
         onMouseLeave={handleLeave}
-        ref={Tower} 
-        id="cn-tower" 
-        />
+        ref={Tower}
+        id="cn-tower"
+      />
       <IntroText />
+      <AboutMe />
       <Work />
       <ContactUs />
     </Layout>

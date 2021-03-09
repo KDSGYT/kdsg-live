@@ -24,9 +24,10 @@ export default function Links({toggle, setToggle}) {
             <li onClick={() => handleClick('home')}id="link-1">
                     Home
             </li>
-            <li onClick={() => handleClick('work')}id="link-2">Work</li>
-            <li onClick={() => handleClick('contact-us')}id="link-3">Contact Me</li>
-            <li id="link-4"><a href={resume} target="_blank">Resume</a></li>
+            <li onClick={() => handleClick('about-me')} id="link-2">About Me</li>
+            <li onClick={() => handleClick('work')}id="link-3">Work</li>
+            <li onClick={() => handleClick('contact-us')}id="link-4">Contact Me</li>
+            <li id="link-5"><a href={resume} target="_blank">Resume</a></li>
         </ul>
     )
 }

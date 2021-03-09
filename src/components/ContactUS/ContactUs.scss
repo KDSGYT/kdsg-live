@@ -16,14 +16,7 @@
         text-align: center;
     }
 
-    h2 {
-        text-decoration: underline;
-        transition: all 1s ease;
-
-        &:hover {
-            text-decoration: none;
-        }
-    }
+    
 }
 
 @media (max-width: $mobileView){
