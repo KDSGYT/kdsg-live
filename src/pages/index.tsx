@@ -12,15 +12,9 @@ import './styles/index.scss'
 const IndexPage = () => {
 
   const Tower = React.useRef(null)
-  function handleOver() {
-    Tower.current.style.opacity = "70%";
-  }
-  function handleLeave() {
-    Tower.current.style.opacity = "20%"
-  }
 
   React.useEffect(() => {
-    handleLeave();
+    // handleLeave();
   }, []);
 
   return (
@@ -28,8 +22,6 @@ const IndexPage = () => {
       <SEO title="Karan | Front End Developer " />
       <img
         src={CNTower}
-        onMouseOver={handleOver}
-        onMouseLeave={handleLeave}
         ref={Tower}
         id="cn-tower"
       />

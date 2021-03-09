@@ -1,14 +1,17 @@
+@import '../../components/assets/Global.scss';
 #cn-tower {
     position: absolute;
     left: 40%;
     top: 1%;
     height: 100vh;
     object-fit: cover;
-    opacity: 20%;
+    opacity: 0.2;
     width: 20%;
     transform-origin: -50% -50%;
     transition: all 1s ease;
-    z-index: 99;
+    &:hover{
+        opacity: 0.7;
+    }
 }
 
 h2 {

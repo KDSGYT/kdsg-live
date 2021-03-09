@@ -22,8 +22,8 @@
 @media (max-width: $mobileView){
     #contact-us{
         p{
-            width: 100vw;
-            padding: auto 10px;
+            width: 100%;
+            padding: $globalPaddingMobile;
         }
     }
 }
