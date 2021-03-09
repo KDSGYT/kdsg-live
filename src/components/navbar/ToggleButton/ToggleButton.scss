@@ -3,35 +3,29 @@
     margin-left: -0.7%;
     width: auto;
     height: 46px;
-    // background-color: black;
-    // border-bottom: 5px solid $accentRed;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
     padding: 0 2%;
     z-index: 99;
+
     #toggle-button {
-        outline:none;
+        outline: none;
         margin: 0;
         border: none;
         background-color: transparent;
         width: 44px;
-        $button-height: 50px;
+        $button-height: 40px;
         height: $button-height;
         min-width: 30px;
-        // max-width: 27px;
-        // max-height: 30px;
-        // height: $button-height;
-        // min-height: 7px;
-        // height: $navbar-height - 1vh;
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
 
         .line {
             margin: 0;
-            width: 35px;
-            height: 4px;
+            width: 29px;
+            height: 3px;
             background-color: black;
             border: none;
             transition: all 0.5s ease;
@@ -59,5 +53,5 @@
 
     }
 
-    
+
 }
