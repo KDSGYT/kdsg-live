@@ -20,9 +20,12 @@ const Project: FC<props> = (props) => {
         projectLinks
     } = props;
 
+    function handleClick(){
+        window.open(projectLinks.website, '_blank')
+    }
+
     return (
-        <div className="project-card" >
-            <a href={projectLinks.website}>
+        <div className="project-card" onClick={handleClick}>
                 <div className="project-image">
                     <img src={projectImage} />
                 </div>
@@ -30,7 +33,6 @@ const Project: FC<props> = (props) => {
                     <h2>{projectTitle}</h2>
                     <p>{projectDiscription}</p>
                 </div>
-            </a>
         </div>
     )
 }
