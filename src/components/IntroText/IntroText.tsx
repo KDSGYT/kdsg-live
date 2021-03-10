@@ -1,6 +1,6 @@
 import * as React from 'react';
 import './IntroText.scss';
-import DP from '../../images/dp.png';
+import DP from '../../images/dp.gif';
 
 export default function IntroText() {
 
