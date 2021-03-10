@@ -2,13 +2,13 @@
 
 #work {
     margin-top: 10vh;
-    min-height: 100vh;
     width: 100vw;
     padding: 20px $globalPadding;
     color: black;
+    flex-direction: row;
 
     #projects {
-        padding: 20px 18%;
+        // padding: 20px 18%;
     }
 
 }

@@ -1,7 +1,7 @@
 import React, { Suspense, useEffect, useState } from 'react';
-import  ProjectSection from './ProjectSection/ProjectSection';
 import './Work.scss';
 import firebase from "gatsby-plugin-firebase";
+import Project from './Project/Project';
 
 
 export default function Work() {
@@ -26,7 +26,7 @@ export default function Work() {
     return (
         <section id="work">
             <h2>WORK</h2>
-            <div id="projects" >
+            <div id="projects" className="display-flex">
                     {values ? values.map((item, index) => {
                         const {
                             name,
@@ -36,7 +36,7 @@ export default function Work() {
                             links
                         } = item;
 
-                        return <ProjectSection
+                        return <Project
                             key={index}
                             projectTitle={name}
                             projectImage={projectImage}
