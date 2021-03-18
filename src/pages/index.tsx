@@ -8,13 +8,15 @@ import SEO from "../components/seo"
 import Work from "../components/Work/Work";
 import CNTower from '../images/cn-tower.svg';
 import './styles/index.scss'
+import firebase from 'gatsby-plugin-firebase';
 
 const IndexPage = () => {
 
   const Tower = React.useRef(null)
 
   React.useEffect(() => {
-    // handleLeave();
+    // Tell google analytics that the website was visited
+    firebase.analytics();
   }, []);
 
   return (

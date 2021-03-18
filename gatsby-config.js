@@ -60,6 +60,7 @@ module.exports = {
           measurementId: process.env.GATSBY_FIREBASE_MEASUREMENT_ID,
         }
       },
-    }
+    },
+    
   ],
 }
