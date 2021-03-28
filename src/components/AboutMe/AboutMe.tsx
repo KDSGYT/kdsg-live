@@ -15,12 +15,14 @@ export default function AboutMe() {
                 </p>
             </div>
             <div id="skills-section" >
-                <h2>Skills</h2>
+                <h2>SKILLS</h2>
                 <ol className="display-flex">
                     <li>HTML</li>
                     <li>CSS</li>
                     <li>JavaScript</li>
                     <li>React</li>
+                    <li>Angular</li>
+                    <li>GraphQL</li>
                     <li>Gatsby</li>
                     <li>Firebase</li>
                     <li>Node.js</li>
