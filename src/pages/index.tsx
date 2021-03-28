@@ -13,10 +13,6 @@ const IndexPage = () => {
 
   const Tower = React.useRef(null)
 
-  React.useEffect(() => {
-    // handleLeave();
-  }, []);
-
   return (
     <Layout>
       <SEO title="Karan | Front End Developer " />

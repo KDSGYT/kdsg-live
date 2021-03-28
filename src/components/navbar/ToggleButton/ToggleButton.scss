@@ -23,6 +23,7 @@
         justify-content: space-evenly;
 
         .line {
+            position: relative;
             margin: 0;
             width: 29px;
             height: 3px;
@@ -32,11 +33,62 @@
             transform-origin: left;
             border-radius: 5px;
             display: block;
+            overflow: hidden;
+        }
+
+        &:hover+.line {
+            opacity: 0;
+
+        }
+
+
+        &:hover {
+
+            .line1::before,
+            .line2::before,
+            .line3::before {
+                left: 0%
+            }
+        }
+
+        // Add overlay lines that will appear when the user hover over the hamburger icon
+        .line1,
+        .line2,
+        .line3 {
+            &::before {
+                outline: none;
+                position: absolute;
+                left: -120%;
+                width: 100%;
+                height: 100%;
+                content: "";
+                fill: black;
+                background-color: gold;
+                transition: all 0.45s ease-in;
+            }
+        }
+        
+        $minBeforeAnimationDelay: 0s;
+        .line1::before{
+            transition-delay: $minBeforeAnimationDelay + 0.15s;
+        }
+        .line2::before{
+            transition-delay: $minBeforeAnimationDelay + 0.30;
+        }
+        .line3::before{
+            transition-delay: $minBeforeAnimationDelay + 0.45;
         }
     }
 
     .toggle {
         justify-content: space-around;
+
+        .line1,
+        .line2,
+        .line3 {
+            outline: none;
+        }
+
 
         .line1 {
             transform: rotateZ(45deg)
