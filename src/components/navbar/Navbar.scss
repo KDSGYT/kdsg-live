@@ -7,6 +7,7 @@
     height: 70px;
     align-items: center;
     justify-content: space-between;
+
     h1 {
         font-family: 'Poppins', Arial;
         font-weight: 600;
@@ -21,12 +22,36 @@
             color: black;
         }
     }
-    
+
+    #button-social-container {
+        height: 100%;
+        width: 35%;
+
+        .nav-social-media-link {
+            right: 50%;
+            height: 100%;
+            float: left;
+
+            .social-link-item {
+                height: 50%;
+
+                .icon {
+                    height: 100%;
+                    width: auto;
+                }
+            }
+        }
+    }
+
+
 }
 
-@media (max-width:$mobileView){
-    #navigation{
+@media (max-width:$mobileView) {
+    #navigation {
         padding: 0 $globalPaddingMobile;
+
+        .nav-social-media-link {
+            display: none;
+        }
     }
 }
-

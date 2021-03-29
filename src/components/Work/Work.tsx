@@ -27,24 +27,24 @@ export default function Work() {
         <section id="work">
             <h2>WORK</h2>
             <div id="projects" className="display-flex">
-                    {values ? values.map((item, index) => {
-                        const {
-                            name,
-                            projectImage,
-                            skills,
-                            disc,
-                            links
-                        } = item;
+                {values ? values.map((item, index) => {
+                    const {
+                        name,
+                        projectImage,
+                        skills,
+                        disc,
+                        links
+                    } = item;
 
-                        return <Project
-                            key={index}
-                            projectTitle={name}
-                            projectImage={projectImage}
-                            projectSkills={skills}
-                            projectDiscription={disc}
-                            projectLinks={links}
-                        />
-                    }) : ""}
+                    return <Project
+                        key={index}
+                        projectTitle={name}
+                        projectImage={projectImage}
+                        projectSkills={skills}
+                        projectDiscription={disc}
+                        projectLinks={links}
+                    />
+                }) : ""}
             </div>
         </section>
     )
