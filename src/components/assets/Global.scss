@@ -15,8 +15,15 @@ $globalPaddingMobile:20px;
 
 $globalPadding: $globalPaddingDesktop;
 
+
 /*********************************
-***********STYLES****************
+***********Style Variables*******
+********************************/
+
+$accentColor: #e04242;
+
+/*********************************
+***********Style Classes*********
 ********************************/
 .display-flex {
     display: flex;
@@ -25,3 +32,4 @@ $globalPadding: $globalPaddingDesktop;
     flex-wrap: wrap;
     // border: 2px solid black;
 }
+

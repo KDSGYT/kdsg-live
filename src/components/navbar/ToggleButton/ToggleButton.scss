@@ -1,3 +1,4 @@
+@import '../../assets/Global.scss';
 #button-container {
     box-sizing: border-box;
     margin-left: -0.7%;
@@ -63,7 +64,7 @@
                 height: 100%;
                 content: "";
                 fill: black;
-                background-color: gold;
+                background-color: $accentColor;
                 transition: all 0.45s ease-in;
             }
         }

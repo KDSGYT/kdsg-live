@@ -6,9 +6,9 @@ import Links from './Links/Links';
 import SocialMediaLinks from '../ContactUS/SocialMediaLinks/SocialMediaLinks';
 
 export default function Navbar() {
-
+    
     const [toggle, setToggle] = useState("");
-
+    
     React.useEffect(() => {
         console.log(toggle)
     }, [toggle])
@@ -16,18 +16,15 @@ export default function Navbar() {
     return (
         <nav id="navigation" className="display-flex">
             <h1>KDSG.LIVE</h1>
-            <div id="button-social-container">
-                <SocialMediaLinks styleClass="nav-social-media-link" />
-                <ToggleButton
-                    toggle={toggle}
-                    setToggle={setToggle}
-                />
-
-            </div>
-            <Links
+            <ToggleButton 
+                toggle={toggle}
+                setToggle={setToggle}
+            />
+            
+            <Links 
                 toggle={toggle}
                 setToggle={setToggle}
             />
         </nav>
-    )
+    )   
 }
