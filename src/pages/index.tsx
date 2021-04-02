@@ -15,7 +15,7 @@ const IndexPage = () => {
 
   return (
     <Layout>
-      <SEO title="Karan | Front End Developer " />
+      <SEO title="Karan | Front End Developer" />
       <img
         src={CNTower}
         ref={Tower}

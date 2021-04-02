@@ -9,17 +9,17 @@ export default function Work() {
     const [values, setValues] = useState(null)
 
     useEffect(() => {
-        firebase
-            .firestore()
-            .collection("/projects")
-            .get()
-            .then(res => {
-                setValues(() => {
-                    const newState = [];
-                    res.forEach(item => newState.push(item.data()));
-                    return newState;
-                })
-            });
+        // firebase
+        //     .firestore()
+        //     .collection("/projects")
+        //     .get()
+        //     .then(res => {
+        //         setValues(() => {
+        //             const newState = [];
+        //             res.forEach(item => newState.push(item.data()));
+        //             return newState;
+        //         })
+        //     });
 
     }, []);
 
