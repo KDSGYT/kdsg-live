@@ -1,16 +1,12 @@
 @import '../assets/Global.scss';
 
 #work {
-    margin-top: 10vh;
+    margin-top: 20vh;
     width: 100vw;
     padding: 20px $globalPadding;
     color: black;
     flex-direction: row;
-
-    #projects {
-        // padding: 20px 18%;
-    }
-
+    justify-content: space-evenly;
 }
 
 @media (max-width: $mobileView) {

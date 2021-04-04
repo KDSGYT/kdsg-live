@@ -17,7 +17,6 @@ const Project: FC<props> = (props) => {
         projectTitle,
         projectImage,
         projectDiscription,
-        projectSkills = [],
         projectLinks,
         projectRef
     } = props;

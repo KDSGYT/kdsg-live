@@ -27,6 +27,7 @@ export default function AboutMe() {
                 compRef={skills}
                 duration={1}
                 animationDelay={1}
+                className='animation'
             >
                 <div ref={skills} id="skills-section" >
                     <h2>SKILLS</h2>

@@ -5,10 +5,11 @@ interface ParallaxAnimation {
     duration: Number
     animationDelay?: Number
     xOffset?: Number
-    yOffset?: Number
+    yOffset?: Number,
+    className?:string
 }
 
-const Parallax: FC<ParallaxAnimation> = ({ children, duration, compRef, animationDelay = "0" }) => {
+const Parallax: FC<ParallaxAnimation> = ({ children, duration, compRef, animationDelay = "0", className }) => {
 
     const [opacity, setOpacity] = useState<number>(0)
 
@@ -33,11 +34,14 @@ const Parallax: FC<ParallaxAnimation> = ({ children, duration, compRef, animatio
         opacity,
         transition: `opacity ${duration}s ease`,
         transitionDelay: `${animationDelay}s`,
-
+        // margin:"0",
+        // padding:"0",
+        height:"unset",
+        width: "unset"
     }
 
     return (
-        <div style={compStyles}>
+        <div style={compStyles} className={`${className}`}>
 
             {/* All the children enclosed in the current component */}
             {children}
