@@ -4,10 +4,11 @@ import './Project.scss';
 
 interface props {
     projectTitle?: string,
-    projectImage: any,
+    projectImage: string,
     projectDiscription?: string,
-    projectSkills?: any
-    projectLinks?: any
+    projectSkills?: object
+    projectLinks?: any,
+    projectRef?: any
 }
 
 const Project: FC<props> = (props) => {
@@ -16,23 +17,23 @@ const Project: FC<props> = (props) => {
         projectTitle,
         projectImage,
         projectDiscription,
-        projectSkills = [],
-        projectLinks
+        projectLinks,
+        projectRef
     } = props;
 
-    function handleClick(){
+    function handleClick() {
         window.open(projectLinks.website, '_blank')
     }
 
     return (
-        <div className="project-card" onClick={handleClick}>
-                <div className="project-image">
-                    <img src={projectImage} />
-                </div>
-                <div className="project-discription">
-                    <h2>{projectTitle}</h2>
-                    <p>{projectDiscription}</p>
-                </div>
+        <div ref={projectRef} className="project-card" onClick={handleClick}>
+            <div className="project-image">
+                <img src={projectImage} />
+            </div>
+            <div className="project-discription">
+                <h2>{projectTitle}</h2>
+                <p>{projectDiscription}</p>
+            </div>
         </div>
     )
 }

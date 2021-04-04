@@ -1,0 +1,53 @@
+import React, { FC, useEffect, useState } from 'react'
+
+interface ParallaxAnimation {
+    compRef: any
+    duration: Number
+    animationDelay?: Number
+    xOffset?: Number
+    yOffset?: Number,
+    className?:string
+}
+
+const Parallax: FC<ParallaxAnimation> = ({ children, duration, compRef, animationDelay = "0", className }) => {
+
+    const [opacity, setOpacity] = useState<number>(0)
+
+    const changeOpacityWhenScroll = () => {
+
+        const viewPortHeight: number = window.innerHeight
+        const compOffset: number = compRef.current.getBoundingClientRect().bottom
+        const value: number = parseFloat(((viewPortHeight / compOffset) - 0.30).toFixed(3))
+
+        if (value > 0.40) { setOpacity(1) }
+    };
+
+    useEffect(() => {
+        document.addEventListener('scroll', changeOpacityWhenScroll)
+
+        return () => {
+            document.removeEventListener('scroll', changeOpacityWhenScroll)
+        }
+    }, []);
+
+    const compStyles = {
+        opacity,
+        transition: `opacity ${duration}s ease`,
+        transitionDelay: `${animationDelay}s`,
+        // margin:"0",
+        // padding:"0",
+        height:"unset",
+        width: "unset"
+    }
+
+    return (
+        <div style={compStyles} className={`${className}`}>
+
+            {/* All the children enclosed in the current component */}
+            {children}
+        </div>
+    )
+}
+
+
+export default Parallax;

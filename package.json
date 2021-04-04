@@ -3,7 +3,7 @@
   "private": true,
   "description": "",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Karan Pal Singh <kdsgyt@gmail.com>",
   "dependencies": {
     "file-loader": "^6.2.0",
     "firebase": "^8.2.9",
@@ -50,9 +50,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/kdsgyt/way2way-react"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/KDSGYT/way2way-react/issues"
   }
 }

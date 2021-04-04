@@ -1,3 +1,5 @@
+@import '../../assets/Global.scss';
+
 #button-container {
     box-sizing: border-box;
     margin-left: -0.7%;
@@ -11,7 +13,7 @@
 
     #toggle-button {
         outline: none;
-        margin: 0;
+        margin: auto;
         border: none;
         background-color: transparent;
         width: 44px;
@@ -23,20 +25,86 @@
         justify-content: space-evenly;
 
         .line {
+            position: relative;
             margin: 0;
             width: 29px;
-            height: 3px;
+            height: 4px;
             background-color: black;
             border: none;
             transition: all 0.5s ease;
             transform-origin: left;
-            border-radius: 5px;
+            border-radius: 1px;
             display: block;
+            overflow: hidden;
+        }
+
+        &:hover+.line {
+            opacity: 0;
+
+        }
+
+
+        &:hover {
+
+            .line1::before,
+            .line2::before,
+            .line3::before {
+                left: 0%
+            }
+        }
+
+        // Add overlay lines that will appear when the user hover over the hamburger icon
+        .line1,
+        .line2,
+        .line3 {
+            &::before {
+                outline: none;
+                position: absolute;
+                left: -120%;
+                width: 100%;
+                height: 100%;
+                content: "";
+                fill: black;
+                background-color: $accentColor;
+                transition: all 0.45s ease-in;
+            }
+        }
+
+        $minBeforeAnimationDelay: 0s;
+
+        .line1::before {
+            transition-delay: $minBeforeAnimationDelay + 0.15s;
+        }
+
+        .line2::before {
+            transition-delay: $minBeforeAnimationDelay + 0.30;
+        }
+
+        .line3::before {
+            transition-delay: $minBeforeAnimationDelay + 0.45;
+        }
+    }
+
+    #toggle-button[class="toggle"] {
+
+        // border:2px solid black;
+
+        .line1::before,
+        .line2::before,
+        .line3::before {
+            left: 0%
         }
     }
 
     .toggle {
         justify-content: space-around;
+
+        .line1,
+        .line2,
+        .line3 {
+            outline: none;
+        }
+
 
         .line1 {
             transform: rotateZ(45deg)

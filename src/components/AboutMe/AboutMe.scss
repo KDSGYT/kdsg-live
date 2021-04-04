@@ -2,9 +2,11 @@
 
 #about-me {
     margin-top: 50px;
+    min-height: 60vh;
     width: 100vw;
-    justify-content: space-evenly;
-    padding: $globalPaddingDesktop;
+    padding: 0 $globalPaddingDesktop;
+    flex-direction: column;
+    justify-content: space-between;
 
     h2 {
         text-align: center;
@@ -12,20 +14,25 @@
 
     #about-section,
     #skills-section {
-        width: 50%;
+        width: 80%;
+        max-width: 1000px;
+        margin: auto;
+        margin-top: 10%;
+        text-align: center;
     }
 
     #about-section {
+
         p {
             padding: 10px $globalPaddingDesktop;
         }
     }
 
     #skills-section {
-
         ol {
-            padding: 10px $globalPaddingDesktop;
+            margin: auto;
 
+            padding: 10px $globalPaddingDesktop;
             list-style-type: none;
 
             li {
@@ -43,8 +50,6 @@
 
         #about-section,
         #skills-section {
-
-
             width: 100%;
         }
 
@@ -52,14 +57,15 @@
             padding: 10px $globalPaddingMobile;
         }
 
-        #skills-section ol {
+        #skills-section {
+            ol {
+                padding: 10px $globalPaddingMobile;
+                list-style-type: none;
+                width: 100%;
 
-            padding: 10px $globalPaddingMobile;
-
-            list-style-type: none;
-
-            li {
-                width: 30%;
+                li {
+                    width: inherit/3;
+                }
             }
         }
     }

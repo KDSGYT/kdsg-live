@@ -69,3 +69,6 @@ yarn-error.log
 .yarn-integrity
 
 src/firebase.ts
+
+#todofiles
+*TODO*
