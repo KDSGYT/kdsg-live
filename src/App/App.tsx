@@ -5,7 +5,7 @@ import IntroText from "../components/IntroText/IntroText";
 
 import SEO from "../components/seo"
 import Work from "../components/Work/Work";
-import CNTower from '../images/cn-tower.ts';
+import CNTower from '../images/cn-tower.svg';
 
 const App = () => {
     const Tower = React.useRef(null)
