@@ -17,7 +17,7 @@ export default function Navbar() {
         <nav id="navigation" className="display-flex">
             <h1>KDSG.LIVE</h1>
             <div id="nav-dark-mode-button-container">
-                <DarkModeButton dark={false} />
+                <DarkModeButton/>
                 <ToggleButton
                     toggle={toggle}
                     setToggle={setToggle}
