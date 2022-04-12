@@ -1,8 +1,5 @@
-button {
-    border:none;
-    background-color: white;
-    &:hover{
-        background-color: black;
-        color:white;
-    }
+#dark-mode-form {
+    padding:  3%;
+    margin: 0;
+    display: flex;
 }

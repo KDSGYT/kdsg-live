@@ -24,8 +24,8 @@
     
     #nav-dark-mode-button-container{
         display: flex;
-        justify-content: space-between;
-        // border:2px solid black;
+        justify-content: space-evenly;
+        padding: auto;
         width: 150px;
         min-width: 30px;
     }
