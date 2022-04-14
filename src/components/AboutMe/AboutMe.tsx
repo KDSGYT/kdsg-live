@@ -1,11 +1,31 @@
 import * as React from 'react';
 import Parallax from '../Animate/Parallax';
 import './AboutMe.scss';
+import firebase from 'gatsby-plugin-firebase'
+
 
 export default function AboutMe() {
 
-    const aboutSection = React.useRef<any>("")
-    const skills = React.useRef<any>("")
+    const aboutSection = React.useRef<any>()
+    const skills = React.useRef<any>()
+    const [aboutText, setAboutText] = React.useState<string>("")
+    
+    React.useEffect(() => {
+        firebase
+        .firestore()
+        .collection('/about-text')
+        .get()
+        .then(res => {
+            console.log(res)
+            setAboutText(() => {
+                let newState;
+                res.forEach(item => newState = item.data().data)
+                return newState
+            })
+        })
+        .catch((e) => console.error(e.message) )
+    })
+
     return (
         <section ref={aboutSection} id="about-me" className="display-flex">
 
@@ -17,7 +37,7 @@ export default function AboutMe() {
                 <div id="about-section" >
                     <h2>ABOUT ME</h2>
                     <p>
-                        My name is Karan. I'm a passionate Frontend Web developer using web technologies to build amazing products and focusing on solving problems for different niches and different industries using the power of technology.
+                        {aboutText || ""}
                     </p>
                 </div>
             </Parallax>
