@@ -1,25 +1,36 @@
 import { FormControlLabel, FormGroup, styled, Switch } from '@mui/material';
-import React, { Component, Ref, useState } from 'react';
+import React, { Component, Ref, useContext, useState } from 'react';
+import DarKModeContext, { DarkmodeContextInterface } from '../assets/context';
 import './darkMode.scss';
 
 interface props {
 }
 
-export const DarkModeButton: React.FC<Component> = ({ }: props) => {
 
-    const [isDark]: [boolean, any] = useState()
+export const DarkModeButton: React.FC<Component> = ({ }: props) => {
+    const darkModeContextProvider: DarkmodeContextInterface = React.useContext(DarKModeContext)
+
     // ref to control the dark mode switch 
     const darkButton: Ref<any> = React.createRef();
 
     return (
         <FormGroup id="dark-mode-form">
-            <FormControlLabel control={<DarkSwitch isDark={isDark} darkButton={darkButton} />} label="" />
+            <FormControlLabel
+                control={
+                    <DarkSwitch
+                        darkButton={darkButton}
+                    />}
+                label=""
+            />
         </FormGroup>
     )
 }
 
+export default DarkModeButton
 
-const DarkSwitch: React.FC<{ isDark: boolean, darkButton: Ref<any> }> = ({ isDark, darkButton }) => {
+
+// the following code is the dark switch style itself no need to change anything unless you want to change the switch itself.
+const DarkSwitch: React.FC<{ darkButton: Ref<any> }> = ({ darkButton }) => {
 
     // styles for dark mode button
     const MaterialUISwitch = styled(Switch)(({ theme }) => ({
@@ -69,25 +80,30 @@ const DarkSwitch: React.FC<{ isDark: boolean, darkButton: Ref<any> }> = ({ isDar
         },
     }));
 
+    const { isDark, setIsDark }: DarkmodeContextInterface = useContext(DarKModeContext)
     // Component's personal state to keep track is the value is changed or not
     const [check, setIsCheck] = useState(isDark);
-
-    function printRef() {
+    function switchMode() {
         setIsCheck((prevState) => {
             return prevState ? false : true
         })
     }
-
+    React.useEffect(() => {
+        setIsDark(check)
+    }, [check])
+    /****************************************************************************** */
 
     return (
-        <MaterialUISwitch
-            checked={check}
-            // defaultChecked
-            sx={{ m: 0, transition: 'all 1s ease' }}
-            inputRef={darkButton}
-            onClick={printRef}
-        />
+        <DarKModeContext.Consumer>
+            {(value: DarkmodeContextInterface) => (
+                <MaterialUISwitch
+                    checked={value.isDark}
+                    // defaultChecked
+                    sx={{ m: 0, transition: 'all 1s ease' }}
+                    inputRef={darkButton}
+                    onClick={switchMode}
+                />
+            )}
+        </DarKModeContext.Consumer>
     )
 }
-
-export default DarkModeButton

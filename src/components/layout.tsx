@@ -13,6 +13,7 @@ import './assets/Global.scss';
 import "./layout.css"
 import Navbar from "./navbar/Navbar"
 import Footer from "./Footer/Footer";
+import DarKModeContext from "./assets/context";
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -24,21 +25,24 @@ const Layout = ({ children }) => {
       }
     }
   `)
+  const [isDark, setIsDark]: [boolean, any] = React.useState<boolean>(false)
+  // **************************************************************************
+  // no need to keep this line in production
+  React.useEffect(() => {
+    console.log(isDark)
+  }, [isDark])
 
-  
-  
-
-  const [state]: any = React.useState<boolean>(false)
+  // **************************************************************************
 
   return (
-    <>
+    <DarKModeContext.Provider value={{ isDark, setIsDark }}>
       <Navbar />
       {/* <Header siteTitle={data.site.siteMetadata?.title || `Title`} /> */}
       <div>
         <main>{children}</main>
         <Footer />
       </div>
-    </>
+    </DarKModeContext.Provider>
   )
 }
 
