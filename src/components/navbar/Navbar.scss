@@ -7,6 +7,8 @@
     height: 70px;
     align-items: center;
     justify-content: space-between;
+    background-color: white;
+
     h1 {
         font-family: 'Poppins', Arial;
         font-weight: 600;
@@ -21,8 +23,8 @@
             color: black;
         }
     }
-    
-    #nav-dark-mode-button-container{
+
+    #nav-dark-mode-button-container {
         display: flex;
         justify-content: space-evenly;
         padding: auto;
@@ -31,9 +33,19 @@
     }
 }
 
-@media (max-width:$mobileView){
-    #navigation{
-        padding: 0 $globalPaddingMobile;
+
+#navigation.dark-mode {
+    background-color: $darkModeDark;
+    transition: all 1s ease-in-out;
+
+    h1 {
+        color: white;
+
     }
 }
 
+@media (max-width:$mobileView) {
+    #navigation {
+        padding: 0 $globalPaddingMobile;
+    }
+}

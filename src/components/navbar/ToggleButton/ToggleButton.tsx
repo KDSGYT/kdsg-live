@@ -1,4 +1,5 @@
 import React, { FC } from 'react';
+import DarKModeContext, { DarkmodeContextInterface } from '../../assets/context';
 import './ToggleButton.scss';
 
 interface props {
@@ -15,8 +16,16 @@ const ToggleButton: FC<props> = ({ toggle, setToggle }) => {
         else setToggle("")
     }
 
+    const DarkModeContext: DarkmodeContextInterface = React.useContext(DarKModeContext)
+    const [darkModeClass, setDarkModeClass] = React.useState<string>('')
+
+    React.useEffect(() => {
+        setDarkModeClass(() => DarkModeContext.isDark ? 'dark-mode' : '')
+    }, [DarkModeContext.isDark])
+
+
     return (
-        <div id="button-container" className="display-as-flex">
+        <div id="button-container" className={`display-as-flex ${darkModeClass}`}>
             <button id="toggle-button" className={toggle} onClick={handleToggle}>
                 <div className={"line line1"}></div>
                 <div className={"line line2 "}></div>

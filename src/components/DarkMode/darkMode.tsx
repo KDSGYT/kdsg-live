@@ -1,13 +1,10 @@
 import { FormControlLabel, FormGroup, styled, Switch } from '@mui/material';
-import React, { Component, Ref, useContext, useState } from 'react';
+import React, { Ref, useContext, useState } from 'react';
 import DarKModeContext, { DarkmodeContextInterface } from '../assets/context';
 import './darkMode.scss';
 
-interface props {
-}
 
-
-export const DarkModeButton: React.FC<Component> = ({ }: props) => {
+export const DarkModeButton: React.FC = () => {
     const darkModeContextProvider: DarkmodeContextInterface = React.useContext(DarKModeContext)
 
     // ref to control the dark mode switch 
