@@ -1,4 +1,4 @@
-import React, { FC, useEffect, useState } from 'react'
+import React, { FC, Ref, useEffect, useState } from 'react'
 
 interface ParallaxAnimation {
     compRef: any
@@ -30,18 +30,16 @@ const Parallax: FC<ParallaxAnimation> = ({ children, duration, compRef, animatio
         }
     }, []);
 
-    const compStyles = {
+    const componentStyles = {
         opacity,
         transition: `opacity ${duration}s ease`,
         transitionDelay: `${animationDelay}s`,
-        // margin:"0",
-        // padding:"0",
         height:"unset",
         width: "unset"
     }
 
     return (
-        <div style={compStyles} className={`${className}`}>
+        <div style={componentStyles} className={`${className}`}>
 
             {/* All the children enclosed in the current component */}
             {children}
