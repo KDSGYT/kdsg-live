@@ -7,7 +7,7 @@ export default function ContactUs() {
         <section id="contact-us" className="display-flex">
             <h2>Contact Me</h2>
             <p>If you’re hiring for a Frontend role, or have any questions,  please don’t hesitate to reach out!</p>
-            <h3><a href="mailto:karan@kdsg.live">karan@kdsg.live</a></h3>
+            <h3><a href="mailto:karan@kdsg.media">karan@kdsg.media</a></h3>
             <SocialMediaLinks />
         </section>
     )
