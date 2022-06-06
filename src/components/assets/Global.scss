@@ -21,7 +21,11 @@ $globalPadding: $globalPaddingDesktop;
 ********************************/
 
 $accentColor: #e04242;
-
+// $darkModeDark: #484848; light greyish black
+$darkModeDark: #151320;
+$darkModewhite: rgb(204, 204, 204);
+$darkModeTextColor: white;
+$darkModeTransition: ' background-color 0.5s ease-in-out,color 0.5s ease-in-out';
 /*********************************
 ***********Style Classes*********
 ********************************/
@@ -32,4 +36,7 @@ $accentColor: #e04242;
     flex-wrap: wrap;
     // border: 2px solid black;
 }
+
+
+
 

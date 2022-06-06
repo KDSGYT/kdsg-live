@@ -1,16 +1,12 @@
 @import '../../assets/Global.scss';
 
 .links {
-    // font-family: ;
     font-family: 'Poppins', Arial;
-
     position: absolute;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    // border: 2px solid black;
     right: -100%;
-    // right: 0;
     top: 0;
     list-style-type: none;
     height: 100vh;
@@ -70,6 +66,13 @@
         margin-right: 0;
         opacity: 1;
     }
+}
+
+
+
+.links.dark-mode{
+    background: $darkModeDark;
+    color:white
 }
 
 @media (max-width:480px){
