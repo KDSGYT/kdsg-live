@@ -27,5 +27,5 @@
 <li>Don't forget to diable the google analytics in the <code>index.tsx</code> so there is not any false data that get's there.
 </li>
 </ol>
-
+<h3>Author: KDSG</h3>
 </p>
