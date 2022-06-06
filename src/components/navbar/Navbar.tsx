@@ -31,7 +31,11 @@ export default function Navbar() {
         <nav id="navigation" className={`display-flex ${darkModeClass}`}>
             <h1>KDSG.LIVE</h1>
             <div id="nav-dark-mode-button-container">
-                <DarkModeButton />
+               
+               {/* Uncomment the line below to enable the darkmode button in the navbar */}
+                {/* <DarkModeButton /> */}
+               
+
                 <ToggleButton
                     toggle={toggle}
                     setToggle={setToggle}
