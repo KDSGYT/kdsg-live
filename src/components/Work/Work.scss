@@ -23,13 +23,6 @@
 
 }
 
-
-@media (max-width: $tabletView) {
-    #work {
-        border: 2px solid black;
-    }
-}
-
 @media (max-width: $mobileView) {
     #work {
         padding: 10px $globalPaddingMobile;

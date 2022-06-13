@@ -8,7 +8,7 @@
     align-items: center;
     justify-content: space-between;
     background-color: white;
-
+    // border:2px solid black;
     h1 {
         font-family: 'Poppins', Arial;
         font-weight: 600;
@@ -26,6 +26,7 @@
 
     #nav-dark-mode-button-container {
         display: flex;
+        // display: none;
         justify-content: space-evenly;
         padding: auto;
         width: 150px;

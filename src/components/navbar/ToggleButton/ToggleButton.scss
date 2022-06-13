@@ -2,13 +2,14 @@
 
 #button-container {
     box-sizing: border-box;
-    margin-left: -0.7%;
+    // margin-right: 0.7%;
     width: auto;
     height: 46px;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    padding: 0 2%;
+    // padding: 0 0%;
+    // border:2px solid black;
     z-index: 99;
 
     #toggle-button {
