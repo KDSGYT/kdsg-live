@@ -39,11 +39,11 @@ const Parallax: FC<ParallaxAnimation> = ({ children, duration, compRef, animatio
     }
 
     return (
-        <div style={componentStyles} className={`${className}`}>
+        <span style={componentStyles} className={`${className}`}>
 
             {/* All the children enclosed in the current component */}
             {children}
-        </div>
+        </span>
     )
 }
 

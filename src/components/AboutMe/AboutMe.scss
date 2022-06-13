@@ -1,27 +1,28 @@
 @import '../assets/Global.scss';
 
 #about-me {
-    margin-top: 50px;
-    min-height: 60vh;
-    width: 100vw;
+    min-height: 35em;
+    margin-top: 10em;
+    margin-bottom: -8em;
     padding: 0 $globalPaddingDesktop;
-    flex-direction: column;
-    justify-content: space-between;
-
+    flex-direction: row;
+    justify-content: space-evenly;
+    // border:2px solid black;
     h2 {
         text-align: center;
     }
-
+    
     #about-section,
     #skills-section {
+        // border:2px solid black;
         width: 80%;
-        max-width: 1000px;
         margin: auto;
-        margin-top: 10%;
         text-align: center;
+        justify-content: space-between;
     }
 
     #about-section {
+        min-height:20%;
 
         p {
             padding: 10px $globalPaddingDesktop;
@@ -29,10 +30,11 @@
     }
 
     #skills-section {
+        min-height:20%;
         ol {
             margin: auto;
 
-            padding: 10px $globalPaddingDesktop;
+            // padding: 10px $globalPaddingDesktop;
             list-style-type: none;
 
             li {

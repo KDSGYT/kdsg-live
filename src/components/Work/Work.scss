@@ -3,14 +3,34 @@
 #work {
     margin-top: 20vh;
     width: 100vw;
-    padding: 20px $globalPadding;
+    padding: 2em $globalPadding;
     color: black;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-evenly;
+
+    // container for projects
+    #projects {
+        max-width: 80em;
+        margin: auto;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+        min-height: 70em;
+    }
+
 }
 
 @media (max-width: $mobileView) {
     #work {
         padding: 10px $globalPaddingMobile;
+
+        #projects {
+            flex-direction: column;
+            width: auto;
+
+        }
     }
 }

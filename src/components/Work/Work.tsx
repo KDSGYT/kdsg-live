@@ -27,7 +27,7 @@ export default function Work() {
     return (
         <section id="work">
             <h2>WORK</h2>
-            <div id="projects" className="display-flex">
+            <div id="projects" className="">
                 {values ? values.map((item, index) => {
                     const {
                         name,
