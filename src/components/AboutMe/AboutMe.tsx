@@ -68,7 +68,7 @@ export default function AboutMe() {
                 compRef={skills}
                 duration={1}
                 animationDelay={1}
-                className='animation'
+                // className='animation'
             >
                 {/* create a varible that will represent the serial number of the skills in which they willbe displayed in the skills section of the website */}
                 <div ref={skills} id="skills-section" >

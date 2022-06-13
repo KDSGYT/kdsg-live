@@ -1,38 +1,42 @@
 @import '../../assets/Global.scss';
-.project-card{
-    // border:2px solid grey;
+
+.project-card {
     border-radius: 10px;
     overflow: hidden;
     width: 300px;
-    height:400px;
-    
-    .project-image{
+    height: 400px;
+    margin: 1em;
+
+    .project-image {
         height: 60%;
         width: 100%;
-        img{
+
+        img {
             height: 100%;
             width: 100%;
             object-position: center;
             object-fit: cover;
         }
     }
-    
-    a{
+
+    a {
         text-decoration: none;
         color: inherit;
     }
-    .project-discription{
-        h2{
+
+    .project-discription {
+        h2 {
             margin: 20px;
             text-decoration: none;
         }
-        p{
+
+        p {
             text-align: center;
             padding: 0 20px;
         }
     }
 
-    &:hover{
+    &:hover {
         border: 2px solid grey;
     }
 }
