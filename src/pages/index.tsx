@@ -16,7 +16,7 @@ const IndexPage = () => {
 
   React.useEffect(() => {
     // Tell google analytics that the website was visited
-    // firebase.analytics();
+    firebase.analytics();
   }, []);
 
   return (
