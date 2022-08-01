@@ -7,7 +7,8 @@ import Parallax from '../Animate/Parallax';
 
 export default function Work() {
 
-    const [values, setValues] = useState(null)
+    const [values, setValues]:any = useState(null)
+    const workTrigger:any = React.useRef("");
     const project = React.useRef("")
     useEffect(() => {
         firebase
@@ -16,7 +17,7 @@ export default function Work() {
             .get()
             .then(res => {
                 setValues(() => {
-                    const newState = [];
+                    const newState:any = [];
                     res.forEach(item => newState.push(item.data()));
                     return newState;
                 })
@@ -26,7 +27,7 @@ export default function Work() {
 
     return (
         <section id="work">
-            <h2>WORK</h2>
+            <h2 ref={workTrigger}>WORK</h2>
             <div id="projects" className="">
                 {values ? values.map((item, index) => {
                     const {
@@ -39,9 +40,10 @@ export default function Work() {
 
                     return (
                         <Parallax
+                            triggerRef={workTrigger}
                             compRef={project}
                             duration={1}
-                            animationDelay={1}
+                            animationDelay={1.5}
                             key={index}
                         >
                             <Project
