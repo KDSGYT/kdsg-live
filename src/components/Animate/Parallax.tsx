@@ -1,4 +1,4 @@
-import React, { FC, Ref, useEffect, useState } from 'react'
+import React, { Component, FC , Ref, useEffect, useState } from 'react'
 
 interface ParallaxAnimation {
     compRef: any
@@ -7,16 +7,20 @@ interface ParallaxAnimation {
     xOffset?: Number
     yOffset?: Number,
     className?:string
+    triggerRef?:any
 }
 
-const Parallax: FC<ParallaxAnimation> = ({ children, duration, compRef, animationDelay = "0", className }) => {
+const Parallax: FC<ParallaxAnimation> = ({ children, duration, compRef, animationDelay = "0", className, triggerRef=compRef }) => {
 
     const [opacity, setOpacity] = useState<number>(0)
 
     const changeOpacityWhenScroll = () => {
 
+        // height of the screen
         const viewPortHeight: number = window.innerHeight
-        const compOffset: number = compRef.current.getBoundingClientRect().bottom
+        
+        // location of the scren in the window
+        const compOffset: number = triggerRef.current.getBoundingClientRect().bottom
         const value: number = parseFloat(((viewPortHeight / compOffset) - 0.30).toFixed(3))
 
         if (value > 0.40) { setOpacity(1) }
