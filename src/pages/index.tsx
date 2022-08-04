@@ -9,6 +9,7 @@ import Work from "../components/Work/Work";
 import CNTower from '../images/cn-tower.svg';
 import './styles/index.scss'
 import firebase from 'gatsby-plugin-firebase';
+import { getFinishedProjects, getUnderDevelopmentProjects } from "../components/Work/functions";
 
 const IndexPage = () => {
 
@@ -29,7 +30,8 @@ const IndexPage = () => {
       />
       <IntroText />
       <AboutMe />
-      <Work />
+      <Work getData={getUnderDevelopmentProjects} />
+      <Work getData={getFinishedProjects}/>
       <ContactUs />
     </Layout>
   )

@@ -3,26 +3,16 @@ import './Work.scss';
 import firebase from "gatsby-plugin-firebase";
 import Project from './Project/Project';
 import Parallax from '../Animate/Parallax';
+import { getFinishedProjects } from './functions';
 
 
-export default function Work() {
+export default function Work({getData}) {
 
     const [values, setValues]:any = useState(null)
     const workTrigger:any = React.useRef("");
     const project = React.useRef("")
     useEffect(() => {
-        firebase
-            .firestore()
-            .collection("/projects")
-            .get()
-            .then(res => {
-                setValues(() => {
-                    const newState:any = [];
-                    res.forEach(item => newState.push(item.data()));
-                    return newState;
-                })
-            });
-
+            getData(setValues)
     }, []);
 
     return (
