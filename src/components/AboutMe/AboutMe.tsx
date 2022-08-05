@@ -34,7 +34,7 @@ export default function AboutMe() {
     // Get skills data from DB
     React.useEffect(() => {
         firebase.firestore()
-        .collection('/skillset')
+        .collection('/skills')
         .get()
         .then(res => {
             setSkillsData(() => {
@@ -74,10 +74,10 @@ export default function AboutMe() {
                 <div ref={skills} id="skills-section" >
                     <h2>SKILLS</h2>
                     <ol className="display-flex">
-                        {skillsData.map((item:any) => {
+                        {skillsData.map((skill:any) => {
                             return (
-                                <li>{item.value}</li>
-                            )
+                                <img src={skill.link} alt={skill.name}/>
+                                )
                         })}
                     </ol>
                 </div>
