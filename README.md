@@ -14,6 +14,24 @@
 <p align="center">
     This is the source code for the online portfolio hosted on KDSG.LIVE
 </p>
+<table>
+    <theader>
+        <td>Branch Name</td>
+        <td>Discription</td>
+    </theader>
+    <tr>
+        <td>underdevelopment</td>
+        <td>Feature that will be show all the projects that are under development.</td>
+    </tr>
+    <tr>
+        <td>React Testing</td>
+        <td>Trying to write tests for the project</td>
+    </tr>
+    <tr>
+        <td>Darkmode</td>
+        <td>Button to toggle dark and light mode. ( Everything  is working just need to fix specify the styles for each component.</td>
+    </tr>
+</table>
 <h2>Development Environment Setup</h2>
 <p>
 <ol>
