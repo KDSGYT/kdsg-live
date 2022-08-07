@@ -40,7 +40,8 @@ export default function AboutMe() {
             setSkillsData(() => {
                 const data = [];
                 res.forEach(item => data.push(item.data()))
-                // sort the data using bubble sort algorithm
+                
+                // sort the data using bubble sort algorithm and return anArray of objects.
                 return bubbleSort(data)
             })
         })

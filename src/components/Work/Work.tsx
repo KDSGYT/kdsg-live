@@ -3,6 +3,7 @@ import './Work.scss';
 import firebase from "gatsby-plugin-firebase";
 import Project from './Project/Project';
 import Parallax from '../Animate/Parallax';
+import { Searchbar } from './searchbar/SearchBar';
 
 
 export default function Work() {
@@ -27,7 +28,7 @@ export default function Work() {
 
     return (
         <section id="work">
-            <h2 ref={workTrigger}>WORK</h2>
+            <div id='headline' ref={workTrigger}><h2>WORK</h2> <Searchbar/></div>
             <div id="projects" className="">
                 {values ? values.map((item, index) => {
                     const {

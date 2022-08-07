@@ -1,6 +1,7 @@
 @import '../assets/Global.scss';
 
 #work {
+
     margin-top: 20vh;
     width: 100vw;
     padding: 2em $globalPadding;
@@ -8,6 +9,8 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
+
+    #headline {}
 
     // container for projects
     #projects {
