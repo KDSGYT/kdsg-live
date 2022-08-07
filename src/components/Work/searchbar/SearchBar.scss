@@ -2,17 +2,22 @@
     width: fit-content;
     margin: auto;
     height: 2em;
+    position: relative;
+
+    overflow: hidden;
 
     label {
-        border-bottom:2px solid black;
+        border-bottom: 2px solid rgb(71, 144, 255);
         width: 100%;
         height: 100%;
         display: flex;
         flex-direction: row;
+
         #image-container {
             width: fit-content;
             height: 80%;
-            img{
+
+            img {
                 height: 100%;
             }
         }
@@ -23,4 +28,23 @@
 
         }
     }
+
+    #left-line,
+    #right-line {
+        content: " ";
+        position: absolute;
+        width: 50%;
+        bottom: 0;
+        border-bottom: 2px solid black;
+        transition: all 0.5s ease;
+    }
+
+    #right-line {
+        left: 0%;
+    }
+
+    #left-line {
+        right: 0%;
+    }
+
 }
