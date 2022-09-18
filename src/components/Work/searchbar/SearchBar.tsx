@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { SearchContext } from '../../assets/SearchContext';
 import './SearchBar.scss';
 /**
  * Search bar to search through all the projects.
@@ -22,8 +23,8 @@ export const Searchbar: React.FC<{}> = () => {
     const leftLine: any = React.useRef(null)
     const rightLine: any = React.useRef(null)
     const inputField: any = React.useRef(null)
-
-    const [searchTerm, setSearchTerm] = React.useState<String>('')
+    const searchText:any = React.useContext(SearchContext)
+    // const [searchText.searchTerm, searchText.setSearchTerm] = React.useState<String>('')
     // Funciton to change the state focus on input changes
     function changeState(): void { setMoveLines((prevState) => prevState ? false : true) }
     React.useEffect(() => {
@@ -39,16 +40,13 @@ export const Searchbar: React.FC<{}> = () => {
     }, [moveLines])
 
 
-    React.useEffect(() => {
-
-    },[searchTerm])
-
+ 
 
     /**
      * update the state with the value from the search input.
      */
     function handleChange() { 
-        setSearchTerm(inputField.current.value) 
+        searchText.setSearchTerm(inputField.current.value) 
     }
 
     return (

@@ -38,8 +38,8 @@ export default function AboutMe() {
         .get()
         .then(res => {
             setSkillsData(() => {
-                const data = [];
-                res.forEach(item => data.push(item.data()))
+                const data:any = [];
+                res.forEach((item:any) => data.push(item.data()))
                 
                 // sort the data using bubble sort algorithm and return anArray of objects.
                 return bubbleSort(data)
@@ -75,9 +75,9 @@ export default function AboutMe() {
                 <div ref={skills} id="skills-section" >
                     <h2>SKILLS</h2>
                     <ol className="display-flex">
-                        {skillsData.map((item:any) => {
+                        {skillsData.map((item:any, index) => {
                             return (
-                                <li>{item.value}</li>
+                                <li key={index}>{item.value}</li>
                             )
                         })}
                     </ol>

@@ -9,14 +9,18 @@ import Work from "../components/Work/Work";
 import CNTower from '../images/cn-tower.svg';
 import './styles/index.scss'
 import firebase from 'gatsby-plugin-firebase';
+import { getFinishedProjects } from "../components/Work/functions";
+import { SearchTextProvider } from "../components/assets/SearchContext";
 
 const IndexPage = () => {
 
   const Tower = React.useRef(null)
 
+  const [searchTerm, setSearchTerm] = React.useState<String>('')
+
   React.useEffect(() => {
     // Tell google analytics that the website was visited
-    firebase.analytics();
+    // firebase.analytics();
   }, []);
 
   return (
@@ -29,7 +33,11 @@ const IndexPage = () => {
       />
       <IntroText />
       <AboutMe />
-      <Work />
+      {/* <Work getData={getUnderDevelopmentProjects} /> */}
+      <SearchTextProvider value={{searchTerm, setSearchTerm}}>
+        <Work getData={getFinishedProjects} />
+
+      </SearchTextProvider>
       <ContactUs />
     </Layout>
   )
